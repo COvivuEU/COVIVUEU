@@ -2,9 +2,8 @@ import { useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
-import FeaturesSection from "@/components/FeaturesSection";
-import HowItWorksSection from "@/components/HowItWorksSection";
-import WaitlistSection from "@/components/WaitlistSection";
+import ServicesSection from "@/components/ServicesSection";
+import VisaSection from "@/components/VisaSection";
 
 const Home = () => {
   // Smooth scrolling for navigation links
@@ -38,14 +37,13 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col bg-slate-50 text-slate-800">
+    <div className="min-h-screen flex flex-col bg-white">
       <Header />
       
       <main>
         <HeroSection />
-        <FeaturesSection />
-        <HowItWorksSection />
-        <WaitlistSection />
+        <ServicesSection />
+        <VisaSection />
       </main>
       
       <Footer />

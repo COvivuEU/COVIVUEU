@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { Star } from "lucide-react";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -20,24 +19,29 @@ const Header = () => {
 
   return (
     <>
-      <header className={`sticky top-0 z-50 w-full border-b border-slate-200 ${isScrolled ? 'bg-white/90 backdrop-blur-sm' : 'bg-white'}`}>
+      <header className={`sticky top-0 z-50 w-full ${isScrolled ? 'bg-white/90 backdrop-blur-sm shadow-sm' : 'bg-white'}`}>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between">
-            <div className="flex items-center gap-2">
-              <Star className="h-8 w-8 text-primary" />
-              <span className="text-xl font-bold">ProductX</span>
+            <div className="flex items-center">
+              <a href="/" className="text-2xl font-bold">
+                <span className="text-gray-900">COvivu</span>
+                <span className="text-teal-600">EU</span>
+              </a>
             </div>
             
             {/* Desktop navigation */}
-            <nav className="hidden md:flex md:items-center md:space-x-6">
-              <a href="#features" className="text-sm font-medium text-slate-700 hover:text-primary transition-colors">
-                Features
+            <nav className="hidden md:flex md:items-center md:space-x-8">
+              <a href="/" className="text-base font-medium text-gray-900 hover:text-teal-600 transition-colors">
+                Accueil
               </a>
-              <a href="#how-it-works" className="text-sm font-medium text-slate-700 hover:text-primary transition-colors">
-                How It Works
+              <a href="#services" className="text-base font-medium text-gray-900 hover:text-teal-600 transition-colors">
+                Services
               </a>
-              <a href="#waitlist" className="text-sm font-medium text-slate-700 hover:text-primary transition-colors">
-                Join Waitlist
+              <a href="#devenir-partenaire" className="text-base font-medium text-gray-900 hover:text-teal-600 transition-colors">
+                Devenir Partenaire
+              </a>
+              <a href="#contact" className="text-base font-medium text-gray-900 hover:text-teal-600 transition-colors">
+                Contact
               </a>
             </nav>
             
@@ -67,28 +71,35 @@ const Header = () => {
         </div>
         
         {/* Mobile navigation menu */}
-        <div className={`md:hidden bg-white border-t border-slate-200 absolute w-full animate-fade-in ${isMenuOpen ? 'block' : 'hidden'}`}>
+        <div className={`md:hidden bg-white border-t border-gray-200 absolute w-full animate-fade-in ${isMenuOpen ? 'block' : 'hidden'}`}>
           <div className="px-4 pt-2 pb-3 space-y-1">
             <a 
-              href="#features" 
-              className="block px-3 py-2 text-base font-medium text-slate-700 hover:text-primary hover:bg-slate-50 rounded-md"
+              href="/" 
+              className="block px-3 py-2 text-base font-medium text-gray-900 hover:text-teal-600 hover:bg-gray-50 rounded-md"
               onClick={() => setIsMenuOpen(false)}
             >
-              Features
+              Accueil
             </a>
             <a 
-              href="#how-it-works" 
-              className="block px-3 py-2 text-base font-medium text-slate-700 hover:text-primary hover:bg-slate-50 rounded-md"
+              href="#services" 
+              className="block px-3 py-2 text-base font-medium text-gray-900 hover:text-teal-600 hover:bg-gray-50 rounded-md"
               onClick={() => setIsMenuOpen(false)}
             >
-              How It Works
+              Services
             </a>
             <a 
-              href="#waitlist" 
-              className="block px-3 py-2 text-base font-medium text-slate-700 hover:text-primary hover:bg-slate-50 rounded-md"
+              href="#devenir-partenaire" 
+              className="block px-3 py-2 text-base font-medium text-gray-900 hover:text-teal-600 hover:bg-gray-50 rounded-md"
               onClick={() => setIsMenuOpen(false)}
             >
-              Join Waitlist
+              Devenir Partenaire
+            </a>
+            <a 
+              href="#contact" 
+              className="block px-3 py-2 text-base font-medium text-gray-900 hover:text-teal-600 hover:bg-gray-50 rounded-md"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Contact
             </a>
           </div>
         </div>
