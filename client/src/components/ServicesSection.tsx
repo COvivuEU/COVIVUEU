@@ -1,46 +1,61 @@
 import { motion } from "framer-motion";
 import { staggerContainer, fadeIn } from "@/lib/animations";
-import { FileText, Plane, MapPin, Home, User, Calendar, Smartphone, UtensilsCrossed } from "lucide-react";
+import { FileText, Plane, MapPin, Home, User, Smartphone, UtensilsCrossed } from "lucide-react";
 
 const services = [
   {
-    icon: <div className="flex justify-center items-center w-12 h-12 border-2 border-teal-600 rounded-md p-2">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-8 w-8 text-teal-600">
+    icon: <div className="flex justify-center items-center w-10 h-10 border border-teal-600 rounded-md">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6 text-teal-600">
               <rect x="4" y="4" width="16" height="16" rx="2" />
-              <path d="M7 10h3V7" />
-              <path d="M14 10h3V7" />
-              <path d="M7 17h3v-3" />
-              <path d="M14 17h3v-3" />
+              <line x1="12" y1="4" x2="12" y2="20" />
+              <line x1="4" y1="12" x2="20" y2="12" />
             </svg>
           </div>,
     title: "Visa"
   },
   {
-    icon: <FileText className="h-10 w-10 text-teal-600" />,
+    icon: <div className="flex justify-center items-center w-10 h-10 border border-teal-600 rounded-md">
+            <FileText className="h-6 w-6 text-teal-600" />
+          </div>,
     title: "Assurance Voyage"
   },
   {
-    icon: <Plane className="h-10 w-10 text-teal-600" />,
+    icon: <div className="flex justify-center items-center w-10 h-10 border border-teal-600 rounded-md">
+            <Plane className="h-6 w-6 text-teal-600" />
+          </div>,
     title: "Billets d'Avion"
   },
   {
-    icon: <MapPin className="h-10 w-10 text-teal-600" />,
+    icon: <div className="flex justify-center items-center w-10 h-10 border border-teal-600 rounded-md">
+            <MapPin className="h-6 w-6 text-teal-600" />
+          </div>,
     title: "Tours"
   },
   {
-    icon: <Home className="h-10 w-10 text-teal-600" />,
+    icon: <div className="flex justify-center items-center w-10 h-10 border border-teal-600 rounded-md">
+            <Home className="h-6 w-6 text-teal-600" />
+          </div>,
     title: "Homestay"
   },
   {
-    icon: <User className="h-10 w-10 text-teal-600" />,
+    icon: <div className="flex justify-center items-center w-10 h-10 border border-teal-600 rounded-md">
+            <User className="h-6 w-6 text-teal-600" />
+          </div>,
     title: "Guides Touristiques"
   },
   {
-    icon: <Smartphone className="h-10 w-10 text-teal-600" />,
+    icon: <div className="flex justify-center items-center w-10 h-10 border border-teal-600 rounded-md">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6 text-teal-600">
+              <rect x="2" y="4" width="20" height="16" rx="2" />
+              <line x1="2" y1="10" x2="22" y2="10" />
+            </svg>
+          </div>,
     title: "Cartes/SIM"
   },
   {
-    icon: <UtensilsCrossed className="h-10 w-10 text-teal-600" />,
+    icon: <div className="flex justify-center items-center w-10 h-10 border border-teal-600 rounded-md">
+            <UtensilsCrossed className="h-6 w-6 text-teal-600" />
+          </div>,
     title: "Restaurants"
   }
 ];
