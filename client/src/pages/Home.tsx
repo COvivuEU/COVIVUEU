@@ -3,7 +3,15 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
 import ServicesSection from "@/components/ServicesSection";
-import VisaSection from "@/components/VisaSection";
+import VisaServiceSection from "@/components/VisaServiceSection";
+import AssuranceVoyageSection from "@/components/AssuranceVoyageSection";
+import BilletsAvionSection from "@/components/BilletsAvionSection";
+import ToursSection from "@/components/ToursSection";
+import HomestaySection from "@/components/HomestaySection";
+import GuidesTouristiquesSection from "@/components/GuidesTouristiquesSection";
+import CartesSimSection from "@/components/CartesSimSection";
+import RestaurantsSection from "@/components/RestaurantsSection";
+import PartnersSection from "@/components/PartnersSection";
 
 const Home = () => {
   // Smooth scrolling for navigation links
@@ -43,7 +51,15 @@ const Home = () => {
       <main>
         <HeroSection />
         <ServicesSection />
-        <VisaSection />
+        <VisaServiceSection />
+        <AssuranceVoyageSection />
+        <BilletsAvionSection />
+        <ToursSection />
+        <HomestaySection />
+        <GuidesTouristiquesSection />
+        <CartesSimSection />
+        <RestaurantsSection />
+        <PartnersSection />
       </main>
       
       <Footer />
