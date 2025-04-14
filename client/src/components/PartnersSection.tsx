@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { fadeIn } from "@/lib/animations";
-import { FileText, HandshakeIcon, Volume2 } from "lucide-react";
+import { FileText, Volume2 } from "lucide-react";
 
 const PartnersSection = () => {
   return (
