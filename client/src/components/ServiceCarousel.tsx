@@ -6,62 +6,30 @@ interface ServiceCarouselProps {
   alt: string;
 }
 
+// This component now displays 3 images in a row instead of a carousel
 const ServiceCarousel = ({ images, alt }: ServiceCarouselProps) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const goToPrevious = () => {
-    const isFirstSlide = currentIndex === 0;
-    const newIndex = isFirstSlide ? images.length - 1 : currentIndex - 1;
-    setCurrentIndex(newIndex);
-  };
-
-  const goToNext = () => {
-    const isLastSlide = currentIndex === images.length - 1;
-    const newIndex = isLastSlide ? 0 : currentIndex + 1;
-    setCurrentIndex(newIndex);
-  };
-
-  const goToSlide = (slideIndex: number) => {
-    setCurrentIndex(slideIndex);
-  };
-
   return (
-    <div className="relative w-full">
-      <div className="relative h-64 md:h-80 overflow-hidden rounded-lg">
-        <img 
-          src={images[currentIndex]} 
-          alt={`${alt} slide ${currentIndex + 1}`} 
-          className="w-full h-full object-cover transition-all duration-300"
-        />
-        
-        {/* Left Arrow */}
-        <button 
-          onClick={goToPrevious} 
-          className="absolute top-1/2 left-4 -translate-y-1/2 bg-white/60 hover:bg-white/80 p-2 rounded-full shadow-md"
-          aria-label="Previous slide"
-        >
-          <ChevronLeft className="w-5 h-5 text-gray-800" />
-        </button>
-        
-        {/* Right Arrow */}
-        <button 
-          onClick={goToNext} 
-          className="absolute top-1/2 right-4 -translate-y-1/2 bg-white/60 hover:bg-white/80 p-2 rounded-full shadow-md"
-          aria-label="Next slide"
-        >
-          <ChevronRight className="w-5 h-5 text-gray-800" />
-        </button>
+    <div className="w-full">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        {images.slice(0, 3).map((image, index) => (
+          <div key={index} className="overflow-hidden rounded-lg shadow-md aspect-square">
+            <img 
+              src={image} 
+              alt={`${alt} image ${index + 1}`} 
+              className="w-full h-full object-cover"
+            />
+          </div>
+        ))}
       </div>
       
-      {/* Dots */}
+      {/* Dots for indication only, no longer interactive */}
       <div className="flex items-center justify-center mt-4 gap-2">
-        {images.map((_, slideIndex) => (
+        {[0, 1, 2, 3, 4].map((dotIndex) => (
           <div
-            key={slideIndex}
-            onClick={() => goToSlide(slideIndex)}
-            className={`h-2 w-2 rounded-full cursor-pointer ${
-              currentIndex === slideIndex ? 'bg-teal-600 w-3' : 'bg-gray-300'
-            } transition-all duration-300`}
+            key={dotIndex}
+            className={`h-2 w-2 rounded-full ${
+              dotIndex === 0 ? 'bg-teal-600 w-3' : 'bg-gray-300'
+            }`}
           />
         ))}
       </div>
