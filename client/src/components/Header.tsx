@@ -32,17 +32,18 @@ const Header = () => {
             {/* Desktop navigation */}
             <nav className="hidden md:flex md:items-center md:space-x-8">
               <a href="/" className="text-base font-medium text-gray-900 hover:text-teal-600 transition-colors">
-                Accueil
+                {language === 'vi' ? 'Trang chủ' : 'Accueil'}
               </a>
               <a href="#services" className="text-base font-medium text-gray-900 hover:text-teal-600 transition-colors">
-                Services
+                {language === 'vi' ? 'Dịch vụ' : 'Services'}
               </a>
               <a href="#devenir-partenaire" className="text-base font-medium text-gray-900 hover:text-teal-600 transition-colors">
-                Devenir Partenaire
+                {language === 'vi' ? 'Trở thành đối tác' : 'Devenir Partenaire'}
               </a>
               <a href="#contact" className="text-base font-medium text-gray-900 hover:text-teal-600 transition-colors">
-                Contact
+                {language === 'vi' ? 'Liên hệ' : 'Contact'}
               </a>
+              <LanguageSwitcher />
             </nav>
             
             {/* Mobile menu button */}
