@@ -1,8 +1,10 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const { language } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,7 +30,7 @@ const Header = () => {
                 <span className="text-teal-600">EU</span>
               </a>
             </div>
-            
+
             {/* Desktop navigation */}
             <nav className="hidden md:flex md:items-center md:space-x-8">
               <a href="/" className="text-base font-medium text-gray-900 hover:text-teal-600 transition-colors">
@@ -45,7 +47,7 @@ const Header = () => {
               </a>
               <LanguageSwitcher />
             </nav>
-            
+
             {/* Mobile menu button */}
             <button 
               type="button" 
@@ -70,7 +72,7 @@ const Header = () => {
             </button>
           </div>
         </div>
-        
+
         {/* Mobile navigation menu */}
         <div className={`md:hidden bg-white border-t border-gray-200 absolute w-full animate-fade-in ${isMenuOpen ? 'block' : 'hidden'}`}>
           <div className="px-4 pt-2 pb-3 space-y-1">
@@ -79,28 +81,28 @@ const Header = () => {
               className="block px-3 py-2 text-base font-medium text-gray-900 hover:text-teal-600 hover:bg-gray-50 rounded-md"
               onClick={() => setIsMenuOpen(false)}
             >
-              Accueil
+              {language === 'vi' ? 'Trang chủ' : 'Accueil'}
             </a>
             <a 
               href="#services" 
               className="block px-3 py-2 text-base font-medium text-gray-900 hover:text-teal-600 hover:bg-gray-50 rounded-md"
               onClick={() => setIsMenuOpen(false)}
             >
-              Services
+              {language === 'vi' ? 'Dịch vụ' : 'Services'}
             </a>
             <a 
               href="#devenir-partenaire" 
               className="block px-3 py-2 text-base font-medium text-gray-900 hover:text-teal-600 hover:bg-gray-50 rounded-md"
               onClick={() => setIsMenuOpen(false)}
             >
-              Devenir Partenaire
+              {language === 'vi' ? 'Trở thành đối tác' : 'Devenir Partenaire'}
             </a>
             <a 
               href="#contact" 
               className="block px-3 py-2 text-base font-medium text-gray-900 hover:text-teal-600 hover:bg-gray-50 rounded-md"
               onClick={() => setIsMenuOpen(false)}
             >
-              Contact
+              {language === 'vi' ? 'Liên hệ' : 'Contact'}
             </a>
           </div>
         </div>
