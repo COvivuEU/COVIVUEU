@@ -71,9 +71,9 @@ const ServicesSection = () => {
           whileInView="show"
           viewport={{ once: true }}
         >
-          Services
+          Dịch vụ
         </motion.h2>
-        
+
         <motion.div 
           className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-6"
           variants={staggerContainer}

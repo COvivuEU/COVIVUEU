@@ -13,7 +13,7 @@ const Footer = () => {
               </span>
             </div>
             <p className="mt-4 text-gray-600">
-              Votre compagnon de voyage idéal en Europe.
+              Người bạn đồng hành lý tưởng của bạn tại Châu Âu.
             </p>
             <div className="mt-6 flex space-x-4">
               <a href="#" className="text-gray-500 hover:text-teal-600 transition-colors" aria-label="Facebook">
@@ -29,12 +29,12 @@ const Footer = () => {
           </div>
           
           <div>
-            <h3 className="text-lg font-semibold mb-4">Liens Rapides</h3>
+            <h3 className="text-lg font-semibold mb-4">Truy cập nhanh</h3>
             <ul className="space-y-2">
-              <li><a href="/" className="text-gray-600 hover:text-teal-600 transition-colors">Accueil</a></li>
-              <li><a href="#services" className="text-gray-600 hover:text-teal-600 transition-colors">Services</a></li>
-              <li><a href="#devenir-partenaire" className="text-gray-600 hover:text-teal-600 transition-colors">Devenir Partenaire</a></li>
-              <li><a href="#contact" className="text-gray-600 hover:text-teal-600 transition-colors">Contact</a></li>
+              <li><a href="/" className="text-gray-600 hover:text-teal-600 transition-colors">Trang chủ</a></li>
+              <li><a href="#services" className="text-gray-600 hover:text-teal-600 transition-colors">Dịch vụ</a></li>
+              <li><a href="#devenir-partenaire" className="text-gray-600 hover:text-teal-600 transition-colors">Trở thành đối tác</a></li>
+              <li><a href="#contact" className="text-gray-600 hover:text-teal-600 transition-colors">Liên hệ</a></li>
             </ul>
           </div>
           

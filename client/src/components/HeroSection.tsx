@@ -26,14 +26,14 @@ const HeroSection = () => {
             className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl"
             variants={fadeIn("up", "tween", 0.2, 1)}
           >
-            Explorez l'Europe avec COvivu
+            Khám phá Châu Âu cùng COvivu
           </motion.h1>
           
           <motion.p 
             className="mt-6 text-xl leading-8 text-white"
             variants={fadeIn("up", "tween", 0.4, 1)}
           >
-            Votre compagnon de voyage idéal
+            Người bạn đồng hành lý tưởng của bạn
           </motion.p>
           
           <motion.div 
@@ -44,7 +44,7 @@ const HeroSection = () => {
               href="#services" 
               className="inline-block rounded-md bg-teal-600 px-6 py-3 text-base font-medium text-white shadow-md hover:bg-teal-700 transition-colors"
             >
-              Découvrez Nos Services
+              Khám phá dịch vụ của chúng tôi
             </a>
           </motion.div>
         </motion.div>
