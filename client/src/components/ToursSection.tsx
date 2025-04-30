@@ -22,7 +22,7 @@ const ToursSection = () => {
           whileInView="show"
           viewport={{ once: true }}
         >
-          Tours
+          Tour Du Lịch
         </motion.h2>
         
         <motion.p 
@@ -32,7 +32,7 @@ const ToursSection = () => {
           whileInView="show"
           viewport={{ once: true }}
         >
-          Explorez nos excursions avec des expériences guidées
+          Khám phá các tour du lịch với trải nghiệm có hướng dẫn của chúng tôi
         </motion.p>
         
         <motion.div 

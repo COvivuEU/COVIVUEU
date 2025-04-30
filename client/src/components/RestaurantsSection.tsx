@@ -19,7 +19,7 @@ const RestaurantsSection = () => {
           whileInView="show"
           viewport={{ once: true }}
         >
-          Restaurants
+          Nhà Hàng
         </motion.h2>
         
         <motion.p 
@@ -29,7 +29,7 @@ const RestaurantsSection = () => {
           whileInView="show"
           viewport={{ once: true }}
         >
-          Découvrez nos restaurants partenaires pour savourer l'Europe à votre goût
+          Khám phá các nhà hàng đối tác để thưởng thức ẩm thực châu Âu theo sở thích của bạn
         </motion.p>
         
         <motion.div 

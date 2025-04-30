@@ -32,7 +32,7 @@ const HomestaySection = () => {
           whileInView="show"
           viewport={{ once: true }}
         >
-          Séjournez chez l'habitant avec nos options d'hébergement
+          Trải nghiệm lưu trú tại nhà dân với các lựa chọn chỗ ở của chúng tôi
         </motion.p>
         
         <motion.div 

@@ -22,7 +22,7 @@ const CartesSimSection = () => {
           whileInView="show"
           viewport={{ once: true }}
         >
-          Cartes/SIM
+          Thẻ SIM
         </motion.h2>
         
         <motion.p 
@@ -32,7 +32,7 @@ const CartesSimSection = () => {
           whileInView="show"
           viewport={{ once: true }}
         >
-          Restez connecté avec nos cartes et forfaits SIM
+          Luôn kết nối với thẻ SIM và các gói cước của chúng tôi
         </motion.p>
         
         <motion.div 

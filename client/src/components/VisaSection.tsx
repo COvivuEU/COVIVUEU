@@ -22,7 +22,7 @@ const VisaSection = () => {
           whileInView="show"
           viewport={{ once: true }}
         >
-          Facilitez vos démarches avec nos partenaires visa.
+          Đơn giản hóa thủ tục với các đối tác visa của chúng tôi
         </motion.p>
         
         <motion.div 

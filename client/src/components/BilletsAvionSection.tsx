@@ -22,7 +22,7 @@ const BilletsAvionSection = () => {
           whileInView="show"
           viewport={{ once: true }}
         >
-          Billets d'Avion
+          Vé Máy Bay
         </motion.h2>
         
         <motion.p 
@@ -32,7 +32,7 @@ const BilletsAvionSection = () => {
           whileInView="show"
           viewport={{ once: true }}
         >
-          Réservez vos vols avec nos partenaires de confiance
+          Đặt vé máy bay với các đối tác uy tín của chúng tôi
         </motion.p>
         
         <motion.div 

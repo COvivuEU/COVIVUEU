@@ -22,7 +22,7 @@ const AssuranceVoyageSection = () => {
           whileInView="show"
           viewport={{ once: true }}
         >
-          Assurance Voyage
+          Bảo hiểm Du lịch
         </motion.h2>
         
         <motion.p 
@@ -32,7 +32,7 @@ const AssuranceVoyageSection = () => {
           whileInView="show"
           viewport={{ once: true }}
         >
-          Protégez votre voyage avec nos solutions d'assurance
+          Bảo vệ chuyến đi của bạn với các gói bảo hiểm của chúng tôi
         </motion.p>
         
         <motion.div 

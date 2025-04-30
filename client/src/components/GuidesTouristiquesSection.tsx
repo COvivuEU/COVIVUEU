@@ -22,7 +22,7 @@ const GuidesTouristiquesSection = () => {
           whileInView="show"
           viewport={{ once: true }}
         >
-          Guides Touristiques
+          Hướng Dẫn Viên Du Lịch
         </motion.h2>
         
         <motion.p 
@@ -32,7 +32,7 @@ const GuidesTouristiquesSection = () => {
           whileInView="show"
           viewport={{ once: true }}
         >
-          Profitez de visites guidées avec nos experts locaux
+          Tận hưởng chuyến tham quan với hướng dẫn viên địa phương của chúng tôi
         </motion.p>
         
         <motion.div 
