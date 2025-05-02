@@ -56,7 +56,7 @@ const VisaServiceSection = () => {
             href="#services" 
             className="inline-block rounded-md bg-teal-600 px-6 py-3 text-base font-medium text-white shadow-md hover:bg-teal-700 transition-colors"
           >
-            Découvrez Nos Services
+            Xem Thêm Dịch Vụ
           </a>
         </motion.div>
       </div>
