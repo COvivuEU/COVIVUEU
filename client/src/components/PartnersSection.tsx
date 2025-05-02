@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { fadeIn } from "@/lib/animations";
 import { FileText, Volume2 } from "lucide-react";
@@ -13,7 +14,7 @@ const PartnersSection = () => {
           whileInView="show"
           viewport={{ once: true }}
         >
-          Espace Partenaires
+          Khu vực Đối tác
         </motion.h2>
         
         <motion.div 
@@ -27,7 +28,7 @@ const PartnersSection = () => {
             <div className="text-teal-600 mb-4">
               <FileText size={40} />
             </div>
-            <h3 className="text-lg font-medium text-center mb-2">Consulter nos offres</h3>
+            <h3 className="text-lg font-medium text-center mb-2">Xem ưu đãi của chúng tôi</h3>
           </div>
           
           <div className="flex flex-col items-center justify-center p-6 border border-gray-200 rounded-lg hover:shadow-md transition-shadow">
@@ -37,14 +38,14 @@ const PartnersSection = () => {
                 <path d="M12.8 11v4.2M9.2 13l7 1.5"/>
               </svg>
             </div>
-            <h3 className="text-lg font-medium text-center mb-2">Rejoignez-nous</h3>
+            <h3 className="text-lg font-medium text-center mb-2">Tham gia với chúng tôi</h3>
           </div>
           
           <div className="flex flex-col items-center justify-center p-6 border border-gray-200 rounded-lg hover:shadow-md transition-shadow">
             <div className="text-teal-600 mb-4">
               <Volume2 size={40} />
             </div>
-            <h3 className="text-lg font-medium text-center mb-2">Support & Marketing</h3>
+            <h3 className="text-lg font-medium text-center mb-2">Hỗ trợ & Tiếp thị</h3>
           </div>
         </motion.div>
       </div>

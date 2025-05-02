@@ -1,21 +1,22 @@
+
 import { motion } from "framer-motion";
 import { staggerContainer, fadeIn } from "@/lib/animations";
 
 const steps = [
   {
     number: 1,
-    title: "Sign Up",
-    description: "Join our waitlist to be among the first to experience ProductX. We'll notify you as soon as it's available."
+    title: "Đăng ký",
+    description: "Tham gia danh sách chờ để trở thành một trong những người đầu tiên trải nghiệm dịch vụ của chúng tôi. Chúng tôi sẽ thông báo cho bạn ngay khi có sẵn."
   },
   {
     number: 2,
-    title: "Customize Your Experience",
-    description: "Once you gain access, set up your workspace according to your specific needs and preferences."
+    title: "Tùy chỉnh trải nghiệm của bạn",
+    description: "Khi bạn có quyền truy cập, hãy thiết lập không gian làm việc của bạn theo nhu cầu và sở thích cụ thể."
   },
   {
     number: 3,
-    title: "Boost Your Productivity",
-    description: "Experience the full power of ProductX and watch your productivity soar. Collaborate, automate, and achieve more."
+    title: "Nâng cao hiệu suất",
+    description: "Trải nghiệm sức mạnh đầy đủ của dịch vụ và xem hiệu suất của bạn tăng vọt. Hợp tác, tự động hóa và đạt được nhiều hơn."
   }
 ];
 
@@ -31,10 +32,10 @@ const HowItWorksSection = () => {
           viewport={{ once: true, amount: 0.25 }}
         >
           <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
-            How ProductX Works
+            Cách thức hoạt động
           </h2>
           <p className="mt-4 text-lg text-slate-600">
-            Simple, intuitive, and designed for maximum productivity.
+            Đơn giản, trực quan và được thiết kế để đạt hiệu quả tối đa.
           </p>
         </motion.div>
         
@@ -45,7 +46,7 @@ const HowItWorksSection = () => {
           
           <div className="relative flex justify-center">
             <span className="bg-slate-50 px-4 text-sm text-slate-500">
-              Follow these simple steps
+              Thực hiện theo các bước đơn giản sau
             </span>
           </div>
         </div>
