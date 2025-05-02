@@ -17,13 +17,14 @@ const services = [
     icon: <div className="flex justify-center items-center w-10 h-10 border border-teal-600 rounded-md">
             <FileText className="h-6 w-6 text-teal-600" />
           </div>,
-    title: "Assurance Voyage"
+    //title: "Assurance Voyage"
+    title: "Bảo Hiểm"
   },
   {
     icon: <div className="flex justify-center items-center w-10 h-10 border border-teal-600 rounded-md">
             <Plane className="h-6 w-6 text-teal-600" />
           </div>,
-    title: "Billets d'Avion"
+    title: "Vé máy bay"
   },
   {
     icon: <div className="flex justify-center items-center w-10 h-10 border border-teal-600 rounded-md">
@@ -41,7 +42,7 @@ const services = [
     icon: <div className="flex justify-center items-center w-10 h-10 border border-teal-600 rounded-md">
             <User className="h-6 w-6 text-teal-600" />
           </div>,
-    title: "Guides Touristiques"
+    title: "Hướng dẫn viên"
   },
   {
     icon: <div className="flex justify-center items-center w-10 h-10 border border-teal-600 rounded-md">
@@ -50,13 +51,13 @@ const services = [
               <line x1="2" y1="10" x2="22" y2="10" />
             </svg>
           </div>,
-    title: "Cartes/SIM"
+    title: "eSIM du lịch"
   },
   {
     icon: <div className="flex justify-center items-center w-10 h-10 border border-teal-600 rounded-md">
             <UtensilsCrossed className="h-6 w-6 text-teal-600" />
           </div>,
-    title: "Restaurants"
+    title: "Nhà hàng"
   }
 ];
 
