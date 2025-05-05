@@ -29,7 +29,7 @@ const flightServices = [
     instant: true
   },
   {
-    image: "https://images.unsplash.com/photo-1540339832862-474599557778",
+    image: "https://images.unsplash.com/photo-1464037866556-6812c9d1c72e",
     title: "Vé máy bay Đà Nẵng - Amsterdam",
     rating: 4.6,
     bookings: "2K+ đã đặt",
@@ -109,16 +109,13 @@ const BilletsAvionSection = () => {
           <Carousel className="w-full max-w-5xl mx-auto">
             <CarouselContent>
               {flightServices.map((service, index) => (
-                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3 p-2">
+                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
                   <div className="relative h-full bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
-                    {/* Badge for best value */}
                     {service.rating >= 4.8 && (
                       <div className="absolute top-4 right-4 z-10 bg-teal-600 text-white px-3 py-1 rounded-full text-xs font-semibold">
                         Phổ biến
                       </div>
                     )}
-
-                    {/* Image with 16:9 aspect ratio */}
                     <div className="relative pt-[56.25%] overflow-hidden">
                       <img
                         src={service.image}
@@ -126,9 +123,7 @@ const BilletsAvionSection = () => {
                         className="absolute top-0 left-0 w-full h-full object-cover"
                       />
                     </div>
-
-                    {/* Content */}
-                    <div className="p-4">
+                    <div className="p-4 flex flex-col flex-grow">
                       <h3 className="font-semibold text-lg mb-2">{service.title}</h3>
                       <div className="flex items-center mb-2">
                         {renderStars(service.rating)}
