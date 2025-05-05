@@ -125,7 +125,10 @@ const AssuranceVoyageSection = () => {
                         </div>
                         <span className="text-gray-600">{service.rating}</span>
                       </div>
-                      <p className="text-sm text-gray-500">{service.bookings}</p>
+                      <p className="text-sm text-gray-500 mb-4">{service.bookings}</p>
+                      <button className="w-full text-center py-2 rounded-md text-sm bg-teal-600 text-white hover:bg-teal-700 transition-colors">
+                        Đặt ngay
+                      </button>
                     </div>
                   </div>
                 </CarouselItem>

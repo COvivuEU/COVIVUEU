@@ -133,7 +133,7 @@ const BilletsAvionSection = () => {
                       </div>
                       <p className="text-sm text-gray-500 mb-4">{service.bookings}</p>
                       <button 
-                        className={`w-full text-center py-2 rounded-md text-sm transition-colors ${
+                        className={`w-full text-center py-2 rounded-md text-sm transition-colors px-4 ${
                           service.instant 
                             ? 'bg-teal-600 text-white hover:bg-teal-700'
                             : 'border border-teal-600 text-teal-600 hover:bg-teal-50'
