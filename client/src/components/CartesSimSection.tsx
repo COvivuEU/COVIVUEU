@@ -1,19 +1,56 @@
+
 import { motion } from "framer-motion";
 import { fadeIn } from "@/lib/animations";
-import ServiceCarousel from "./ServiceCarousel";
+import { StarIcon } from "lucide-react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
-const cartesSimImages = [
-  "https://images.unsplash.com/photo-1622612912568-11c4a18996ebb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80",
-  "https://images.unsplash.com/photo-1589492477829-5e65395b66cc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
-  "https://images.unsplash.com/photo-1601972602288-3be527e7b5bb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80",
-  "https://images.unsplash.com/photo-1544866737-34f234586893?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-  "https://images.unsplash.com/photo-1598114615844-65f80204a705?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-  "https://images.unsplash.com/photo-1598327105854-c8674faddf79?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+const esimServices = [
+  {
+    image: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9",
+    title: "eSIM Châu Âu 30 ngày",
+    rating: 4.8,
+    bookings: "2K+ đã đặt",
+    price: "590.000đ",
+    description: "Không giới hạn dữ liệu, tốc độ cao"
+  },
+  {
+    image: "https://images.unsplash.com/photo-1585944672394-5485648bd9f6",
+    title: "eSIM Châu Âu 15 ngày",
+    rating: 4.7,
+    bookings: "1.5K+ đã đặt",
+    price: "390.000đ",
+    description: "Không giới hạn dữ liệu, tốc độ cao"
+  },
+  {
+    image: "https://images.unsplash.com/photo-1557180295-76eee20ae8aa",
+    title: "eSIM Châu Âu 7 ngày",
+    rating: 4.6,
+    bookings: "1K+ đã đặt",
+    price: "290.000đ",
+    description: "Không giới hạn dữ liệu, tốc độ cao"
+  }
 ];
+
+const renderStars = (rating: number) => {
+  return Array(5).fill(0).map((_, index) => (
+    <StarIcon
+      key={index}
+      className={`h-4 w-4 ${
+        index < Math.floor(rating) ? "text-yellow-400" : "text-gray-300"
+      }`}
+    />
+  ));
+};
 
 const CartesSimSection = () => {
   return (
-    <section id="cartes-sim" className="py-12 bg-white border-t border-gray-100">
+    <section id="esim" className="py-12 bg-white border-t border-gray-100">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.h2 
           className="text-3xl font-bold mb-4"
@@ -22,7 +59,7 @@ const CartesSimSection = () => {
           whileInView="show"
           viewport={{ once: true }}
         >
-          Thẻ SIM
+          eSIM Du lịch
         </motion.h2>
         
         <motion.p 
@@ -32,32 +69,53 @@ const CartesSimSection = () => {
           whileInView="show"
           viewport={{ once: true }}
         >
-          Luôn kết nối với thẻ SIM và các gói cước của chúng tôi
+          Kết nối Internet ổn định cho chuyến du lịch của bạn
         </motion.p>
-        
-        <motion.div 
+
+        <motion.div
           variants={fadeIn("up", "tween", 0.4, 1)}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="mb-10"
+          className="relative"
         >
-          <ServiceCarousel images={cartesSimImages} alt="Cartes SIM" />
-        </motion.div>
-        
-        <motion.div 
-          className="flex justify-center"
-          variants={fadeIn("up", "tween", 0.5, 1)}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-        >
-          <a 
-            href="#services" 
-            className="inline-block rounded-md bg-teal-600 px-6 py-3 text-base font-medium text-white shadow-md hover:bg-teal-700 transition-colors"
-          >
-            Découvrez Nos Services
-          </a>
+          <Carousel className="w-full">
+            <CarouselContent>
+              {esimServices.map((service, index) => (
+                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                  <div className="relative">
+                    <div className="relative h-[200px] overflow-hidden rounded-t-lg">
+                      <img
+                        src={service.image}
+                        alt={service.title}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div className="p-4">
+                      <h3 className="font-semibold text-lg mb-2">{service.title}</h3>
+                      <div className="flex items-center mb-2">
+                        {renderStars(service.rating)}
+                        <span className="ml-2 text-sm text-gray-600">
+                          {service.rating} ({service.bookings})
+                        </span>
+                      </div>
+                      <p className="text-gray-600 text-sm mb-3">{service.description}</p>
+                      <div className="flex justify-between items-center">
+                        <span className="text-lg font-bold text-teal-600">
+                          {service.price}
+                        </span>
+                        <button className="bg-teal-600 text-white px-4 py-2 rounded-md text-sm hover:bg-teal-700 transition-colors">
+                          Đặt ngay
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
         </motion.div>
       </div>
     </section>
