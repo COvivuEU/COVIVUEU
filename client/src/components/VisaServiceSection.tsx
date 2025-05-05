@@ -1,8 +1,8 @@
 
 import { motion } from "framer-motion";
 import { fadeIn } from "@/lib/animations";
-import ServiceCarousel from "./ServiceCarousel";
 import { StarIcon } from "lucide-react";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
 const visaServices = [
   {
@@ -94,47 +94,55 @@ const VisaServiceSection = () => {
           Đồng hành cùng bạn trong mọi thủ tục visa
         </motion.p>
         
-        <motion.div 
-          className="grid grid-cols-1 md:grid-cols-3 gap-6"
+        <motion.div
           variants={fadeIn("up", "tween", 0.4, 1)}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
+          className="w-full"
         >
-          {visaServices.map((service, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden">
-              <div className="relative h-48">
-                <img 
-                  src={service.image} 
-                  alt={service.title}
-                  className="w-full h-full object-cover"
-                />
-                {service.instant && (
-                  <span className="absolute top-2 right-2 bg-blue-500 text-white text-xs px-2 py-1 rounded">
-                    Xác nhận ngay
-                  </span>
-                )}
-              </div>
-              <div className="p-4">
-                <h3 className="font-semibold text-lg mb-2">{service.title}</h3>
-                <div className="flex items-center mb-2">
-                  {renderStars(service.rating)}
-                  <span className="ml-2 text-sm text-gray-600">
-                    {service.rating} ({service.bookings})
-                  </span>
-                </div>
-                <p className="text-gray-600 text-sm mb-3">{service.description}</p>
-                <div className="flex justify-between items-center">
-                  <span className="text-lg font-bold text-teal-600">
-                    từ {service.price}
-                  </span>
-                  <button className="bg-teal-600 text-white px-4 py-2 rounded-md text-sm hover:bg-teal-700 transition-colors">
-                    Đặt ngay
-                  </button>
-                </div>
-              </div>
-            </div>
-          ))}
+          <Carousel className="w-full max-w-5xl mx-auto">
+            <CarouselContent>
+              {visaServices.map((service, index) => (
+                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                  <div className="bg-white rounded-lg shadow-md overflow-hidden h-full mx-2">
+                    <div className="relative h-48">
+                      <img 
+                        src={service.image} 
+                        alt={service.title}
+                        className="w-full h-full object-cover"
+                      />
+                      {service.instant && (
+                        <span className="absolute top-2 right-2 bg-blue-500 text-white text-xs px-2 py-1 rounded">
+                          Xác nhận ngay
+                        </span>
+                      )}
+                    </div>
+                    <div className="p-4">
+                      <h3 className="font-semibold text-lg mb-2">{service.title}</h3>
+                      <div className="flex items-center mb-2">
+                        {renderStars(service.rating)}
+                        <span className="ml-2 text-sm text-gray-600">
+                          {service.rating} ({service.bookings})
+                        </span>
+                      </div>
+                      <p className="text-gray-600 text-sm mb-3">{service.description}</p>
+                      <div className="flex justify-between items-center">
+                        <span className="text-lg font-bold text-teal-600">
+                          từ {service.price}
+                        </span>
+                        <button className="bg-teal-600 text-white px-4 py-2 rounded-md text-sm hover:bg-teal-700 transition-colors">
+                          Đặt ngay
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
         </motion.div>
       </div>
     </section>
