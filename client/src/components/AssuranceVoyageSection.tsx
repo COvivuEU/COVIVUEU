@@ -65,9 +65,7 @@ const renderStars = (rating: number) => {
   return Array(5).fill(0).map((_, index) => (
     <StarIcon
       key={index}
-      className={`h-4 w-4 ${
-        index < Math.floor(rating) ? "text-yellow-400" : "text-gray-300"
-      }`}
+      className={`h-4 w-4 ${index < rating ? 'text-yellow-400 fill-yellow-400' : 'text-gray-300'}`}
     />
   ));
 };
@@ -101,9 +99,9 @@ const AssuranceVoyageSection = () => {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="relative"
+          className="w-full"
         >
-          <Carousel className="w-full">
+          <Carousel className="w-full max-w-5xl mx-auto">
             <CarouselContent>
               {insuranceServices.map((service, index) => (
                 <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
