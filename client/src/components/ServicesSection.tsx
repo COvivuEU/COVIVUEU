@@ -94,8 +94,8 @@ const ServicesSection = () => {
                   "Vé máy bay": "billets-avion",
                   "Tours": "tours",
                   "Homestay": "homestay",
-                  "Hướng dẫn viên": "guides-touristiques",
-                  "eSIM du lịch": "cartes-sim",
+                  "Hướng dẫn viên": "guides",
+                  "eSIM du lịch": "esim",
                   "Nhà hàng": "restaurants"
                 };
                 const element = document.getElementById(sectionMap[service.title]);
