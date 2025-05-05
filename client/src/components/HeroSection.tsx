@@ -30,7 +30,7 @@ const HeroSection = () => {
 
   return (
     <section className="relative">
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0 h-[400px] md:h-[500px]">
         {bannerImages.map((image, index) => (
           <div
             key={index}
@@ -41,14 +41,14 @@ const HeroSection = () => {
             <img 
               src={image} 
               alt={`Banner ${index + 1}`} 
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover object-center"
             />
             <div className="absolute inset-0 bg-black/30"></div>
           </div>
         ))}
       </div>
       
-      <div className="relative z-10 min-h-[400px] py-20">
+      <div className="relative z-10 h-[400px] md:h-[500px]">
         <button 
           onClick={goToPrev} 
           className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 p-2 rounded-full text-white hover:bg-black/70 transition-colors"
