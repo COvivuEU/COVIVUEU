@@ -114,6 +114,7 @@ const BilletsAvionSection = () => {
                   <div className="relative">
                     <div className="relative h-[200px] overflow-hidden rounded-t-lg">
                       <img
+                        loading="lazy"
                         src={service.image}
                         alt={service.title}
                         className="w-full h-full object-cover"
