@@ -62,7 +62,7 @@ const insuranceServices = [
 ];
 
 const renderStars = (rating: number) => {
-  return [...Array(5)].map((_, index) => (
+  return Array(5).fill(0).map((_, index) => (
     <StarIcon
       key={index}
       className={`h-4 w-4 ${
