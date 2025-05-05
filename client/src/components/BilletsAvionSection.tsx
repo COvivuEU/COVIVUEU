@@ -123,16 +123,16 @@ const BilletsAvionSection = () => {
                         className="absolute top-0 left-0 w-full h-full object-cover"
                       />
                     </div>
-                    <div className="p-4 flex flex-col flex-grow">
-                      <h3 className="font-semibold text-lg mb-2">{service.title}</h3>
+                    <div className="p-4 flex flex-col h-[200px]">
+                      <h3 className="font-semibold text-lg mb-2 line-clamp-2 h-[56px]">{service.title}</h3>
                       <div className="flex items-center mb-2">
                         {renderStars(service.rating)}
                         <span className="ml-2 text-sm text-gray-600">
                           {service.rating} ({service.bookings})
                         </span>
                       </div>
-                      <p className="text-gray-600 text-sm mb-3">{service.description}</p>
-                      <div className="flex justify-between items-center">
+                      <p className="text-gray-600 text-sm mb-3 line-clamp-2">{service.description}</p>
+                      <div className="mt-auto flex justify-between items-center">
                         <span className="text-lg font-bold text-teal-600">
                           {service.price}
                         </span>
