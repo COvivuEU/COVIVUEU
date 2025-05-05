@@ -11,7 +11,7 @@ import {
 
 const flightServices = [
   {
-    image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05",
+    image: "https://images.unsplash.com/photo-1464037866556-6812c9d1c72e",
     title: "Vé máy bay Hà Nội - Paris",
     rating: 4.8,
     bookings: "5K+ đã đặt",

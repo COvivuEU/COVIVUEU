@@ -105,15 +105,15 @@ const VisaServiceSection = () => {
             <CarouselContent>
               {visaServices.map((service, index) => (
                 <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                  <div className="bg-white rounded-lg shadow-md overflow-hidden h-full mx-2">
-                    <div className="relative h-48">
-                      <img 
-                        src={service.image} 
+                  <div className="relative h-full bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
+                    <div className="relative pt-[56.25%] overflow-hidden">
+                      <img
+                        src={service.image}
                         alt={service.title}
-                        className="w-full h-full object-cover"
+                        className="absolute top-0 left-0 w-full h-full object-cover"
                       />
                     </div>
-                    <div className="p-4">
+                    <div className="p-4 flex flex-col flex-grow">
                       <h3 className="font-semibold text-lg mb-2">{service.title}</h3>
                       <div className="flex items-center mb-2">
                         {renderStars(service.rating)}
@@ -122,13 +122,15 @@ const VisaServiceSection = () => {
                         </span>
                       </div>
                       <p className="text-gray-600 text-sm mb-3">{service.description}</p>
-                      <div className="flex justify-between items-center">
-                        <span className="text-lg font-bold text-teal-600">
-                          từ {service.price}
-                        </span>
-                        <button className="bg-teal-600 text-white px-4 py-2 rounded-md text-sm hover:bg-teal-700 transition-colors">
-                          Đặt ngay
-                        </button>
+                      <div className="mt-auto">
+                        <div className="flex justify-between items-center">
+                          <span className="text-lg font-bold text-teal-600">
+                            từ {service.price}
+                          </span>
+                          <button className="bg-teal-600 text-white px-4 py-2 rounded-md text-sm hover:bg-teal-700 transition-colors">
+                            Đặt ngay
+                          </button>
+                        </div>
                       </div>
                     </div>
                   </div>
