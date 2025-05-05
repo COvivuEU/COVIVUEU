@@ -1,15 +1,76 @@
+
 import { motion } from "framer-motion";
 import { fadeIn } from "@/lib/animations";
-import ServiceCarousel from "./ServiceCarousel";
+import { StarIcon } from "lucide-react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
-const assuranceImages = [
-  "https://images.unsplash.com/photo-1547573854-74d2a71d0826?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-  "https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-  "https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-  "https://images.unsplash.com/photo-1625842268584-8f3296236761?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-  "https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1173&q=80",
-  "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+const insuranceServices = [
+  {
+    image: "https://images.unsplash.com/photo-1547573854-74d2a71d0826",
+    title: "Bảo hiểm Du lịch Cơ bản",
+    rating: 4.7,
+    bookings: "3K+ đã đặt",
+    price: "890.000đ",
+    description: "Bảo hiểm cơ bản cho chuyến du lịch châu Âu"
+  },
+  {
+    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef",
+    title: "Bảo hiểm Du lịch VIP",
+    rating: 4.9,
+    bookings: "1K+ đã đặt",
+    price: "2.890.000đ",
+    description: "Bảo hiểm toàn diện với hỗ trợ y tế 24/7"
+  },
+  {
+    image: "https://images.unsplash.com/photo-1526256262350-7da7584cf5eb",
+    title: "Bảo hiểm Gia đình",
+    rating: 4.8,
+    bookings: "2K+ đã đặt",
+    price: "3.590.000đ",
+    description: "Bảo hiểm cho cả gia đình với ưu đãi đặc biệt"
+  },
+  {
+    image: "https://images.unsplash.com/photo-1625842268584-8f3296236761",
+    title: "Bảo hiểm Dài hạn",
+    rating: 4.6,
+    bookings: "500+ đã đặt",
+    price: "5.990.000đ",
+    description: "Bảo hiểm du lịch dài hạn lên đến 1 năm"
+  },
+  {
+    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa",
+    title: "Bảo hiểm Premium",
+    rating: 4.9,
+    bookings: "800+ đã đặt",
+    price: "4.290.000đ",
+    description: "Bảo hiểm cao cấp với quyền lợi tối đa"
+  },
+  {
+    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40",
+    title: "Bảo hiểm Du học",
+    rating: 4.7,
+    bookings: "1.5K+ đã đặt",
+    price: "6.990.000đ",
+    description: "Bảo hiểm chuyên biệt cho du học sinh"
+  }
 ];
+
+const renderStars = (rating: number) => {
+  return [...Array(5)].map((_, index) => (
+    <StarIcon
+      key={index}
+      className={`h-4 w-4 ${
+        index < Math.floor(rating) ? "text-yellow-400" : "text-gray-300"
+      }`}
+    />
+  ));
+};
 
 const AssuranceVoyageSection = () => {
   return (
@@ -34,30 +95,47 @@ const AssuranceVoyageSection = () => {
         >
           Bảo vệ chuyến đi của bạn với các gói bảo hiểm của chúng tôi
         </motion.p>
-        
-        <motion.div 
+
+        <motion.div
           variants={fadeIn("up", "tween", 0.4, 1)}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="mb-10"
+          className="relative"
         >
-          <ServiceCarousel images={assuranceImages} alt="Assurance voyage" />
-        </motion.div>
-        
-        <motion.div 
-          className="flex justify-center"
-          variants={fadeIn("up", "tween", 0.5, 1)}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-        >
-          <a 
-            href="#services" 
-            className="inline-block rounded-md bg-teal-600 px-6 py-3 text-base font-medium text-white shadow-md hover:bg-teal-700 transition-colors"
-          >
-            Découvrez Nos Services
-          </a>
+          <Carousel className="w-full">
+            <CarouselContent>
+              {insuranceServices.map((service, index) => (
+                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                  <div className="relative">
+                    <div className="relative h-[200px] overflow-hidden rounded-t-lg">
+                      <img
+                        src={service.image}
+                        alt={service.title}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div className="p-4">
+                      <h3 className="font-semibold text-lg mb-2">{service.title}</h3>
+                      <p className="text-gray-600 mb-2">{service.description}</p>
+                      <p className="text-lg font-semibold text-teal-600 mb-2">
+                        {service.price}
+                      </p>
+                      <div className="flex items-center mb-2">
+                        <div className="flex mr-2">
+                          {renderStars(service.rating)}
+                        </div>
+                        <span className="text-gray-600">{service.rating}</span>
+                      </div>
+                      <p className="text-sm text-gray-500">{service.bookings}</p>
+                    </div>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
         </motion.div>
       </div>
     </section>
