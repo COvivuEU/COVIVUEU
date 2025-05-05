@@ -128,33 +128,22 @@ const BilletsAvionSection = () => {
                     </div>
 
                     {/* Content */}
-                    <div className="p-4 flex-1 flex flex-col">
-                      <h3 className="font-semibold text-lg mb-2 line-clamp-1">{service.title}</h3>
-                      <p className="text-gray-600 mb-4 flex-1 line-clamp-2">{service.description}</p>
-
-                      {/* Price and rating section */}
-                      <div className="mt-auto">
-                        <p className="text-lg font-semibold text-teal-600 mb-3">
+                    <div className="p-4">
+                      <h3 className="font-semibold text-lg mb-2">{service.title}</h3>
+                      <div className="flex items-center mb-2">
+                        {renderStars(service.rating)}
+                        <span className="ml-2 text-sm text-gray-600">
+                          {service.rating} ({service.bookings})
+                        </span>
+                      </div>
+                      <p className="text-gray-600 text-sm mb-3">{service.description}</p>
+                      <div className="flex justify-between items-center">
+                        <span className="text-lg font-bold text-teal-600">
                           {service.price}
-                        </p>
-
-                        <div className="flex items-center space-x-4 mb-4">
-                          <div className="flex items-center space-x-2">
-                            <div className="flex space-x-0.5">
-                              {renderStars(service.rating)}
-                            </div>
-                            <span className="text-gray-600 font-medium">{service.rating}</span>
-                          </div>
-                          <span className="text-sm text-gray-500">{service.bookings}</span>
-                        </div>
-
-                        <div className="flex justify-end">
-                          <button 
-                            className="bg-teal-600 text-white px-4 py-2 rounded-md text-sm hover:bg-teal-700 transition-colors"
-                          >
-                            Đặt ngay
-                          </button>
-                        </div>
+                        </span>
+                        <button className="bg-teal-600 text-white px-4 py-2 rounded-md text-sm hover:bg-teal-700 transition-colors">
+                          Đặt ngay
+                        </button>
                       </div>
                     </div>
                   </div>
