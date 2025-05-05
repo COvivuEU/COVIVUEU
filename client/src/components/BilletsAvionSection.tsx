@@ -110,33 +110,51 @@ const BilletsAvionSection = () => {
           <Carousel className="w-full max-w-5xl mx-auto">
             <CarouselContent>
               {flightServices.map((service, index) => (
-                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                  <div className="relative">
-                    <div className="relative h-[200px] overflow-hidden rounded-t-lg">
+                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3 p-2">
+                  <div className="relative h-full bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
+                    {/* Badge for best value */}
+                    {service.rating >= 4.8 && (
+                      <div className="absolute top-4 right-4 z-10 bg-teal-600 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                        Phổ biến
+                      </div>
+                    )}
+                    
+                    {/* Image with 16:9 aspect ratio */}
+                    <div className="relative pt-[56.25%] overflow-hidden">
                       <img
                         src={service.image}
                         alt={service.title}
-                        className="w-full h-full object-cover"
+                        className="absolute top-0 left-0 w-full h-full object-cover"
                       />
                     </div>
-                    <div className="p-4">
-                      <h3 className="font-semibold text-lg mb-2">{service.title}</h3>
-                      <p className="text-gray-600 mb-2">{service.description}</p>
-                      <p className="text-lg font-semibold text-teal-600 mb-2">
-                        {service.price}
-                      </p>
-                      <div className="flex items-center mb-2">
-                        <div className="flex mr-2">
-                          {renderStars(service.rating)}
+
+                    {/* Content */}
+                    <div className="p-4 flex-1 flex flex-col">
+                      <h3 className="font-semibold text-lg mb-2 line-clamp-1">{service.title}</h3>
+                      <p className="text-gray-600 mb-4 flex-1 line-clamp-2">{service.description}</p>
+                      
+                      {/* Price and rating section */}
+                      <div className="mt-auto">
+                        <p className="text-lg font-semibold text-teal-600 mb-3">
+                          {service.price}
+                        </p>
+                        
+                        <div className="flex items-center space-x-4 mb-4">
+                          <div className="flex items-center space-x-2">
+                            <div className="flex space-x-0.5">
+                              {renderStars(service.rating)}
+                            </div>
+                            <span className="text-gray-600 font-medium">{service.rating}</span>
+                          </div>
+                          <span className="text-sm text-gray-500">{service.bookings}</span>
                         </div>
-                        <span className="text-gray-600">{service.rating}</span>
+
+                        <button 
+                          className="w-full bg-teal-600 text-white px-4 py-2.5 rounded-md text-sm font-medium hover:bg-teal-700 transition-colors"
+                        >
+                          Đặt ngay
+                        </button>
                       </div>
-                      <p className="text-sm text-gray-500 mb-4">{service.bookings}</p>
-                      <button 
-                        className="bg-teal-600 text-white px-4 py-2 rounded-md text-sm hover:bg-teal-700 transition-colors"
-                      >
-                        Đặt ngay
-                      </button>
                     </div>
                   </div>
                 </CarouselItem>
