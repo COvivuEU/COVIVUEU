@@ -36,55 +36,27 @@ const GuidesTouristiquesSection = () => {
         </motion.p>
         
         <motion.div 
+          variants={fadeIn("up", "tween", 0.4, 1)}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10"
+          className="mb-10"
         >
-          {[
-            {
-              title: "Tour Paris",
-              description: "Khám phá thành phố ánh sáng với HDV chuyên nghiệp",
-              price: "€149/người",
-              image: guidesImages[0]
-            },
-            {
-              title: "Tour Rome",
-              description: "Tham quan các di tích lịch sử La Mã cổ đại",
-              price: "€129/người",
-              image: guidesImages[1]
-            },
-            {
-              title: "Tour Barcelona",
-              description: "Khám phá kiến trúc và ẩm thực Barcelona",
-              price: "€139/người",
-              image: guidesImages[2]
-            }
-          ].map((service, index) => (
-            <motion.div
-              key={index}
-              variants={fadeIn("up", "tween", 0.1 * index, 0.5)}
-              className="bg-white rounded-lg shadow-md overflow-hidden"
-            >
-              <img 
-                src={service.image} 
-                alt={service.title}
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-4">
-                <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
-                <p className="text-gray-600 mb-4">{service.description}</p>
-                <p className="text-2xl font-bold text-teal-600 mb-4">{service.price}</p>
-                <a 
-                  href="#services"
-                  className="block text-center bg-teal-600 text-white py-2 px-4 rounded hover:bg-teal-700 transition-colors"
-                >
-                  Xem Thêm Dịch Vụ
-                </a>
-              </div>
-            </motion.div>
-          ))}
+          <ServiceCarousel images={guidesImages} alt="Guides touristiques" />
         </motion.div>
+        
+        <motion.div 
+          className="flex justify-center"
+          variants={fadeIn("up", "tween", 0.5, 1)}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+        >
+          <a 
+            href="#services" 
+            className="inline-block rounded-md bg-teal-600 px-6 py-3 text-base font-medium text-white shadow-md hover:bg-teal-700 transition-colors"
+          >
+            Découvrez Nos Services
           </a>
         </motion.div>
       </div>
