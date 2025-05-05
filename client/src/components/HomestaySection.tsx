@@ -112,11 +112,6 @@ const HomestaySection = () => {
                         alt={service.title}
                         className="w-full h-full object-cover"
                       />
-                      {service.instant && (
-                        <span className="absolute top-2 right-2 bg-blue-500 text-white text-xs px-2 py-1 rounded">
-                          Đặt phòng ngay
-                        </span>
-                      )}
                     </div>
                     <div className="p-4">
                       <h3 className="font-semibold text-lg mb-2">{service.title}</h3>
