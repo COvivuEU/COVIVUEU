@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { fadeIn } from "@/lib/animations";
 import { StarIcon } from "lucide-react";
@@ -89,7 +88,7 @@ const BilletsAvionSection = () => {
         >
           Vé Máy Bay
         </motion.h2>
-        
+
         <motion.p 
           className="text-base md:text-lg text-gray-700 mb-6"
           variants={fadeIn("up", "tween", 0.3, 1)}
@@ -118,7 +117,7 @@ const BilletsAvionSection = () => {
                         Phổ biến
                       </div>
                     )}
-                    
+
                     {/* Image with 16:9 aspect ratio */}
                     <div className="relative pt-[56.25%] overflow-hidden">
                       <img
@@ -132,13 +131,13 @@ const BilletsAvionSection = () => {
                     <div className="p-4 flex-1 flex flex-col">
                       <h3 className="font-semibold text-lg mb-2 line-clamp-1">{service.title}</h3>
                       <p className="text-gray-600 mb-4 flex-1 line-clamp-2">{service.description}</p>
-                      
+
                       {/* Price and rating section */}
                       <div className="mt-auto">
                         <p className="text-lg font-semibold text-teal-600 mb-3">
                           {service.price}
                         </p>
-                        
+
                         <div className="flex items-center space-x-4 mb-4">
                           <div className="flex items-center space-x-2">
                             <div className="flex space-x-0.5">
@@ -150,7 +149,7 @@ const BilletsAvionSection = () => {
                         </div>
 
                         <button 
-                          className="w-full bg-teal-600 text-white px-4 py-2.5 rounded-md text-sm font-medium hover:bg-teal-700 transition-colors"
+                          className="bg-teal-600 text-white px-4 py-2 rounded-md text-sm hover:bg-teal-700 transition-colors"
                         >
                           Đặt ngay
                         </button>
