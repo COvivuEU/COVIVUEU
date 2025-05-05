@@ -1,7 +1,7 @@
 
 import { motion } from "framer-motion";
 import { fadeIn } from "@/lib/animations";
-import { FileText, Volume2 } from "lucide-react";
+import { HandshakeIcon, HeartHandshakeIcon, MegaphoneIcon } from "lucide-react";
 
 const PartnersSection = () => {
   return (
@@ -26,26 +26,26 @@ const PartnersSection = () => {
         >
           <div className="flex flex-col items-center justify-center p-6 border border-gray-200 rounded-lg hover:shadow-md transition-shadow">
             <div className="text-teal-600 mb-4">
-              <FileText size={40} />
+              <HandshakeIcon size={40} />
             </div>
-            <h3 className="text-lg font-medium text-center mb-2">Xem ưu đãi của chúng tôi</h3>
+            <h3 className="text-lg font-medium text-center mb-2">Hợp tác cùng phát triển</h3>
+            <p className="text-gray-600 text-center text-sm">Mở rộng kinh doanh của bạn với đối tác tin cậy</p>
           </div>
           
           <div className="flex flex-col items-center justify-center p-6 border border-gray-200 rounded-lg hover:shadow-md transition-shadow">
             <div className="text-teal-600 mb-4">
-              <svg viewBox="0 0 24 24" width="40" height="40" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" className="text-teal-600">
-                <path d="M16.5 18H21a1 1 0 001-1v-5a1 1 0 00-1-1h-3l-4-4H8L4 11H3a1 1 0 00-1 1v5a1 1 0 001 1h4.5M5.5 15.5h13M16 17v1.5a3 3 0 01-3 3h-2a3 3 0 01-3-3V17"/>
-                <path d="M12.8 11v4.2M9.2 13l7 1.5"/>
-              </svg>
+              <HeartHandshakeIcon size={40} />
             </div>
-            <h3 className="text-lg font-medium text-center mb-2">Tham gia với chúng tôi</h3>
+            <h3 className="text-lg font-medium text-center mb-2">Quyền lợi hấp dẫn</h3>
+            <p className="text-gray-600 text-center text-sm">Tận hưởng các ưu đãi và hỗ trợ đặc biệt</p>
           </div>
           
           <div className="flex flex-col items-center justify-center p-6 border border-gray-200 rounded-lg hover:shadow-md transition-shadow">
             <div className="text-teal-600 mb-4">
-              <Volume2 size={40} />
+              <MegaphoneIcon size={40} />
             </div>
-            <h3 className="text-lg font-medium text-center mb-2">Hỗ trợ & Tiếp thị</h3>
+            <h3 className="text-lg font-medium text-center mb-2">Quảng bá thương hiệu</h3>
+            <p className="text-gray-600 text-center text-sm">Tiếp cận khách hàng tiềm năng qua nền tảng của chúng tôi</p>
           </div>
         </motion.div>
       </div>
