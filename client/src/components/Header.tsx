@@ -10,7 +10,7 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex justify-between items-center py-6 md:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
-            <a href="/" className="flex items-center gap-2 text-2xl font-bold">
+            <a href="/" className="flex items-center text-2xl font-bold">
               <span className="text-gray-900">COvivu</span>
               <span className="text-teal-600">EU</span>
             </a>

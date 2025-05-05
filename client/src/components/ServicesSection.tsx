@@ -85,8 +85,22 @@ const ServicesSection = () => {
           {services.map((service, index) => (
             <motion.div 
               key={index}
-              className="group flex flex-col items-center justify-center border border-gray-200 rounded-md p-6 hover:shadow-md transition-shadow"
+              className="group flex flex-col items-center justify-center border border-gray-200 rounded-md p-6 hover:shadow-md transition-shadow cursor-pointer"
               variants={fadeIn("up", "tween", 0.1 * index, 0.5)}
+              onClick={() => {
+                const sectionMap: { [key: string]: string } = {
+                  "Visa": "visa-service",
+                  "Bảo Hiểm": "assurance-voyage",
+                  "Vé máy bay": "billets-avion",
+                  "Tours": "tours",
+                  "Homestay": "homestay",
+                  "Hướng dẫn viên": "guides-touristiques",
+                  "eSIM du lịch": "cartes-sim",
+                  "Nhà hàng": "restaurants"
+                };
+                const element = document.getElementById(sectionMap[service.title]);
+                element?.scrollIntoView({ behavior: 'smooth' });
+              }}
             >
               <div className="flex justify-center items-center mb-4">
                 {service.icon}
