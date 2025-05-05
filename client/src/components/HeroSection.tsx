@@ -9,12 +9,12 @@ const HeroSection = () => {
         <img 
           src="https://images.unsplash.com/photo-1522093007474-d86e9bf7ba6f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2000&q=80" 
           alt="European cityscape" 
-          className="w-full h-[500px] object-cover"
+          className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black/30"></div>
       </div>
       
-      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 h-[500px] flex flex-col justify-center">
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 min-h-[400px] py-20 flex flex-col justify-center">
         <motion.div 
           className="max-w-3xl text-white"
           variants={staggerContainer}
