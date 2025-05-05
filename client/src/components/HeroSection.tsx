@@ -28,25 +28,6 @@ const HeroSection = () => {
           >
             Khám phá Châu Âu cùng COvivu
           </motion.h1>
-          
-          <motion.p 
-            className="mt-6 text-xl leading-8 text-white"
-            variants={fadeIn("up", "tween", 0.4, 1)}
-          >
-            Người bạn đồng hành lý tưởng của bạn
-          </motion.p>
-          
-          <motion.div 
-            className="mt-10"
-            variants={fadeIn("up", "tween", 0.6, 1)}
-          >
-            <a 
-              href="#services" 
-              className="inline-block rounded-md bg-teal-600 px-6 py-3 text-base font-medium text-white shadow-md hover:bg-teal-700 transition-colors"
-            >
-              Khám phá dịch vụ của chúng tôi
-            </a>
-          </motion.div>
         </motion.div>
       </div>
     </section>
