@@ -99,9 +99,27 @@ const ToursSection = () => {
                 ) : (
                   <>
                     <div className="text-teal-600 mb-4">
-                      <svg className="w-10 h-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                        <path d="M3 7l9-4 9 4M3 17l9 4 9-4M3 12l9 4 9-4" strokeLinecap="round" strokeLinejoin="round"/>
-                      </svg>
+                      {index === 0 && (
+                        <svg className="w-10 h-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                          <path d="M12 21V12m0 9l-3-3m3 3l3-3M3 4h18M4 4h16v4a2 2 0 01-2 2H6a2 2 0 01-2-2V4z" strokeLinecap="round" strokeLinejoin="round"/>
+                        </svg>
+                      )}
+                      {index === 1 && (
+                        <svg className="w-10 h-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                          <path d="M3 21h18M3 18h18M8 21v-3m4 3v-3m4 3v-3M12 3L2 12h20L12 3z" strokeLinecap="round" strokeLinejoin="round"/>
+                        </svg>
+                      )}
+                      {index === 2 && (
+                        <svg className="w-10 h-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                          <path d="M8 18H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v10a2 2 0 01-2 2h-3m-6 0v3m0-3h6m-6 0v3m6-3v3M3 6l18 0M9 3v3m6-3v3" strokeLinecap="round" strokeLinejoin="round"/>
+                        </svg>
+                      )}
+                      {index === 3 && (
+                        <svg className="w-10 h-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                          <path d="M12 8c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4zm0 6c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z" strokeLinecap="round" strokeLinejoin="round"/>
+                          <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8z" strokeLinecap="round" strokeLinejoin="round"/>
+                        </svg>
+                      )}
                     </div>
                     <h3 className="text-lg font-medium text-center mb-2">{tour.title}</h3>
                     <p className="text-gray-600 text-center text-sm">{tour.description}</p>
