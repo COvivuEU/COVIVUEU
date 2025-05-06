@@ -50,8 +50,20 @@ const GuidesTouristiquesSection = () => {
             </div>
           </a>
 
-          <div className="mt-8 text-center">
-            <p className="text-gray-600 max-w-2xl mx-auto">
+          <div className="flex flex-col items-center mt-8">
+            <div className="w-16 h-16 mb-6 text-teal-600">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-full h-full">
+                <path d="M18 8h1a4 4 0 0 1 0 8h-1" />
+                <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8Z" />
+                <path d="M6 1v3" />
+                <path d="M10 1v3" />
+                <path d="M14 1v3" />
+                <path d="M8 12h.01" />
+                <path d="M12 12h.01" />
+                <path d="M16 12h.01" />
+              </svg>
+            </div>
+            <p className="text-gray-600 max-w-2xl mx-auto text-center">
               Tìm kiếm và đặt hướng dẫn viên du lịch địa phương tại Châu Âu. 
               Khám phá những trải nghiệm độc đáo và cá nhân hóa với các hướng dẫn viên chuyên nghiệp của chúng tôi.
             </p>
