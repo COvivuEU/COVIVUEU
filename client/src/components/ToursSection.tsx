@@ -1,128 +1,115 @@
+
 import { motion } from "framer-motion";
 import { fadeIn } from "@/lib/animations";
-import { StarIcon } from "lucide-react";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
+import { useState } from "react";
 
-const tourServices = [
+const tourTypes = [
   {
-    image: "https://images.unsplash.com/photo-1473496169904-658ba7c44d8a",
-    title: "Tour Khám Phá Paris",
-    rating: 4.8,
-    bookings: "256 lượt đặt",
-    price: "450€",
-    description: "Khám phá thành phố ánh sáng với tour trọn gói 3 ngày 2 đêm",
+    title: "Land Tour trọn gói",
+    description: "Khám phá châu Âu với hành trình trọn gói",
+    images: [
+      "https://images.unsplash.com/photo-1473496169904-658ba7c44d8a",
+      "https://images.unsplash.com/photo-1533105079780-92b9be482077",
+      "https://images.unsplash.com/photo-1534777367038-9404f45b869a"
+    ]
   },
   {
-    image: "https://images.unsplash.com/photo-1533105079780-92b9be482077",
-    title: "Tour Châu Âu Cổ Điển",
-    rating: 4.7,
-    bookings: "189 lượt đặt",
-    price: "2500€",
-    description: "Hành trình 10 ngày qua 5 quốc gia châu Âu",
+    title: "City Tour Thành phố",
+    description: "Khám phá các thành phố lớn châu Âu",
+    images: [
+      "https://images.unsplash.com/photo-1499856871958-5b9627545d1a",
+      "https://images.unsplash.com/photo-1527631746610-bca00a040d60",
+      "https://images.unsplash.com/photo-1502602898657-3e91760cbb34"
+    ]
   },
   {
-    image: "https://images.unsplash.com/photo-1534777367038-9404f45b869a",
-    title: "Tour Rome - Venice",
-    rating: 4.9,
-    bookings: "312 lượt đặt",
-    price: "1540€",
-    description: "Khám phá vẻ đẹp của Ý trong 7 ngày",
+    title: "Day Tour vùng lân cận",
+    description: "Khám phá vùng ngoại ô và làng mạc châu Âu",
+    images: [
+      "https://images.unsplash.com/photo-1513581166391-887a96ddeafd",
+      "https://images.unsplash.com/photo-1465778893808-9b3d1b443be6",
+      "https://images.unsplash.com/photo-1533591362725-979dfce672b5"
+    ]
   },
   {
-    image: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a",
-    title: "Tour Thụy Sĩ",
-    rating: 4.6,
-    bookings: "145 lượt đặt",
-    price: "1500€",
-    description: "Trải nghiệm mùa đông tuyết trắng tại Thụy Sĩ",
-  },
-  {
-    image: "https://images.unsplash.com/photo-1527631746610-bca00a040d60",
-    title: "Tour Barcelona",
-    rating: 4.7,
-    bookings: "203 lượt đặt",
-    price: "750€",
-    description: "Khám phá kiến trúc độc đáo của Barcelona",
+    title: "Tour Trải nghiệm đặc biệt",
+    description: "Trải nghiệm độc đáo và khó quên tại châu Âu",
+    images: [
+      "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1",
+      "https://images.unsplash.com/photo-1504150558240-0b4fd8946624",
+      "https://images.unsplash.com/photo-1519677100203-a0e668c92439"
+    ]
   }
 ];
 
 const ToursSection = () => {
-  const renderStars = (rating: number) => {
-    return Array(5).fill(0).map((_, index) => (
-      <StarIcon
-        key={index}
-        className={`h-4 w-4 ${index < rating ? 'text-yellow-400 fill-yellow-400' : 'text-gray-300'}`}
-      />
-    ));
-  };
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
     <section id="tours" className="py-12 bg-white border-t border-gray-100">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.h2 
-          className="text-2xl md:text-3xl font-bold mb-4"
+          className="text-2xl md:text-3xl font-bold text-center mb-6"
           variants={fadeIn("up", "tween", 0.2, 1)}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
         >
-          Land Tour Schengen
+          TOURS Du Lịch
         </motion.h2>
-
-        <motion.p 
-          className="text-base md:text-lg text-gray-700 mb-6"
+        
+        <motion.div 
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8"
           variants={fadeIn("up", "tween", 0.3, 1)}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
         >
-          Các hình thức Tour Du lịch/trải nghiệm tại các quốc gia Schengen dành cho Du khách người Việt
-        </motion.p>
-
-        <motion.div
-          variants={fadeIn("up", "tween", 0.4, 1)}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-          className="w-full"
-        >
-          <Carousel className="w-full max-w-5xl mx-auto">
-            <CarouselContent>
-              {tourServices.map((service, index) => (
-                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3 p-2">
-                  <div className="relative h-full bg-white rounded-lg shadow-md overflow-hidden">
-                    <div className="relative h-48 overflow-hidden">
-                      <img
-                        src={service.image}
-                        alt={service.title}
-                        className="w-full h-full object-cover"
-                      />
+          {tourTypes.map((tour, index) => (
+            <div
+              key={index}
+              className="relative group"
+              onMouseEnter={() => setHoveredIndex(index)}
+              onMouseLeave={() => setHoveredIndex(null)}
+            >
+              <div className="flex flex-col items-center justify-center p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-all duration-300 h-[200px] relative overflow-hidden">
+                {hoveredIndex === index ? (
+                  <Carousel className="absolute inset-0 w-full h-full">
+                    <CarouselContent>
+                      {tour.images.map((image, imgIndex) => (
+                        <CarouselItem key={imgIndex} className="w-full h-full">
+                          <div className="relative w-full h-full">
+                            <img
+                              src={image}
+                              alt={`${tour.title} ${imgIndex + 1}`}
+                              className="absolute inset-0 w-full h-full object-cover"
+                            />
+                            <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                              <div className="text-center text-white p-4">
+                                <h3 className="text-lg font-bold mb-2">{tour.title}</h3>
+                                <p className="text-sm">{tour.description}</p>
+                              </div>
+                            </div>
+                          </div>
+                        </CarouselItem>
+                      ))}
+                    </CarouselContent>
+                  </Carousel>
+                ) : (
+                  <>
+                    <div className="text-teal-600 mb-4">
+                      <svg className="w-10 h-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M3 7l9-4 9 4M3 17l9 4 9-4M3 12l9 4 9-4" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
                     </div>
-                    <div className="p-4 flex flex-col h-[200px]">
-                      <h3 className="font-semibold text-lg mb-2 line-clamp-2 h-[56px]">{service.title}</h3>
-                      <div className="flex items-center gap-2 mb-2">
-                        {renderStars(service.rating)}
-                        <span className="text-sm text-gray-600">
-                          ({service.bookings})
-                        </span>
-                      </div>
-                      <p className="text-gray-600 text-sm mb-3 line-clamp-2">{service.description}</p>
-                      <div className="mt-auto flex justify-between items-center">
-                        <span className="text-lg font-bold text-teal-600">
-                          {service.price}
-                        </span>
-                        <button className="bg-teal-600 text-white px-3 py-1.5 text-sm rounded-full hover:bg-teal-700 transition-colors">
-                          Chi tiết
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
-          </Carousel>
+                    <h3 className="text-lg font-medium text-center mb-2">{tour.title}</h3>
+                    <p className="text-gray-600 text-center text-sm">{tour.description}</p>
+                  </>
+                )}
+              </div>
+            </div>
+          ))}
         </motion.div>
       </div>
     </section>
