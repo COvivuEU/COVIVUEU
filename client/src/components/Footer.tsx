@@ -13,7 +13,7 @@ const Footer = () => {
               </span>
             </div>
             <p className="mt-4 text-gray-600">
-              Người bạn đồng hành lý tưởng của bạn tại Châu Âu.
+              Đi châu Âu - Khó gì đâu!
             </p>
             <div className="mt-6 flex space-x-4">
               <a href="#" className="text-gray-500 hover:text-teal-600 transition-colors" aria-label="Facebook">
@@ -43,15 +43,15 @@ const Footer = () => {
             <ul className="space-y-2">
               <li className="flex items-center text-gray-600">
                 <Mail size={18} className="mr-2 text-teal-600" />
-                <span>contact@covivueu.com</span>
+                <span>covivueu@covivu.com</span>
               </li>
               <li className="flex items-center text-gray-600">
                 <Phone size={18} className="mr-2 text-teal-600" />
-                <span>+33 (0)1 23 45 67 89</span>
+                <span>+33 (0)7 45 19 84 88</span>
               </li>
               <li className="flex items-center text-gray-600">
                 <MapPin size={18} className="mr-2 text-teal-600" />
-                <span>123 Avenue de l'Europe, Paris, France</span>
+                <span>Strasbourg, Paris, Hà Nội</span>
               </li>
             </ul>
           </div>
