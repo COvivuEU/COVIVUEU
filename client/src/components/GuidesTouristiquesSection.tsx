@@ -1,50 +1,5 @@
-
 import { motion } from "framer-motion";
 import { fadeIn } from "@/lib/animations";
-import { StarIcon } from "lucide-react";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-
-const guideServices = [
-  {
-    image: "https://images.unsplash.com/photo-1504150558240-0b4fd8946624",
-    title: "Hướng dẫn viên Paris",
-    rating: 4.9,
-    bookings: "5K+ đã đặt",
-    price: "120€/ngày",
-    description: "HDV kinh nghiệm, thông thạo tiếng Việt và Pháp"
-  },
-  {
-    image: "https://images.unsplash.com/photo-1516383607781-913a19294fd1",
-    title: "Hướng dẫn viên Rome",
-    rating: 4.8,
-    bookings: "3K+ đã đặt",
-    price: "115€/ngày",
-    description: "HDV chuyên tour văn hóa và ẩm thực Ý"
-  },
-  {
-    image: "https://images.unsplash.com/photo-1524008279394-3aed4643b30b",
-    title: "Hướng dẫn viên London",
-    rating: 4.7,
-    bookings: "2K+ đã đặt",
-    price: "140€/ngày",
-    description: "HDV am hiểu lịch sử và văn hóa Anh"
-  }
-];
-
-const renderStars = (rating: number) => {
-  return Array(5).fill(0).map((_, index) => (
-    <StarIcon
-      key={index}
-      className={`h-4 w-4 ${index < rating ? 'text-yellow-400 fill-yellow-400' : 'text-gray-300'}`}
-    />
-  ));
-};
 
 const GuidesTouristiquesSection = () => {
   return (
@@ -59,7 +14,7 @@ const GuidesTouristiquesSection = () => {
         >
           Tour guide/Buddy Schengen
         </motion.h2>
-        
+
         <motion.p 
           className="text-base md:text-lg text-gray-700 mb-6"
           variants={fadeIn("up", "tween", 0.3, 1)}
@@ -75,50 +30,32 @@ const GuidesTouristiquesSection = () => {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="w-full"
+          className="w-full max-w-5xl mx-auto"
         >
-          <Carousel className="w-full max-w-5xl mx-auto">
-            <CarouselContent>
-              {guideServices.map((service, index) => (
-                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3 p-2">
-                  <div className="relative h-full bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
-                    {service.rating >= 4.8 && (
-                      <div className="absolute top-4 right-4 z-10 bg-teal-600 text-white px-3 py-1 rounded-full text-xs font-semibold">
-                        Phổ biến
-                      </div>
-                    )}
-                    <div className="relative pt-[56.25%] overflow-hidden">
-                      <img
-                        src={service.image}
-                        alt={service.title}
-                        className="absolute top-0 left-0 w-full h-full object-cover"
-                      />
-                    </div>
-                    <div className="p-4">
-                      <h3 className="font-semibold text-lg mb-2">{service.title}</h3>
-                      <div className="flex items-center mb-2">
-                        {renderStars(service.rating)}
-                        <span className="ml-2 text-sm text-gray-600">
-                          {service.rating} ({service.bookings})
-                        </span>
-                      </div>
-                      <p className="text-gray-600 text-sm mb-3">{service.description}</p>
-                      <div className="flex justify-between items-center">
-                        <span className="text-lg font-bold text-teal-600">
-                          {service.price}
-                        </span>
-                        <button className="bg-teal-600 text-white px-4 py-2 rounded-md text-sm hover:bg-teal-700 transition-colors">
-                          Chi tiết
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
-          </Carousel>
+          <a 
+            href="https://tubudd.com" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="block relative group"
+          >
+            <div className="relative overflow-hidden rounded-lg aspect-[16/9]">
+              <img
+                src="https://images.unsplash.com/photo-1504150558240-0b4fd8946624"
+                alt="Tour Guide"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <span className="text-white text-lg font-semibold">Khám phá thêm</span>
+              </div>
+            </div>
+          </a>
+
+          <div className="mt-8 text-center">
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Tìm kiếm và đặt hướng dẫn viên du lịch địa phương tại Châu Âu. 
+              Khám phá những trải nghiệm độc đáo và cá nhân hóa với các hướng dẫn viên chuyên nghiệp của chúng tôi.
+            </p>
+          </div>
         </motion.div>
       </div>
     </section>
