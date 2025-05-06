@@ -16,7 +16,7 @@ const esimServices = [
     title: "eSIM Châu Âu 30 ngày",
     rating: 4.8,
     bookings: "2K+ đã đặt",
-    price: "590.000đ",
+    price: "30€",
     description: "Không giới hạn dữ liệu, tốc độ cao"
   },
   {
@@ -24,7 +24,7 @@ const esimServices = [
     title: "eSIM Châu Âu 15 ngày",
     rating: 4.7,
     bookings: "1.5K+ đã đặt",
-    price: "390.000đ",
+    price: "20€",
     description: "Không giới hạn dữ liệu, tốc độ cao"
   },
   {
@@ -32,7 +32,7 @@ const esimServices = [
     title: "eSIM Châu Âu 7 ngày",
     rating: 4.6,
     bookings: "1K+ đã đặt",
-    price: "290.000đ",
+    price: "15€",
     description: "Không giới hạn dữ liệu, tốc độ cao"
   }
 ];
@@ -57,7 +57,7 @@ const CartesSimSection = () => {
           whileInView="show"
           viewport={{ once: true }}
         >
-          eSIM Du lịch
+          Sim Du lịch toàn cầu
         </motion.h2>
         
         <motion.p 
@@ -67,7 +67,7 @@ const CartesSimSection = () => {
           whileInView="show"
           viewport={{ once: true }}
         >
-          Kết nối Internet ổn định cho chuyến du lịch của bạn
+          Đầy đủ các lựa chọn Sim Vật lí/eSim, Sim Data/Sim có thoại - với các đối tác Nhà mạng đa dạng trên toàn Thế giới
         </motion.p>
 
         <motion.div
@@ -103,7 +103,7 @@ const CartesSimSection = () => {
                           {service.price}
                         </span>
                         <button className="bg-teal-600 text-white px-4 py-2 rounded-md text-sm hover:bg-teal-700 transition-colors">
-                          Đặt ngay
+                          Chi tiết
                         </button>
                       </div>
                     </div>

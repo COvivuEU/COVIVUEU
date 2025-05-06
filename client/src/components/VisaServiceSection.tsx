@@ -8,7 +8,7 @@ const visaServices = [
   {
     image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1174&q=80",
     title: "Visa Du Lịch Châu Âu",
-    price: "3.500.000₫",
+    price: "300€",
     rating: 4.7,
     bookings: "3K+ đã đặt",
     description: "Dịch vụ visa trọn gói, hỗ trợ 24/7, tỷ lệ đậu cao",
@@ -17,7 +17,7 @@ const visaServices = [
   {
     image: "https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80",
     title: "Visa VIP Express",
-    price: "7.200.000₫",
+    price: "500€",
     rating: 4.9,
     bookings: "10K+ đã đặt",
     description: "Dịch vụ visa nhanh, ưu tiên xét duyệt",
@@ -26,7 +26,7 @@ const visaServices = [
   {
     image: "https://images.unsplash.com/photo-1539418561314-565804e349c0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80",
     title: "Visa Doanh Nghiệp",
-    price: "4.800.000₫",
+    price: "270€",
     rating: 4.8,
     bookings: "5K+ đã đặt",
     description: "Chuyên visa thương mại và công tác",
@@ -35,7 +35,7 @@ const visaServices = [
   {
     image: "https://images.unsplash.com/photo-1526151755583-8737f135a046?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1174&q=80",
     title: "Visa Du Học",
-    price: "4.300.000₫",
+    price: "300€",
     rating: 4.9,
     bookings: "2K+ đã đặt",
     description: "Hỗ trợ visa du học các nước châu Âu",
@@ -44,7 +44,7 @@ const visaServices = [
   {
     image: "https://images.unsplash.com/photo-1521920592574-49e0b121c964?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
     title: "Visa Schengen",
-    price: "3.900.000₫",
+    price: "270€",
     rating: 4.8,
     bookings: "8K+ đã đặt",
     description: "Visa khối Schengen, đi lại tự do châu Âu",
@@ -53,7 +53,7 @@ const visaServices = [
   {
     image: "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80",
     title: "Visa Định Cư",
-    price: "12.000.000₫",
+    price: "1000€",
     rating: 4.9,
     bookings: "1K+ đã đặt",
     description: "Tư vấn và hỗ trợ visa định cư châu Âu",
@@ -81,7 +81,7 @@ const VisaServiceSection = () => {
           whileInView="show"
           viewport={{ once: true }}
         >
-          Dịch Vụ Visa
+        Visa Schengen
         </motion.h2>
         
         <motion.p 
@@ -91,7 +91,7 @@ const VisaServiceSection = () => {
           whileInView="show"
           viewport={{ once: true }}
         >
-          Đồng hành cùng bạn trong mọi thủ tục visa
+          Dịch vụ Tư vấn, Hỗ trợ chuẩn bị, hoàn thiện và nộp hồ sơ Visa Schengen
         </motion.p>
         
         <motion.div
@@ -128,7 +128,7 @@ const VisaServiceSection = () => {
                             từ {service.price}
                           </span>
                           <button className="bg-teal-600 text-white px-4 py-2 rounded-md text-sm hover:bg-teal-700 transition-colors">
-                            Đặt ngay
+                            Chi tiết
                           </button>
                         </div>
                       </div>

@@ -10,7 +10,7 @@ const homestayServices = [
     title: "Homestay Paris",
     rating: 4.9,
     bookings: "230 lượt đặt",
-    price: "890.000đ/đêm",
+    price: "210€/đêm",
     description: "Căn hộ trung tâm Paris với view tháp Eiffel",
     instant: true
   },
@@ -19,7 +19,7 @@ const homestayServices = [
     title: "Villa Rome",
     rating: 4.8,
     bookings: "180 lượt đặt",
-    price: "1.290.000đ/đêm",
+    price: "325€/đêm",
     description: "Villa sang trọng gần Vatican",
     instant: false
   },
@@ -28,7 +28,7 @@ const homestayServices = [
     title: "Studio Barcelona",
     rating: 4.7,
     bookings: "156 lượt đặt",
-    price: "750.000đ/đêm",
+    price: "90€/đêm",
     description: "Studio hiện đại tại trung tâm Barcelona",
     instant: true
   },
@@ -37,7 +37,7 @@ const homestayServices = [
     title: "Căn hộ Amsterdam",
     rating: 4.8,
     bookings: "203 lượt đặt",
-    price: "950.000đ/đêm",
+    price: "140€/đêm",
     description: "Căn hộ view kênh đào Amsterdam",
     instant: false
   },
@@ -46,7 +46,7 @@ const homestayServices = [
     title: "Homestay Berlin",
     rating: 4.6,
     bookings: "145 lượt đặt",
-    price: "680.000đ/đêm",
+    price: "110€/đêm",
     description: "Phòng riêng tại khu phố cổ Berlin",
     instant: true
   },
@@ -55,7 +55,7 @@ const homestayServices = [
     title: "Penthouse Vienna",
     rating: 4.9,
     bookings: "167 lượt đặt",
-    price: "1.590.000đ/đêm",
+    price: "255€/đêm",
     description: "Penthouse sang trọng tại Vienna",
     instant: false
   }
@@ -132,7 +132,7 @@ const HomestaySection = () => {
                           {service.price}
                         </span>
                         <button className="bg-teal-600 text-white px-4 py-2 rounded-md text-sm hover:bg-teal-700 transition-colors">
-                          Đặt ngay
+                          Chi tiết
                         </button>
                       </div>
                     </div>

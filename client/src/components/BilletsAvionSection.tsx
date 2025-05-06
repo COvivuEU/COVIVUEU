@@ -15,7 +15,7 @@ const flightServices = [
     title: "Vé máy bay Hà Nội - Paris",
     rating: 4.8,
     bookings: "5K+ đã đặt",
-    price: "15.990.000đ",
+    price: "1030€",
     description: "Chuyến bay thẳng, bao gồm hành lý ký gửi",
     instant: true
   },
@@ -24,7 +24,7 @@ const flightServices = [
     title: "Vé máy bay TP.HCM - Frankfurt",
     rating: 4.7,
     bookings: "3K+ đã đặt",
-    price: "18.590.000đ",
+    price: "980€",
     description: "Chuyến bay của Vietnam Airlines với dịch vụ 5 sao",
     instant: true
   },
@@ -33,7 +33,7 @@ const flightServices = [
     title: "Vé máy bay Đà Nẵng - Amsterdam",
     rating: 4.6,
     bookings: "2K+ đã đặt",
-    price: "19.990.000đ",
+    price: "1300€",
     description: "Bay cùng Emirates, transit tại Dubai",
     instant: false
   },
@@ -42,7 +42,7 @@ const flightServices = [
     title: "Vé máy bay Hà Nội - Berlin",
     rating: 4.9,
     bookings: "4K+ đã đặt",
-    price: "17.890.000đ",
+    price: "1250€",
     description: "Chuyến bay của Qatar Airways, transit tại Doha",
     instant: true
   },
@@ -51,7 +51,7 @@ const flightServices = [
     title: "Vé máy bay TP.HCM - Rome",
     rating: 4.7,
     bookings: "2.5K+ đã đặt",
-    price: "16.990.000đ",
+    price: "1267€",
     description: "Bay cùng Turkish Airlines, transit tại Istanbul",
     instant: false
   },
@@ -60,7 +60,7 @@ const flightServices = [
     title: "Vé máy bay Đà Nẵng - Brussels",
     rating: 4.8,
     bookings: "1.8K+ đã đặt",
-    price: "20.590.000đ",
+    price: "1230€",
     description: "Chuyến bay của Air France với dịch vụ cao cấp",
     instant: true
   }
@@ -86,7 +86,7 @@ const BilletsAvionSection = () => {
           whileInView="show"
           viewport={{ once: true }}
         >
-          Vé Máy Bay
+          Vé máy bay
         </motion.h2>
 
         <motion.p 
@@ -96,7 +96,7 @@ const BilletsAvionSection = () => {
           whileInView="show"
           viewport={{ once: true }}
         >
-          Đặt vé máy bay với các đối tác hàng không uy tín của chúng tôi
+          Cung cấp Vé máy bay tất cả các Hãng Hàng không tớ mọi điểm đến trên toàn Thế giới
         </motion.p>
 
         <motion.div
@@ -137,7 +137,7 @@ const BilletsAvionSection = () => {
                           {service.price}
                         </span>
                         <button className="bg-teal-600 text-white px-4 py-2 rounded-md text-sm hover:bg-teal-700 transition-colors">
-                          Đặt ngay
+                          Chi tiết
                         </button>
                       </div>
                     </div>

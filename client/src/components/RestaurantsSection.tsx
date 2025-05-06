@@ -81,7 +81,7 @@ const RestaurantsSection = () => {
           whileInView="show"
           viewport={{ once: true }}
         >
-          Nhà Hàng
+          Nhà hàng Schengen
         </motion.h2>
         
         <motion.p 
@@ -91,7 +91,7 @@ const RestaurantsSection = () => {
           whileInView="show"
           viewport={{ once: true }}
         >
-          Khám phá các nhà hàng đối tác để thưởng thức ẩm thực châu Âu theo sở thích của bạn
+          Gợi ý Nhà hàng tại từng điểm đến
         </motion.p>
 
         <motion.div
@@ -132,7 +132,7 @@ const RestaurantsSection = () => {
                           {service.price}
                         </span>
                         <button className="bg-teal-600 text-white px-4 py-2 rounded-md text-sm hover:bg-teal-700 transition-colors">
-                          Đặt bàn
+                          Chi tiết
                         </button>
                       </div>
                     </div>

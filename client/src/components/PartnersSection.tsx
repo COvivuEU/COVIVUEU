@@ -14,7 +14,7 @@ const PartnersSection = () => {
           whileInView="show"
           viewport={{ once: true }}
         >
-          Khu vực Đối tác
+          KHU VỰC ĐỐI TÁC
         </motion.h2>
         
         <motion.div 

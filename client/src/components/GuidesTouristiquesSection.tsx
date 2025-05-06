@@ -16,7 +16,7 @@ const guideServices = [
     title: "Hướng dẫn viên Paris",
     rating: 4.9,
     bookings: "5K+ đã đặt",
-    price: "890.000đ/ngày",
+    price: "120€/ngày",
     description: "HDV kinh nghiệm, thông thạo tiếng Việt và Pháp"
   },
   {
@@ -24,7 +24,7 @@ const guideServices = [
     title: "Hướng dẫn viên Rome",
     rating: 4.8,
     bookings: "3K+ đã đặt",
-    price: "790.000đ/ngày",
+    price: "115€/ngày",
     description: "HDV chuyên tour văn hóa và ẩm thực Ý"
   },
   {
@@ -32,7 +32,7 @@ const guideServices = [
     title: "Hướng dẫn viên London",
     rating: 4.7,
     bookings: "2K+ đã đặt",
-    price: "850.000đ/ngày",
+    price: "140€/ngày",
     description: "HDV am hiểu lịch sử và văn hóa Anh"
   }
 ];
@@ -57,7 +57,7 @@ const GuidesTouristiquesSection = () => {
           whileInView="show"
           viewport={{ once: true }}
         >
-          Hướng Dẫn Viên Du Lịch
+          Tour guide/Buddy Schengen
         </motion.h2>
         
         <motion.p 
@@ -67,7 +67,7 @@ const GuidesTouristiquesSection = () => {
           whileInView="show"
           viewport={{ once: true }}
         >
-          Tận hưởng chuyến tham quan với hướng dẫn viên địa phương của chúng tôi
+          Hướng dẫn viên/Bạn đồng hành bản địa người Việt tại các quốc gia Schengen
         </motion.p>
 
         <motion.div
@@ -108,7 +108,7 @@ const GuidesTouristiquesSection = () => {
                           {service.price}
                         </span>
                         <button className="bg-teal-600 text-white px-4 py-2 rounded-md text-sm hover:bg-teal-700 transition-colors">
-                          Đặt ngay
+                          Chi tiết
                         </button>
                       </div>
                     </div>

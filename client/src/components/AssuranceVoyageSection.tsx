@@ -16,7 +16,7 @@ const insuranceServices = [
     title: "Bảo hiểm Du lịch Cơ bản",
     rating: 4.7,
     bookings: "3K+ đã đặt",
-    price: "890.000đ",
+    price: "100€",
     description: "Bảo hiểm cơ bản cho chuyến du lịch châu Âu"
   },
   {
@@ -24,7 +24,7 @@ const insuranceServices = [
     title: "Bảo hiểm Du lịch VIP",
     rating: 4.9,
     bookings: "1K+ đã đặt",
-    price: "2.890.000đ",
+    price: "350€",
     description: "Bảo hiểm toàn diện với hỗ trợ y tế 24/7"
   },
   {
@@ -32,7 +32,7 @@ const insuranceServices = [
     title: "Bảo hiểm Gia đình",
     rating: 4.8,
     bookings: "2K+ đã đặt",
-    price: "3.590.000đ",
+    price: "330€",
     description: "Bảo hiểm cho cả gia đình với ưu đãi đặc biệt"
   },
   {
@@ -40,7 +40,7 @@ const insuranceServices = [
     title: "Bảo hiểm Dài hạn",
     rating: 4.6,
     bookings: "500+ đã đặt",
-    price: "5.990.000đ",
+    price: "350€",
     description: "Bảo hiểm du lịch dài hạn lên đến 1 năm"
   },
   {
@@ -48,7 +48,7 @@ const insuranceServices = [
     title: "Bảo hiểm Premium",
     rating: 4.9,
     bookings: "800+ đã đặt",
-    price: "4.290.000đ",
+    price: "550€",
     description: "Bảo hiểm cao cấp với quyền lợi tối đa"
   },
   {
@@ -56,7 +56,7 @@ const insuranceServices = [
     title: "Bảo hiểm Du học",
     rating: 4.7,
     bookings: "1.5K+ đã đặt",
-    price: "6.990.000đ",
+    price: "460€",
     description: "Bảo hiểm chuyên biệt cho du học sinh"
   }
 ];
@@ -81,7 +81,7 @@ const AssuranceVoyageSection = () => {
           whileInView="show"
           viewport={{ once: true }}
         >
-          Bảo hiểm Du lịch
+          Bảo hiểm Du lịch toàn cầu
         </motion.h2>
         
         <motion.p 
@@ -91,7 +91,7 @@ const AssuranceVoyageSection = () => {
           whileInView="show"
           viewport={{ once: true }}
         >
-          Bảo vệ chuyến đi của bạn với các gói bảo hiểm của chúng tôi
+          Chia sẻ rủi ro trong các trường hợp rủi ro về Tài sản, Hoãn/Hủy chuyến bay, Tai nạn, Ốm đau... khi đi Du lịch
         </motion.p>
 
         <motion.div
@@ -128,7 +128,7 @@ const AssuranceVoyageSection = () => {
                             {service.price}
                           </span>
                           <button className="bg-teal-600 text-white px-4 py-2 rounded-md text-sm hover:bg-teal-700 transition-colors">
-                            Đặt ngay
+                            Chi tiết
                           </button>
                         </div>
                       </div>

@@ -9,7 +9,7 @@ const tourServices = [
     title: "Tour Khám Phá Paris",
     rating: 4.8,
     bookings: "256 lượt đặt",
-    price: "2.990.000đ",
+    price: "450€",
     description: "Khám phá thành phố ánh sáng với tour trọn gói 3 ngày 2 đêm",
   },
   {
@@ -17,7 +17,7 @@ const tourServices = [
     title: "Tour Châu Âu Cổ Điển",
     rating: 4.7,
     bookings: "189 lượt đặt",
-    price: "15.990.000đ",
+    price: "2500€",
     description: "Hành trình 10 ngày qua 5 quốc gia châu Âu",
   },
   {
@@ -25,7 +25,7 @@ const tourServices = [
     title: "Tour Rome - Venice",
     rating: 4.9,
     bookings: "312 lượt đặt",
-    price: "8.990.000đ",
+    price: "1540€",
     description: "Khám phá vẻ đẹp của Ý trong 7 ngày",
   },
   {
@@ -33,7 +33,7 @@ const tourServices = [
     title: "Tour Thụy Sĩ",
     rating: 4.6,
     bookings: "145 lượt đặt",
-    price: "12.990.000đ",
+    price: "1500€",
     description: "Trải nghiệm mùa đông tuyết trắng tại Thụy Sĩ",
   },
   {
@@ -41,7 +41,7 @@ const tourServices = [
     title: "Tour Barcelona",
     rating: 4.7,
     bookings: "203 lượt đặt",
-    price: "6.990.000đ",
+    price: "750€",
     description: "Khám phá kiến trúc độc đáo của Barcelona",
   }
 ];
@@ -66,7 +66,7 @@ const ToursSection = () => {
           whileInView="show"
           viewport={{ once: true }}
         >
-          Tour Du Lịch
+          Land Tour Schengen
         </motion.h2>
 
         <motion.p 
@@ -76,7 +76,7 @@ const ToursSection = () => {
           whileInView="show"
           viewport={{ once: true }}
         >
-          Khám phá các tour du lịch với trải nghiệm có hướng dẫn của chúng tôi
+          Các hình thức Tour Du lịch/trải nghiệm tại các quốc gia Schengen dành cho Du khách người Việt
         </motion.p>
 
         <motion.div
@@ -112,7 +112,7 @@ const ToursSection = () => {
                           {service.price}
                         </span>
                         <button className="bg-teal-600 text-white px-3 py-1.5 text-sm rounded-full hover:bg-teal-700 transition-colors">
-                          Đặt ngay
+                          Chi tiết
                         </button>
                       </div>
                     </div>

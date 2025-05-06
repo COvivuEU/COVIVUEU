@@ -72,7 +72,7 @@ const ServicesSection = () => {
           whileInView="show"
           viewport={{ once: true }}
         >
-          Dịch vụ
+        DỊCH VỤ
         </motion.h2>
 
         <motion.div 
