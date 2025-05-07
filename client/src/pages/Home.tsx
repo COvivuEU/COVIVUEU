@@ -12,6 +12,10 @@ import GuidesTouristiquesSection from "@/components/GuidesTouristiquesSection";
 import CartesSimSection from "@/components/CartesSimSection";
 import RestaurantsSection from "@/components/RestaurantsSection";
 import PartnersSection from "@/components/PartnersSection";
+import LandTourSection from "@/components/LandTourSection"; // Added import
+import CityTourSection from "@/components/CityTourSection"; // Added import
+import DayTourSection from "@/components/DayTourSection"; // Added import
+import SpecialTourSection from "@/components/SpecialTourSection"; // Added import
 
 const Home = () => {
   // Smooth scrolling for navigation links
@@ -19,15 +23,15 @@ const Home = () => {
     const handleAnchorClick = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
       const anchor = target.closest('a');
-      
+
       if (anchor && anchor.hash && anchor.hash.startsWith('#')) {
         e.preventDefault();
-        
+
         const targetId = anchor.getAttribute('href');
         if (!targetId) return;
-        
+
         const targetElement = document.querySelector(targetId);
-        
+
         if (targetElement) {
           window.scrollTo({
             top: targetElement.getBoundingClientRect().top + window.scrollY - 80, // Adjust for header height
@@ -38,7 +42,7 @@ const Home = () => {
     };
 
     document.addEventListener('click', handleAnchorClick);
-    
+
     return () => {
       document.removeEventListener('click', handleAnchorClick);
     };
@@ -47,7 +51,7 @@ const Home = () => {
   return (
     <div className="min-h-screen flex flex-col bg-white">
       <Header />
-      
+
       <main>
         <HeroSection />
         <ServicesSection />
@@ -55,13 +59,17 @@ const Home = () => {
         <AssuranceVoyageSection />
         <BilletsAvionSection />
         <ToursSection />
+        <div id="land-tour"><LandTourSection /></div>
+        <div id="city-tour"><CityTourSection /></div>
+        <div id="day-tour"><DayTourSection /></div>
+        <div id="special-tour"><SpecialTourSection /></div>
         <HomestaySection />
         <GuidesTouristiquesSection />
         <CartesSimSection />
         <RestaurantsSection />
         <PartnersSection />
       </main>
-      
+
       <Footer />
     </div>
   );

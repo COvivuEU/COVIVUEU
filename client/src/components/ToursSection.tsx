@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { fadeIn } from "@/lib/animations";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
@@ -58,7 +57,7 @@ const ToursSection = () => {
         >
           TOURS Du Lịch
         </motion.h2>
-        
+
         <motion.div 
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8"
           variants={fadeIn("up", "tween", 0.3, 1)}
@@ -89,6 +88,15 @@ const ToursSection = () => {
                               <div className="text-center text-white p-4">
                                 <h3 className="text-lg font-bold mb-2">{tour.title}</h3>
                                 <p className="text-sm">{tour.description}</p>
+                                <a 
+                                  href={`#${index === 0 ? 'land-tour' : 
+                                           index === 1 ? 'city-tour' : 
+                                           index === 2 ? 'day-tour' : 
+                                           'special-tour'}`} 
+                                  className="inline-block mt-4 bg-teal-600 text-white px-4 py-2 rounded-md text-sm hover:bg-teal-700 transition-colors"
+                                >
+                                  Xem chi tiết
+                                </a>
                               </div>
                             </div>
                           </div>
