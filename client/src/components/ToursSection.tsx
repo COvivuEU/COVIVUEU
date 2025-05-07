@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { fadeIn } from "@/lib/animations";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
+import { useState } from "react";
+
 const tourTypes = [
   {
     title: "Land Tour trọn gói",
@@ -66,16 +68,43 @@ const ToursSection = () => {
           {tourTypes.map((tour, index) => (
             <div
               key={index}
-              className="relative"
+              className="relative group"
+              onMouseEnter={() => setHoveredIndex(index)}
+              onMouseLeave={() => setHoveredIndex(null)}
             >
-              <a 
-                href={`#${index === 0 ? 'land-tour' : 
-                         index === 1 ? 'city-tour' : 
-                         index === 2 ? 'day-tour' : 
-                         'special-tour'}`}
-                className="block"
-              >
-                <div className="flex flex-col items-center justify-center p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-all duration-300 h-[200px] relative overflow-hidden">
+              <div className="flex flex-col items-center justify-center p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-all duration-300 h-[200px] relative overflow-hidden">
+                {hoveredIndex === index ? (
+                  <Carousel className="absolute inset-0 w-full h-full">
+                    <CarouselContent>
+                      {tour.images.map((image, imgIndex) => (
+                        <CarouselItem key={imgIndex} className="w-full h-full">
+                          <div className="relative w-full h-full">
+                            <img
+                              src={image}
+                              alt={`${tour.title} ${imgIndex + 1}`}
+                              className="absolute inset-0 w-full h-full object-cover"
+                            />
+                            <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                              <div className="text-center text-white p-4">
+                                <h3 className="text-lg font-bold mb-2">{tour.title}</h3>
+                                <p className="text-sm">{tour.description}</p>
+                                <a 
+                                  href={`#${index === 0 ? 'land-tour' : 
+                                           index === 1 ? 'city-tour' : 
+                                           index === 2 ? 'day-tour' : 
+                                           'special-tour'}`} 
+                                  className="inline-block mt-4 bg-teal-600 text-white px-4 py-2 rounded-md text-sm hover:bg-teal-700 transition-colors"
+                                >
+                                  Xem chi tiết
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </CarouselItem>
+                      ))}
+                    </CarouselContent>
+                  </Carousel>
+                ) : (
                   <>
                     <div className="text-teal-600 mb-4">
                       {index === 0 ? (
@@ -124,8 +153,8 @@ const ToursSection = () => {
                     <h3 className="text-lg font-medium text-center mb-2">{tour.title}</h3>
                     <p className="text-gray-600 text-center text-sm">{tour.description}</p>
                   </>
-                </div>
-              </a>
+                )}
+              </div>
             </div>
           ))}
         </motion.div>
