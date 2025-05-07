@@ -67,8 +67,6 @@ const Home = () => {
         <GuidesTouristiquesSection />
         <CartesSimSection />
         <RestaurantsSection />
-        <div id="vietnamese-restaurant"><VietnameseRestaurantSection /></div>
-        <div id="european-restaurant"><EuropeanRestaurantSection /></div>
         <PartnersSection />
       </main>
 
