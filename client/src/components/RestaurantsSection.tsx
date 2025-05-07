@@ -1,67 +1,109 @@
-import { motion } from "framer-motion";
-import { staggerContainer, fadeIn } from "@/lib/animations";
 
-const restaurantTypes = [
+import { motion } from "framer-motion";
+import { fadeIn } from "@/lib/animations";
+import { StarIcon } from "lucide-react";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+
+const restaurantServices = [
   {
-    title: "Nhà hàng Việt",
-    description: "Khám phá hương vị quê nhà tại châu Âu",
-    icon: <div className="flex justify-center items-center w-10 h-10 border border-teal-600 rounded-md">
-      <svg className="h-6 w-6 text-teal-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-        <path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z" />
-      </svg>
-    </div>
+    image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0",
+    title: "Nhà hàng Việt Nam",
+    rating: 4.8,
+    bookings: "2K+ đã đặt",
+    price: "€€",
+    description: "Hương vị quê hương giữa lòng châu Âu",
+    instant: true
   },
   {
-    title: "Nhà hàng Âu",
-    description: "Trải nghiệm ẩm thực đặc sắc châu Âu",
-    icon: <div className="flex justify-center items-center w-10 h-10 border border-teal-600 rounded-md">
-      <svg className="h-6 w-6 text-teal-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-        <path d="M12 3L6 9h12l-6-6z" />
-        <path d="M12 21l-6-6h12l-6 6z" />
-        <path d="M12 3v18" />
-      </svg>
-    </div>
+    image: "https://images.unsplash.com/photo-1537047902294-62a40c20a6ae",
+    title: "Nhà hàng Pháp",
+    rating: 4.9,
+    bookings: "3K+ đã đặt", 
+    price: "€€€",
+    description: "Ẩm thực Pháp tinh tế và sang trọng",
+    instant: false
   }
 ];
 
 const RestaurantsSection = () => {
+  const renderStars = (rating: number) => {
+    return Array(5).fill(0).map((_, index) => (
+      <StarIcon
+        key={index}
+        className={`h-4 w-4 ${index < rating ? 'text-yellow-400 fill-yellow-400' : 'text-gray-300'}`}
+      />
+    ));
+  };
+
   return (
-    <section id="restaurants" className="py-16 bg-white border-t border-gray-100">
+    <section id="restaurants" className="py-12 bg-white border-t border-gray-100">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.h2 
-          className="text-3xl font-bold text-center mb-12"
+          className="text-2xl md:text-3xl font-bold mb-4"
           variants={fadeIn("up", "tween", 0.2, 1)}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
         >
-          NHÀ HÀNG
+          Nhà hàng Schengen
         </motion.h2>
-
-        <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 gap-6"
-          variants={staggerContainer}
+        
+        <motion.p 
+          className="text-base md:text-lg text-gray-700 mb-6"
+          variants={fadeIn("up", "tween", 0.3, 1)}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
         >
-          {restaurantTypes.map((restaurant, index) => (
-            <motion.div 
-              key={index}
-              className="flex flex-col items-center justify-center border border-gray-200 rounded-md p-6 hover:shadow-md transition-shadow"
-              variants={fadeIn("up", "tween", 0.1 * index, 0.5)}
-            >
-              <div className="flex justify-center items-center mb-4">
-                {restaurant.icon}
-              </div>
-              <h3 className="text-center text-gray-900 font-medium mb-2">
-                {restaurant.title}
-              </h3>
-              <p className="text-center text-gray-600 text-sm">
-                {restaurant.description}
-              </p>
-            </motion.div>
-          ))}
+          Gợi ý Nhà hàng tại từng điểm đến
+        </motion.p>
+        
+        <motion.div
+          variants={fadeIn("up", "tween", 0.4, 1)}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          className="w-full"
+        >
+          <Carousel className="w-full max-w-5xl mx-auto">
+            <CarouselContent>
+              {restaurantServices.map((service, index) => (
+                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                  <div className="relative h-full bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
+                    <div className="relative pt-[56.25%] overflow-hidden">
+                      <img
+                        src={service.image}
+                        alt={service.title}
+                        className="absolute top-0 left-0 w-full h-full object-cover"
+                      />
+                    </div>
+                    <div className="p-4 flex flex-col flex-grow">
+                      <h3 className="font-semibold text-lg mb-2">{service.title}</h3>
+                      <div className="flex items-center mb-2">
+                        {renderStars(service.rating)}
+                        <span className="ml-2 text-sm text-gray-600">
+                          {service.rating} ({service.bookings})
+                        </span>
+                      </div>
+                      <p className="text-gray-600 text-sm mb-3">{service.description}</p>
+                      <div className="mt-auto">
+                        <div className="flex justify-between items-center">
+                          <span className="text-lg font-bold text-teal-600">
+                            {service.price}
+                          </span>
+                          <button className="bg-teal-600 text-white px-4 py-2 rounded-md text-sm hover:bg-teal-700 transition-colors">
+                            Chi tiết
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
         </motion.div>
       </div>
     </section>
