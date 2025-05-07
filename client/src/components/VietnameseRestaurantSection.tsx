@@ -51,7 +51,7 @@ const VietnameseRestaurantSection = () => {
           whileInView="show"
           viewport={{ once: true }}
         >
-          Nhà hàng Việt Nam
+          Đồ Á, Đồ Việt Nam
         </motion.h2>
         
         <motion.p 

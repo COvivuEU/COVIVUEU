@@ -51,7 +51,7 @@ const EuropeanRestaurantSection = () => {
           whileInView="show"
           viewport={{ once: true }}
         >
-          Nhà hàng Âu
+          Đồ Âu - Đặc sản địa phương
         </motion.h2>
         
         <motion.p 

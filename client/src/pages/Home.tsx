@@ -16,6 +16,8 @@ import LandTourSection from "@/components/LandTourSection"; // Added import
 import CityTourSection from "@/components/CityTourSection"; // Added import
 import DayTourSection from "@/components/DayTourSection"; // Added import
 import SpecialTourSection from "@/components/SpecialTourSection"; // Added import
+import VietnameseRestaurantSection from "@/components/VietnameseRestaurantSection"; // Added import
+import EuropeanRestaurantSection from "@/components/EuropeanRestaurantSection"; // Added import
 
 const Home = () => {
   // Smooth scrolling for navigation links
@@ -67,6 +69,8 @@ const Home = () => {
         <GuidesTouristiquesSection />
         <CartesSimSection />
         <RestaurantsSection />
+        <div id="VietnameseRestaurant"><VietnameseRestaurantSection /></div>
+        <div id="EuropeanRestaurant"><EuropeanRestaurantSection /></div>
         <PartnersSection />
       </main>
 

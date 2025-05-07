@@ -5,7 +5,7 @@ import { Link } from "wouter";
 
 const restaurantTypes = [
   {
-    title: "Nhà hàng Việt",
+    title: "Đồ Á, Đồ Việt Nam",
     description: "Khám phá hương vị quê nhà tại châu Âu",
     href: "#vietnamese-restaurant",
     icon: <div className="flex justify-center items-center w-10 h-10 border border-teal-600 rounded-md">
@@ -15,7 +15,7 @@ const restaurantTypes = [
     </div>
   },
   {
-    title: "Nhà hàng Âu",
+    title: "Đồ Âu - Đặc sản địa phương ",
     description: "Trải nghiệm ẩm thực đặc sắc châu Âu",
     href: "#european-restaurant",
     icon: <div className="flex justify-center items-center w-10 h-10 border border-teal-600 rounded-md">
@@ -39,7 +39,7 @@ const RestaurantsSection = () => {
           whileInView="show"
           viewport={{ once: true }}
         >
-          NHÀ HÀNG
+          Nhà hàng
         </motion.h2>
 
         <motion.div 
