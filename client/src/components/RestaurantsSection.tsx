@@ -1,10 +1,13 @@
+
 import { motion } from "framer-motion";
 import { staggerContainer, fadeIn } from "@/lib/animations";
+import { Link } from "wouter";
 
 const restaurantTypes = [
   {
     title: "Nhà hàng Việt",
     description: "Khám phá hương vị quê nhà tại châu Âu",
+    href: "#vietnamese-restaurant",
     icon: <div className="flex justify-center items-center w-10 h-10 border border-teal-600 rounded-md">
       <svg className="h-6 w-6 text-teal-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
         <path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z" />
@@ -14,6 +17,7 @@ const restaurantTypes = [
   {
     title: "Nhà hàng Âu",
     description: "Trải nghiệm ẩm thực đặc sắc châu Âu",
+    href: "#european-restaurant",
     icon: <div className="flex justify-center items-center w-10 h-10 border border-teal-600 rounded-md">
       <svg className="h-6 w-6 text-teal-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
         <path d="M12 3L6 9h12l-6-6z" />
@@ -46,9 +50,10 @@ const RestaurantsSection = () => {
           viewport={{ once: true }}
         >
           {restaurantTypes.map((restaurant, index) => (
-            <motion.div 
+            <motion.a
+              href={restaurant.href}
               key={index}
-              className="flex flex-col items-center justify-center border border-gray-200 rounded-md p-6 hover:shadow-md transition-shadow"
+              className="flex flex-col items-center justify-center border border-gray-200 rounded-md p-6 hover:shadow-md transition-shadow cursor-pointer"
               variants={fadeIn("up", "tween", 0.1 * index, 0.5)}
             >
               <div className="flex justify-center items-center mb-4">
@@ -60,7 +65,7 @@ const RestaurantsSection = () => {
               <p className="text-center text-gray-600 text-sm">
                 {restaurant.description}
               </p>
-            </motion.div>
+            </motion.a>
           ))}
         </motion.div>
       </div>
