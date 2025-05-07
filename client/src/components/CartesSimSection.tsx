@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { fadeIn } from "@/lib/animations";
 import { StarIcon } from "lucide-react";
@@ -59,7 +58,7 @@ const CartesSimSection = () => {
         >
           Sim Du lịch toàn cầu
         </motion.h2>
-        
+
         <motion.p 
           className="text-base md:text-lg text-gray-700 mb-6"
           variants={fadeIn("up", "tween", 0.3, 1)}
@@ -102,9 +101,9 @@ const CartesSimSection = () => {
                         <span className="text-lg font-bold text-teal-600">
                           {service.price}
                         </span>
-                        <button className="bg-teal-600 text-white px-4 py-2 rounded-md text-sm hover:bg-teal-700 transition-colors">
+                        <a href="/sim-cards" className="bg-teal-600 text-white px-4 py-2 rounded-md text-sm hover:bg-teal-700 transition-colors">
                           Chi tiết
-                        </button>
+                        </a>
                       </div>
                     </div>
                   </div>
