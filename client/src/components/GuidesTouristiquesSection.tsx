@@ -36,11 +36,11 @@ const GuidesTouristiquesSection = () => {
             href="https://tubudd.com" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="block relative group"
+            className="block relative group max-w-2xl mx-auto"
           >
-            <div className="relative overflow-hidden rounded-lg aspect-[16/9]">
+            <div className="relative overflow-hidden rounded-lg aspect-[3/2]">
               <img
-                src="https://images.unsplash.com/photo-1504150558240-0b4fd8946624"
+                src="https://images.unsplash.com/photo-1527631746610-bca00a040d60"
                 alt="Tour Guide"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
