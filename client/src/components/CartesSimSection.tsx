@@ -20,7 +20,7 @@ const esimServices = [
     description: "Không giới hạn dữ liệu, tốc độ cao"
   },
   {
-    image: "https://images.unsplash.com/photo-1585944672394-5485648bd9f6",
+    image: "https://images.pexels.com/photos/1476321/pexels-photo-1476321.jpeg",
     title: "eSIM Châu Âu 15 ngày",
     rating: 4.7,
     bookings: "1.5K+ đã đặt",

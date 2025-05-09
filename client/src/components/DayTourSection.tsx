@@ -14,7 +14,7 @@ const dayTours = [
     description: "Khám phá những làng cổ xinh đẹp của Pháp",
   },
   {
-    image: "https://images.unsplash.com/photo-1465778893808-9b3d1b443be6",
+    image: "https://images.pexels.com/photos/442116/pexels-photo-442116.jpeg",
     title: "Vườn nho Bordeaux",
     price: "180€",
     rating: 4.8,
