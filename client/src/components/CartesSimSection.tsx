@@ -12,7 +12,7 @@ import {
 
 const esimServices = [
   {
-    image: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9",
+    image: "https://images.pexels.com/photos/47261/pexels-photo-47261.jpeg",
     title: "eSIM Châu Âu 30 ngày",
     rating: 4.8,
     bookings: "2K+ đã đặt",

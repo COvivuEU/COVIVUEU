@@ -6,7 +6,7 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 
 const guideServices = [
   {
-    image: "https://images.unsplash.com/photo-1516483638261-f4dbaf036963",
+    image: "https://images.pexels.com/photos/2064827/pexels-photo-2064827.jpeg",
     title: "Tour Guide Ý",
     rating: 4.8,
     bookings: "2K+ đã đặt",

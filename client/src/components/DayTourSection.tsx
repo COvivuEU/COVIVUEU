@@ -6,7 +6,7 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 
 const dayTours = [
   {
-    image: "https://images.unsplash.com/photo-1513581166391-887a96ddeafd",
+    image: "https://images.pexels.com/photos/2570063/pexels-photo-2570063.jpeg",
     title: "Tour làng cổ Pháp",
     price: "150€",
     rating: 4.7,
