@@ -51,7 +51,7 @@
 
   /* Fix carousel container alignment */
   .embla {
-    @apply overflow-hidden w-full max-w-[100vw];
+    @apply overflow-hidden w-full max-w-[100vw] container mx-auto px-4 sm:px-6 lg:px-8;
     margin: 0 !important;
   }
 
@@ -63,7 +63,6 @@
     @apply w-full flex gap-4;
     margin: 0 !important;
     padding: 0 !important;
-    padding-left: 0 !important;
   }
 
   .embla__slide {
