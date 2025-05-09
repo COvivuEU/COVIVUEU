@@ -12,11 +12,11 @@ import {
 const flightServices = [
   {
     image: "https://images.unsplash.com/photo-1464037866556-6812c9d1c72e",
-    title: "Vé máy bay Hà Nội - Paris",
+    title: "Pacific Voyages",
     rating: 4.8,
-    bookings: "5K+ đã đặt",
-    price: "1030€",
-    description: "Chuyến bay thẳng, bao gồm hành lý ký gửi",
+    bookings: "5K+ reviews",
+    price: "Paris - Pháp",
+    description: "Đại lí chính thức của VietnamAirlines tại Châu Âu",
     instant: true
   },
   {
@@ -96,7 +96,7 @@ const BilletsAvionSection = () => {
           whileInView="show"
           viewport={{ once: true }}
         >
-          Cung cấp Vé máy bay tất cả các Hãng Hàng không tớ mọi điểm đến trên toàn Thế giới
+          Cung cấp Vé máy bay tất cả các Hãng Hàng không tới mọi điểm đến trên toàn Thế giới
         </motion.p>
 
         <motion.div

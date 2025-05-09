@@ -72,7 +72,7 @@ const ToursSection = () => {
           whileInView="show"
           viewport={{ once: true }}
         >
-          TOURS Du Lịch
+          Tour Du Lịch
         </motion.h2>
 
         <motion.div 
