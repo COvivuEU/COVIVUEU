@@ -42,7 +42,7 @@
   }
 
   .carousel-content {
-    @apply flex items-start px-0;
+    @apply flex items-start w-full;
   }
 
   .carousel-item {
@@ -51,15 +51,19 @@
 
   /* Fix carousel container alignment */
   .embla {
-    @apply px-0 overflow-hidden;
+    @apply overflow-hidden w-full;
+  }
+
+  .embla__viewport {
+    @apply w-full;
   }
 
   .embla__container {
-    @apply mx-0;
+    @apply w-full flex;
   }
 
   .embla__slide {
-    @apply px-0;
+    @apply flex-[0_0_100%] min-w-0;
   }
 
   .image-container {
