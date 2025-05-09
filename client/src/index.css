@@ -51,19 +51,30 @@
 
   /* Fix carousel container alignment */
   .embla {
-    @apply overflow-hidden w-full;
+    @apply overflow-hidden w-full max-w-[100vw];
+    margin: 0 !important;
   }
 
   .embla__viewport {
-    @apply w-full;
+    @apply w-full overflow-visible;
   }
 
   .embla__container {
-    @apply w-full flex;
+    @apply w-full flex gap-4;
+    margin: 0 !important;
+    padding: 0 !important;
   }
 
   .embla__slide {
-    @apply flex-[0_0_100%] min-w-0;
+    @apply flex-[0_0_100%] md:flex-[0_0_50%] lg:flex-[0_0_33.333%] min-w-0 px-0;
+  }
+
+  .carousel-content {
+    @apply flex w-full mx-0 px-0;
+  }
+
+  .carousel-item {
+    @apply w-full px-0;
   }
 
   .image-container {
