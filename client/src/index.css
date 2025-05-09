@@ -14,31 +14,47 @@
 /* Mobile-first responsive styles */
 @layer base {
   h2 {
-    @apply text-2xl md:text-3xl font-bold mb-4;
+    @apply text-2xl md:text-3xl font-bold mb-4 text-left container mx-auto px-4 sm:px-6 lg:px-8;
   }
 
   section p {
-    @apply text-base md:text-lg text-gray-700 mb-6;
+    @apply text-base md:text-lg text-gray-700 mb-6 text-left container mx-auto px-4 sm:px-6 lg:px-8;
   }
 
   .service-title {
-    @apply text-lg md:text-xl font-semibold mb-2;
+    @apply text-lg md:text-xl font-semibold mb-2 text-left;
   }
 
   .service-description {
-    @apply text-sm md:text-base text-gray-600 mb-2;
+    @apply text-sm md:text-base text-gray-600 mb-2 text-left;
   }
 
   .service-price {
-    @apply text-base md:text-lg font-semibold text-teal-600 mb-2;
+    @apply text-base md:text-lg font-semibold text-teal-600 mb-2 text-left;
   }
 
   .service-rating {
-    @apply text-sm md:text-base text-gray-600;
+    @apply text-sm md:text-base text-gray-600 text-left;
   }
 
   section {
     @apply py-8 md:py-12;
+  }
+
+  .carousel-content {
+    @apply flex items-start;
+  }
+
+  .carousel-item {
+    @apply flex flex-col items-start;
+  }
+
+  .image-container {
+    @apply w-full relative pt-[56.25%] overflow-hidden;
+  }
+
+  .image-container img {
+    @apply absolute top-0 left-0 w-full h-full object-cover;
   }
 }
 
