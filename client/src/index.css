@@ -42,11 +42,24 @@
   }
 
   .carousel-content {
-    @apply flex items-start;
+    @apply flex items-start px-0;
   }
 
   .carousel-item {
-    @apply flex flex-col items-start;
+    @apply flex flex-col items-start w-full;
+  }
+
+  /* Fix carousel container alignment */
+  .embla {
+    @apply px-0 overflow-hidden;
+  }
+
+  .embla__container {
+    @apply mx-0;
+  }
+
+  .embla__slide {
+    @apply px-0;
   }
 
   .image-container {
