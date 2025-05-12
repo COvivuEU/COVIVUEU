@@ -10,6 +10,7 @@ import ToursSection from "@/components/ToursSection";
 import HomestaySection from "@/components/HomestaySection";
 import GuidesTouristiquesSection from "@/components/GuidesTouristiquesSection";
 import TourFromVNSection from "@/components/TourFromVNSection";
+import EuropeanTourSection from "@/components/EuropeanTourSection";
 import CartesSimSection from "@/components/CartesSimSection";
 import RestaurantsSection from "@/components/RestaurantsSection";
 import PartnersSection from "@/components/PartnersSection";
@@ -70,6 +71,7 @@ const Home = () => {
         <GuidesTouristiquesSection />
         <CartesSimSection />
         <TourFromVNSection />
+        <EuropeanTourSection />
         <RestaurantsSection />
         <div id="VietnameseRestaurant"><VietnameseRestaurantSection /></div>
         <div id="EuropeanRestaurant"><EuropeanRestaurantSection /></div>
