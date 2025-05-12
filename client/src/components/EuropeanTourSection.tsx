@@ -1,4 +1,3 @@
-
 import { Star } from "lucide-react";
 import { motion } from "framer-motion";
 import { staggerContainer, fadeIn } from "@/lib/animations";
@@ -108,7 +107,7 @@ const EuropeanTourSection = () => {
         >
           Land Tour từ Châu Âu
         </motion.h2>
-        
+
         <motion.div
           variants={fadeIn("up", "tween", 0.4, 1)}
           initial="hidden"
