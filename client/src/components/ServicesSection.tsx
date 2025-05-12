@@ -9,42 +9,48 @@ const services = [
             <MapPin className="h-6 w-6 text-teal-600" />
           </div>,
     title: "Tour tới Việt Nam",
-    link: "#tours"
+    link: "#tours",
+    isExternal: false
   },
   {
     icon: <div className="flex justify-center items-center w-10 h-10 border border-teal-600 rounded-md">
             <MapPin className="h-6 w-6 text-teal-600" />
           </div>,
     title: "Land tour tại Châu Âu",
-    link: "#land-tour"
+    link: "#land-tour",
+    isExternal: false
   },
   {
     icon: <div className="flex justify-center items-center w-10 h-10 border border-teal-600 rounded-md">
             <Home className="h-6 w-6 text-teal-600" />
           </div>,
     title: "Homestay Host Việt",
-    link: "#homestay"
+    link: "#homestay",
+    isExternal: false
   },
   {
     icon: <div className="flex justify-center items-center w-10 h-10 border border-teal-600 rounded-md">
             <User className="h-6 w-6 text-teal-600" />
           </div>,
     title: "Tourguide/Buddy người Việt",
-    link: "#guides"
+    link: "#guides",
+    isExternal: false
   },
   {
     icon: <div className="flex justify-center items-center w-10 h-10 border border-teal-600 rounded-md">
             <Car className="h-6 w-6 text-teal-600" />
           </div>,
     title: "Ô tô Tài xế Việt",
-    link: "#transport"
+    link: "#transport",
+    isExternal: false
   },
   {
     icon: <div className="flex justify-center items-center w-10 h-10 border border-teal-600 rounded-md">
             <Plane className="h-6 w-6 text-teal-600" />
           </div>,
     title: "Vé máy bay",
-    link: "#billets-avion"
+    link: "https://www.tubudd.com/billets-avion",
+    isExternal: true
   },
   {
     icon: <div className="flex justify-center items-center w-10 h-10 border border-teal-600 rounded-md">
@@ -55,28 +61,32 @@ const services = [
             </svg>
           </div>,
     title: "Visa",
-    link: "#visa-service"
+    link: "https://www.tubudd.com/visa-service",
+    isExternal: true
   },
   {
     icon: <div className="flex justify-center items-center w-10 h-10 border border-teal-600 rounded-md">
             <FileText className="h-6 w-6 text-teal-600" />
           </div>,
     title: "Bảo hiểm Du lịch Toàn cầu",
-    link: "#assurance-voyage"
+    link: "https://www.tubudd.com/assurance-voyage",
+    isExternal: true
   },
   {
     icon: <div className="flex justify-center items-center w-10 h-10 border border-teal-600 rounded-md">
             <Smartphone className="h-6 w-6 text-teal-600" />
           </div>,
     title: "Sim Du lịch toàn cầu",
-    link: "#esim"
+    link: "https://www.tubudd.com/cartes-sim",
+    isExternal: true
   },
   {
     icon: <div className="flex justify-center items-center w-10 h-10 border border-teal-600 rounded-md">
             <UtensilsCrossed className="h-6 w-6 text-teal-600" />
           </div>,
     title: "Nhà hàng",
-    link: "#restaurants"
+    link: "https://www.tubudd.com/restaurants",
+    isExternal: true
   }
 ];
 
@@ -105,6 +115,8 @@ const ServicesSection = () => {
             <motion.a
               href={service.link}
               key={index}
+              target={service.isExternal ? "_blank" : "_self"}
+              rel={service.isExternal ? "noopener noreferrer" : ""}
               className="group flex flex-col items-center justify-center border border-gray-200 rounded-md p-6 hover:shadow-md transition-shadow cursor-pointer"
               variants={fadeIn("up", "tween", 0.1 * index, 0.5)}
             >
