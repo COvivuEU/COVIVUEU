@@ -42,11 +42,41 @@
   }
 
   .carousel-content {
-    @apply flex items-start;
+    @apply flex items-start w-full;
   }
 
   .carousel-item {
-    @apply flex flex-col items-start;
+    @apply flex flex-col items-start w-full;
+  }
+
+  /* Fix carousel container alignment */
+  .embla {
+    @apply overflow-hidden w-full max-w-[100vw] container mx-auto px-4 sm:px-6 lg:px-8;
+    margin: 0 !important;
+  }
+
+  .embla__viewport {
+    @apply w-full overflow-visible;
+  }
+
+  .embla__container {
+    @apply w-full flex gap-4;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .embla__slide {
+    @apply flex-[0_0_100%] md:flex-[0_0_50%] lg:flex-[0_0_33.333%] min-w-0;
+    padding-left: 0 !important;
+  }
+
+  .carousel-content {
+    @apply flex w-full mx-0;
+    padding-left: 0 !important;
+  }
+
+  .carousel-item {
+    @apply w-full px-0;
   }
 
   .image-container {
