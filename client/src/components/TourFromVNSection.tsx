@@ -93,7 +93,7 @@ const TourFromVNSection = () => {
             <CarouselContent>
               {tourProviders.map((provider, index) => (
                 <CarouselItem key={index} className="md:basis-1/3">
-                  <div className="relative h-full bg-white rounded-lg shadow-md overflow-hidden flex flex-col p-4">
+                  <div className="relative h-full bg-white rounded-lg shadow-md overflow-hidden flex flex-col p-4 min-h-[400px]">
                     <div className="relative h-40 overflow-hidden rounded-lg mb-4">
                       <img
                         src={provider.logo}
@@ -114,10 +114,10 @@ const TourFromVNSection = () => {
                           {provider.rating}
                         </span>
                       </div>
-                      <div className="mt-4">
+                      <div className="mt-auto pt-4">
                         <a 
                           href={provider.link}
-                          className="bg-teal-600 text-white px-4 py-2 rounded-md text-sm hover:bg-teal-700 transition-colors inline-block text-center"
+                          className="bg-teal-600 text-white px-4 py-2 rounded-md text-sm hover:bg-teal-700 transition-colors inline-block text-center w-full"
                         >
                           Chi tiết
                         </a>
