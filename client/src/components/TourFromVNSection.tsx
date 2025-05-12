@@ -108,16 +108,16 @@ const TourFromVNSection = () => {
                       {provider.since && (
                         <p className="text-gray-600 text-sm mb-1">Since: {provider.since}</p>
                       )}
-                      <div className="flex items-center mt-2">
-                        {renderStars(provider.rating)}
-                        <span className="ml-2 text-sm text-gray-600">
-                          {provider.rating}
-                        </span>
-                      </div>
-                      <div className="mt-auto pt-4">
+                      <div className="flex items-center justify-between mt-2">
+                        <div className="flex items-center">
+                          {renderStars(provider.rating)}
+                          <span className="ml-2 text-sm text-gray-600">
+                            {provider.rating}
+                          </span>
+                        </div>
                         <a 
                           href={provider.link}
-                          className="bg-teal-600 text-white px-4 py-2 rounded-md text-sm hover:bg-teal-700 transition-colors inline-block text-center w-full"
+                          className="bg-teal-600 text-white px-4 py-2 rounded-md text-sm hover:bg-teal-700 transition-colors"
                         >
                           Chi tiết
                         </a>
