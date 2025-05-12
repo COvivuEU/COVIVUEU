@@ -118,42 +118,42 @@ const EuropeanTourSection = () => {
           <Carousel className="w-full max-w-5xl mx-auto">
             <CarouselContent>
               {europeanTours.map((provider, index) => (
-                <CarouselItem key={index} className="md:basis-1/3">
-                  <div className="relative h-full bg-white rounded-lg shadow-md overflow-hidden flex flex-col p-4 min-h-[400px]">
-                    <div className="relative h-40 overflow-hidden rounded-lg">
+                <CarouselItem key={index} className="md:basis-1/3 p-2">
+                  <div className="relative h-full bg-white/80 backdrop-blur-sm rounded-lg shadow-lg overflow-hidden flex flex-col p-5 min-h-[420px] border border-teal-100 hover:border-teal-200 transition-all">
+                    <div className="relative h-48 overflow-hidden rounded-lg shadow-md">
                       <img
                         src={provider.logo}
                         alt={provider.name}
-                        className="absolute top-0 left-0 w-full h-full object-cover"
+                        className="absolute top-0 left-0 w-full h-full object-cover transform hover:scale-105 transition-transform duration-300"
                       />
                     </div>
-                    <div className="flex flex-col flex-grow gap-4 mt-4">
+                    <div className="flex flex-col flex-grow gap-4 mt-5">
                       <div>
-                        <h3 className="font-semibold text-lg text-blue-600">
+                        <h3 className="font-semibold text-lg text-teal-700 hover:text-teal-600 transition-colors">
                           <a href={provider.link}>{provider.name}</a>
                         </h3>
                       </div>
-                      <div className="space-y-1">
+                      <div className="space-y-2">
                         {provider.description.map((desc, i) => (
-                          <p key={i} className="text-gray-800 font-medium">{desc}</p>
+                          <p key={i} className="text-gray-700 font-medium bg-teal-50/50 px-3 py-1 rounded-md">{desc}</p>
                         ))}
                       </div>
-                      <div className="space-y-1 text-sm text-gray-600">
-                        <p>ĐKKD: {provider.details.dkkd}</p>
-                        <p>{provider.details.hq}</p>
-                        {provider.details.since && <p>Since: {provider.details.since}</p>}
-                        <p>{provider.details.office}</p>
+                      <div className="space-y-1.5 text-sm text-gray-600 bg-white/60 p-3 rounded-md">
+                        <p className="flex items-center"><span className="w-16 text-teal-700">ĐKKD:</span> {provider.details.dkkd}</p>
+                        <p className="flex items-center"><span className="w-16 text-teal-700">HQ:</span> {provider.details.hq.replace('Trụ sở chính: ', '')}</p>
+                        {provider.details.since && <p className="flex items-center"><span className="w-16 text-teal-700">Since:</span> {provider.details.since}</p>}
+                        <p className="flex items-center"><span className="w-16 text-teal-700">Office:</span> {provider.details.office.replace('Văn phòng: ', '')}</p>
                       </div>
-                      <div className="mt-auto flex items-center justify-between">
-                        <div className="flex items-center">
+                      <div className="mt-auto flex items-center justify-between pt-3 border-t border-teal-100">
+                        <div className="flex items-center bg-teal-50/50 px-3 py-1 rounded-full">
                           {renderStars(provider.rating)}
-                          <span className="ml-2 text-sm text-gray-600">
+                          <span className="ml-2 text-sm text-teal-700 font-medium">
                             {provider.rating}
                           </span>
                         </div>
                         <a 
                           href={provider.link}
-                          className="bg-teal-600 text-white px-4 py-2 rounded-md text-sm hover:bg-teal-700 transition-colors"
+                          className="bg-teal-600 text-white px-5 py-2 rounded-full text-sm hover:bg-teal-700 transition-all hover:shadow-md"
                         >
                           Chi tiết
                         </a>
