@@ -15,6 +15,7 @@ const europeanTours = [
     logo: "https://images.pexels.com/photos/672532/pexels-photo-672532.jpeg",
     name: "COvivu",
     link: "#",
+    rating: 4.5,
     description: [
       "Tour Thiết kế riêng",
       "Tour Thiết kế sẵn"
@@ -86,6 +87,15 @@ const europeanTours = [
 ];
 
 const EuropeanTourSection = () => {
+  const renderStars = (rating: number) => {
+    return [...Array(5)].map((_, index) => (
+      <Star
+        key={index}
+        size={16}
+        className={`${index < rating ? 'text-yellow-400' : 'text-gray-300'}`}
+      />
+    ));
+  };
   return (
     <section className="py-16 bg-white border-t border-gray-100">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -136,6 +146,12 @@ const EuropeanTourSection = () => {
                         <p>{provider.details.office}</p>
                       </div>
                       <div className="mt-auto flex items-center justify-between">
+                        <div className="flex items-center">
+                          {renderStars(provider.rating)}
+                          <span className="ml-2 text-sm text-gray-600">
+                            {provider.rating}
+                          </span>
+                        </div>
                         <a 
                           href={provider.link}
                           className="bg-teal-600 text-white px-4 py-2 rounded-md text-sm hover:bg-teal-700 transition-colors"
