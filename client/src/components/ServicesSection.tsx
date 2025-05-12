@@ -49,8 +49,8 @@ const services = [
             <Plane className="h-6 w-6 text-teal-600" />
           </div>,
     title: "Vé máy bay",
-    link: "https://www.tubudd.com/billets-avion",
-    isExternal: true
+    link: "/flights",
+    isExternal: false
   },
   {
     icon: <div className="flex justify-center items-center w-10 h-10 border border-teal-600 rounded-md">
@@ -61,32 +61,32 @@ const services = [
             </svg>
           </div>,
     title: "Visa",
-    link: "https://www.tubudd.com/visa-service",
-    isExternal: true
+    link: "/visa",
+    isExternal: false
   },
   {
     icon: <div className="flex justify-center items-center w-10 h-10 border border-teal-600 rounded-md">
             <FileText className="h-6 w-6 text-teal-600" />
           </div>,
     title: "Bảo hiểm Du lịch Toàn cầu",
-    link: "https://www.tubudd.com/assurance-voyage",
-    isExternal: true
+    link: "/insurance",
+    isExternal: false
   },
   {
     icon: <div className="flex justify-center items-center w-10 h-10 border border-teal-600 rounded-md">
             <Smartphone className="h-6 w-6 text-teal-600" />
           </div>,
     title: "Sim Du lịch toàn cầu",
-    link: "https://www.tubudd.com/cartes-sim",
-    isExternal: true
+    link: "/sim-cards",
+    isExternal: false
   },
   {
     icon: <div className="flex justify-center items-center w-10 h-10 border border-teal-600 rounded-md">
             <UtensilsCrossed className="h-6 w-6 text-teal-600" />
           </div>,
     title: "Nhà hàng",
-    link: "https://www.tubudd.com/restaurants",
-    isExternal: true
+    link: "/restaurants",
+    isExternal: false
   }
 ];
 
