@@ -1,8 +1,57 @@
+
 import { motion } from "framer-motion";
 import { staggerContainer, fadeIn } from "@/lib/animations";
-import { FileText, Plane, MapPin, Home, User, Smartphone, UtensilsCrossed } from "lucide-react";
+import { FileText, Plane, MapPin, Home, User, Smartphone, UtensilsCrossed, Car } from "lucide-react";
 
 const services = [
+  {
+    icon: <div className="flex justify-center items-center w-10 h-10 border border-teal-600 rounded-md">
+            <MapPin className="h-6 w-6 text-teal-600" />
+          </div>,
+    title: "Tour tới Việt Nam",
+    link: "#tours",
+    isExternal: false
+  },
+  {
+    icon: <div className="flex justify-center items-center w-10 h-10 border border-teal-600 rounded-md">
+            <MapPin className="h-6 w-6 text-teal-600" />
+          </div>,
+    title: "Land tour tại Châu Âu",
+    link: "#land-tour",
+    isExternal: false
+  },
+  {
+    icon: <div className="flex justify-center items-center w-10 h-10 border border-teal-600 rounded-md">
+            <Home className="h-6 w-6 text-teal-600" />
+          </div>,
+    title: "Homestay Host Việt",
+    link: "#homestay",
+    isExternal: false
+  },
+  {
+    icon: <div className="flex justify-center items-center w-10 h-10 border border-teal-600 rounded-md">
+            <User className="h-6 w-6 text-teal-600" />
+          </div>,
+    title: "Tourguide/Buddy người Việt",
+    link: "#guides",
+    isExternal: false
+  },
+  {
+    icon: <div className="flex justify-center items-center w-10 h-10 border border-teal-600 rounded-md">
+            <Car className="h-6 w-6 text-teal-600" />
+          </div>,
+    title: "Ô tô Tài xế Việt",
+    link: "#transport",
+    isExternal: false
+  },
+  {
+    icon: <div className="flex justify-center items-center w-10 h-10 border border-teal-600 rounded-md">
+            <Plane className="h-6 w-6 text-teal-600" />
+          </div>,
+    title: "Vé máy bay",
+    link: "/flights",
+    isExternal: false
+  },
   {
     icon: <div className="flex justify-center items-center w-10 h-10 border border-teal-600 rounded-md">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6 text-teal-600">
@@ -11,53 +60,33 @@ const services = [
               <line x1="4" y1="12" x2="20" y2="12" />
             </svg>
           </div>,
-    title: "Visa"
+    title: "Visa",
+    link: "/visa",
+    isExternal: false
   },
   {
     icon: <div className="flex justify-center items-center w-10 h-10 border border-teal-600 rounded-md">
             <FileText className="h-6 w-6 text-teal-600" />
           </div>,
-    //title: "Assurance Voyage"
-    title: "Bảo Hiểm"
+    title: "Bảo hiểm Du lịch Toàn cầu",
+    link: "/insurance",
+    isExternal: false
   },
   {
     icon: <div className="flex justify-center items-center w-10 h-10 border border-teal-600 rounded-md">
-            <Plane className="h-6 w-6 text-teal-600" />
+            <Smartphone className="h-6 w-6 text-teal-600" />
           </div>,
-    title: "Vé máy bay"
-  },
-  {
-    icon: <div className="flex justify-center items-center w-10 h-10 border border-teal-600 rounded-md">
-            <MapPin className="h-6 w-6 text-teal-600" />
-          </div>,
-    title: "Tours"
-  },
-  {
-    icon: <div className="flex justify-center items-center w-10 h-10 border border-teal-600 rounded-md">
-            <Home className="h-6 w-6 text-teal-600" />
-          </div>,
-    title: "Homestay"
-  },
-  {
-    icon: <div className="flex justify-center items-center w-10 h-10 border border-teal-600 rounded-md">
-            <User className="h-6 w-6 text-teal-600" />
-          </div>,
-    title: "Hướng dẫn viên"
-  },
-  {
-    icon: <div className="flex justify-center items-center w-10 h-10 border border-teal-600 rounded-md">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6 text-teal-600">
-              <rect x="2" y="4" width="20" height="16" rx="2" />
-              <line x1="2" y1="10" x2="22" y2="10" />
-            </svg>
-          </div>,
-    title: "eSIM du lịch"
+    title: "Sim Du lịch toàn cầu",
+    link: "/sim-cards",
+    isExternal: false
   },
   {
     icon: <div className="flex justify-center items-center w-10 h-10 border border-teal-600 rounded-md">
             <UtensilsCrossed className="h-6 w-6 text-teal-600" />
           </div>,
-    title: "Nhà hàng"
+    title: "Nhà hàng",
+    link: "/restaurants",
+    isExternal: false
   }
 ];
 
@@ -76,31 +105,20 @@ const ServicesSection = () => {
         </motion.h2>
 
         <motion.div 
-          className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-6"
+          className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-5 gap-6"
           variants={staggerContainer}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
         >
           {services.map((service, index) => (
-            <motion.div 
+            <motion.a
+              href={service.link}
               key={index}
+              target={service.isExternal ? "_blank" : "_self"}
+              rel={service.isExternal ? "noopener noreferrer" : ""}
               className="group flex flex-col items-center justify-center border border-gray-200 rounded-md p-6 hover:shadow-md transition-shadow cursor-pointer"
               variants={fadeIn("up", "tween", 0.1 * index, 0.5)}
-              onClick={() => {
-                const sectionMap: { [key: string]: string } = {
-                  "Visa": "visa-service",
-                  "Bảo Hiểm": "assurance-voyage",
-                  "Vé máy bay": "billets-avion",
-                  "Tours": "tours",
-                  "Homestay": "homestay",
-                  "Hướng dẫn viên": "guides",
-                  "eSIM du lịch": "esim",
-                  "Nhà hàng": "restaurants"
-                };
-                const element = document.getElementById(sectionMap[service.title]);
-                element?.scrollIntoView({ behavior: 'smooth' });
-              }}
             >
               <div className="flex justify-center items-center mb-4">
                 {service.icon}
@@ -108,7 +126,7 @@ const ServicesSection = () => {
               <h3 className="text-center text-gray-900 font-medium">
                 {service.title}
               </h3>
-            </motion.div>
+            </motion.a>
           ))}
         </motion.div>
       </div>
