@@ -94,21 +94,25 @@ const TourFromVNSection = () => {
               {tourProviders.map((provider, index) => (
                 <CarouselItem key={index} className="md:basis-1/3">
                   <div className="relative h-full bg-white rounded-lg shadow-md overflow-hidden flex flex-col p-4 min-h-[400px]">
-                    <div className="relative h-40 overflow-hidden rounded-lg mb-4">
+                    <div className="relative h-40 overflow-hidden rounded-lg">
                       <img
                         src={provider.logo}
                         alt={provider.name}
                         className="absolute top-0 left-0 w-full h-full object-cover"
                       />
                     </div>
-                    <div className="flex flex-col flex-grow">
-                      <h3 className="font-semibold text-lg mb-2">{provider.name}</h3>
-                      <p className="text-gray-600 text-sm mb-1">ĐKKD: Việt Nam</p>
-                      <p className="text-gray-600 text-sm mb-1">{provider.office}</p>
-                      {provider.since && (
-                        <p className="text-gray-600 text-sm mb-1">Since: {provider.since}</p>
-                      )}
-                      <div className="flex items-center justify-between mt-2">
+                    <div className="flex flex-col flex-grow gap-4 mt-4">
+                      <div>
+                        <h3 className="font-semibold text-lg">{provider.name}</h3>
+                      </div>
+                      <div className="space-y-1">
+                        <p className="text-gray-600 text-sm">ĐKKD: Việt Nam</p>
+                        <p className="text-gray-600 text-sm">{provider.office}</p>
+                        {provider.since && (
+                          <p className="text-gray-600 text-sm">Since: {provider.since}</p>
+                        )}
+                      </div>
+                      <div className="mt-auto flex items-center justify-between">
                         <div className="flex items-center">
                           {renderStars(provider.rating)}
                           <span className="ml-2 text-sm text-gray-600">
