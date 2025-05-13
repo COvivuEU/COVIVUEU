@@ -65,7 +65,7 @@ const GuidesTouristiquesSection = () => {
           <Carousel className="w-full max-w-5xl mx-auto">
             <CarouselContent>
               {countries.map((country, index) => (
-                <CarouselItem key={index} className="md:basis-1/3 lg:basis-1/5">
+                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
                   <a 
                     href={country.link}
                     target="_blank"
@@ -73,7 +73,7 @@ const GuidesTouristiquesSection = () => {
                     className="block p-4 text-center transition-transform hover:scale-105"
                   >
                     <div className="rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow">
-                      <div className="aspect-[4/3] relative bg-gray-100">
+                      <div className="relative pt-[56.25%] overflow-hidden bg-gray-100">
                         <div className="absolute inset-0 flex items-center justify-center">
                           <div className="w-1/4 h-auto">
                             <img
