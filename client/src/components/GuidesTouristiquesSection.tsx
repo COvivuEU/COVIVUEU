@@ -20,9 +20,9 @@ const countries = [
     link: "https://www.tubudd.com/locations/germany"
   },
   {
-    name: "THỤY SĨ",
-    flag: "https://flagcdn.com/w1280/ch.svg",
-    link: "https://www.tubudd.com/locations/switzerland"
+    name: "ÁO",
+    flag: "https://flagcdn.com/at.svg",
+    link: "https://www.tubudd.com/locations/austria"
   },
   {
     name: "HÀ LAN",
