@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { fadeIn } from "@/lib/animations";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
@@ -72,12 +73,16 @@ const GuidesTouristiquesSection = () => {
                     className="block p-4 text-center transition-transform hover:scale-105"
                   >
                     <div className="rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow">
-                      <div className="aspect-[4/3] relative">
-                        <img
-                          src={country.flag}
-                          alt={`Flag of ${country.name}`}
-                          className="absolute inset-0 w-full h-full object-cover"
-                        />
+                      <div className="aspect-[4/3] relative bg-gray-100">
+                        <div className="absolute inset-0 flex items-center justify-center">
+                          <div className="w-1/4 h-auto">
+                            <img
+                              src={country.flag}
+                              alt={`Flag of ${country.name}`}
+                              className="w-full h-full object-contain"
+                            />
+                          </div>
+                        </div>
                       </div>
                       <div className="p-3 bg-white">
                         <h3 className="font-semibold text-lg text-teal-600">{country.name}</h3>
