@@ -73,13 +73,16 @@ const GuidesTouristiquesSection = () => {
                     className="block p-4 text-center transition-transform hover:scale-105"
                   >
                     <div className="rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow">
-                      <div className="relative pt-[56.25%] overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100">
+                      <div className="relative pt-[56.25%] overflow-hidden bg-gradient-to-br from-blue-50 to-gray-50">
                         <div className="absolute inset-0 flex items-center justify-center">
                           <div className="w-1/4 h-auto">
                             <img
                               src={country.flag}
                               alt={`Flag of ${country.name}`}
-                              className="w-full h-full object-contain shadow-lg rounded-md border-2 border-gray-200"
+                              className="w-full h-full object-contain shadow-[2px_4px_12px_rgba(0,0,0,0.2)] rounded-sm transform hover:scale-105 transition-transform duration-300 animate-[wave_6s_ease-in-out_infinite]"
+                              style={{
+                                filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1))',
+                              }}
                             />
                           </div>
                         </div>
