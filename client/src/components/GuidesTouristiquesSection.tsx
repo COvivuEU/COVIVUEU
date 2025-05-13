@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { fadeIn } from "@/lib/animations";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
@@ -6,27 +5,27 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 const countries = [
   {
     name: "PHÁP",
-    flag: "https://flagcdn.com/fr.svg",
+    flag: "https://upload.wikimedia.org/wikipedia/commons/c/c3/Flag_of_France.svg",
     link: "https://www.tubudd.com/locations/france"
   },
   {
     name: "Ý",
-    flag: "https://flagcdn.com/it.svg",
+    flag: "https://upload.wikimedia.org/wikipedia/commons/0/03/Flag_of_Italy.svg",
     link: "https://www.tubudd.com/locations/italy"
   },
   {
     name: "ĐỨC",
-    flag: "https://flagcdn.com/de.svg",
+    flag: "https://upload.wikimedia.org/wikipedia/commons/b/ba/Flag_of_Germany.svg",
     link: "https://www.tubudd.com/locations/germany"
   },
   {
     name: "THỤY SĨ",
-    flag: "https://flagcdn.com/ch.svg", // Use a higher resolution version
+    flag: "https://upload.wikimedia.org/wikipedia/commons/f/f3/Flag_of_Switzerland.svg",
     link: "https://www.tubudd.com/locations/switzerland"
   },
   {
     name: "HÀ LAN",
-    flag: "https://flagcdn.com/nl.svg",
+    flag: "https://upload.wikimedia.org/wikipedia/commons/2/20/Flag_of_the_Netherlands.svg",
     link: "https://www.tubudd.com/locations/netherlands"
   }
 ];
