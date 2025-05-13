@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { staggerContainer, fadeIn } from "@/lib/animations";
 import { Link } from "wouter";
@@ -73,4 +74,3 @@ const RestaurantsSection = () => {
 };
 
 export default RestaurantsSection;
-`

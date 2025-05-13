@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { fadeIn } from "@/lib/animations";
 import { StarIcon } from "lucide-react";
@@ -112,7 +113,7 @@ const VietDriverSection = () => {
                           {service.rating} ({service.bookings})
                         </span>
                       </div>
-                      <p className="text-gray-600 text-sm mb-2 text-center">{service.description}</p>
+                      <p className="text-gray-600 text-sm mb-2">{service.description}</p>
                       <div className="mt-auto">
                         <div className="flex justify-between items-center">
                           <span className="text-sm font-medium text-teal-600">
