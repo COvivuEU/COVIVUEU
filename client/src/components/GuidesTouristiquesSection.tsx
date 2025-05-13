@@ -73,13 +73,13 @@ const GuidesTouristiquesSection = () => {
                     className="block p-4 text-center transition-transform hover:scale-105"
                   >
                     <div className="rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow">
-                      <div className="relative pt-[56.25%] overflow-hidden bg-gray-100">
+                      <div className="relative pt-[56.25%] overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100">
                         <div className="absolute inset-0 flex items-center justify-center">
                           <div className="w-1/4 h-auto">
                             <img
                               src={country.flag}
                               alt={`Flag of ${country.name}`}
-                              className="w-full h-full object-contain"
+                              className="w-full h-full object-contain shadow-lg rounded-md border-2 border-gray-200"
                             />
                           </div>
                         </div>
