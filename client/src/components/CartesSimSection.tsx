@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { fadeIn } from "@/lib/animations";
 import { StarIcon } from "lucide-react";
@@ -51,7 +50,7 @@ const CartesSimSection = () => {
     <section id="esim" className="py-12 bg-white border-t border-gray-100">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.h2 
-          className="text-2xl md:text-3xl font-bold mb-4"
+          className="text-2xl md:text-3xl font-bold text-center mb-4 uppercase"
           variants={fadeIn("up", "tween", 0.2, 1)}
           initial="hidden"
           whileInView="show"
@@ -59,7 +58,7 @@ const CartesSimSection = () => {
         >
           Sim Du lịch toàn cầu
         </motion.h2>
-        
+
         <motion.p 
           className="text-base md:text-lg text-gray-700 mb-6"
           variants={fadeIn("up", "tween", 0.3, 1)}
