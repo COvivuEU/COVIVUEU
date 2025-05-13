@@ -13,43 +13,48 @@ import {
 const driverServices = [
   {
     title: "CÔvivu",
-    image: "/images/drivers/covivu.jpg",
+    type: "Công ty",
+    description: "Các loại xe: 5 chỗ, 7 chỗ, 9 chỗ",
+    tags: ["Tài xế người Việt", "Hóa đơn: Có (tick xanh)"],
+    image: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?q=80&w=1470&fit=crop",
     rating: 4.8,
     bookings: "500+ đã đặt",
-    description: "Các loại xe: 5 chỗ, 7 chỗ, 9 chỗ - Tài xế người Việt - Hóa đơn: Có (tick xanh)",
-    type: "Công ty"
   },
   {
     title: "Smile Trip",
-    image: "/images/drivers/smile-trip.jpg",
+    type: "Công ty",
+    description: "Các loại xe: Từ 5 đến 55 chỗ",
+    tags: ["Tài xế người Việt & người Nước ngoài", "Hóa đơn: Có (tick xanh)"],
+    image: "https://images.unsplash.com/photo-1494515843206-f3117d3f51b7?q=80&w=1472&fit=crop",
     rating: 4.9,
     bookings: "1K+ đã đặt",
-    description: "Các loại xe: Từ 5 đến 55 chỗ - Tài xế người Việt & người Nước ngoài",
-    type: "Công ty"
   },
   {
     title: "Hạ Nguy Pha",
-    image: "/images/drivers/ha-nguy-pha.jpg",
+    type: "Cá nhân",
+    description: "Các loại xe: 5 chỗ, 7 chỗ, 9 chỗ",
+    tags: ["Tài xế người Việt"   , "Hóa đơn: Không (X đỏ)"],
+    image: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?q=80&w=1470&fit=crop",
     rating: 4.7,
     bookings: "300+ đã đặt",
-    description: "Các loại xe: 5 chỗ, 7 chỗ, 9 chỗ - Tài xế người Việt",
-    type: "Cá nhân"
   },
   {
     title: "Rvisa",
-    image: "/images/drivers/rvisa.jpg",
+    type: "Cá nhân",
+    description: "Các loại xe: Từ 5 đến 55 chỗ",
+    tags: ["Tài xế người Việt & người Nước ngoài", "Hóa đơn: Không (X đỏ)"],
+    image: "https://images.unsplash.com/photo-1494515843206-f3117d3f51b7?q=80&w=1472&fit=crop",
     rating: 4.8,
     bookings: "800+ đã đặt",
-    description: "Các loại xe: Từ 5 đến 55 chỗ - Tài xế người Việt & người Nước ngoài",
-    type: "Cá nhân"
   },
   {
     title: "Nhung Nguyen",
-    image: "/images/drivers/nhung-nguyen.jpg",
+    type: "Cá nhân",
+    description: "Các loại xe: Từ 5 đến 55 chỗ",
+    tags: ["Tài xế người Việt & người Nước ngoài", "Hóa đơn: Không (X đỏ)"],
+    image: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?q=80&w=1470&fit=crop",
     rating: 4.9,
     bookings: "400+ đã đặt",
-    description: "Các loại xe: Từ 5 đến 55 chỗ - Tài xế người Việt & người Nước ngoài",
-    type: "Cá nhân"
   }
 ];
 
@@ -107,22 +112,27 @@ const VietDriverSection = () => {
                     </div>
                     <div className="p-4 flex flex-col flex-grow">
                       <h3 className="font-semibold text-lg mb-2">{service.title}</h3>
-                      <div className="flex items-center mb-2">
-                        {renderStars(service.rating)}
-                        <span className="ml-2 text-sm text-gray-600">
-                          {service.rating} ({service.bookings})
-                        </span>
-                      </div>
+                      <span className="text-sm font-medium text-teal-600 mb-2">
+                        {service.type}
+                      </span>
                       <p className="text-gray-600 text-sm mb-2">{service.description}</p>
-                      <div className="mt-auto">
-                        <div className="flex justify-between items-center">
-                          <span className="text-sm font-medium text-teal-600">
-                            {service.type}
+                      <div className="mb-2">
+                        {service.tags.map((tag, i) => (
+                          <span key={i} className="inline-block bg-gray-100 rounded-full px-3 py-1 text-xs font-semibold text-gray-600 mr-2 mb-2">
+                            {tag}
                           </span>
-                          <button className="bg-teal-600 text-white px-4 py-2 rounded-md text-sm hover:bg-teal-700 transition-colors">
-                            Chi tiết
-                          </button>
+                        ))}
+                      </div>
+                      <div className="mt-auto flex justify-between items-center">
+                        <div className="flex items-center">
+                          {renderStars(service.rating)}
+                          <span className="ml-2 text-sm text-gray-600">
+                            {service.rating} ({service.bookings})
+                          </span>
                         </div>
+                        <button className="bg-teal-600 text-white px-4 py-2 rounded-md text-sm hover:bg-teal-700 transition-colors">
+                          Chi tiết
+                        </button>
                       </div>
                     </div>
                   </div>
