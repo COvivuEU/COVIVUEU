@@ -21,7 +21,7 @@ const countries = [
   },
   {
     name: "THỤY SĨ",
-    flag: "https://flagcdn.com/w320/ch.svg",
+    flag: "https://flagcdn.com/w1280/ch.svg",
     link: "https://www.tubudd.com/locations/switzerland"
   },
   {
