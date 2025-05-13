@@ -13,7 +13,7 @@ import {
 const driverServices = [
   {
     title: "CÔvivu",
-    image: "/images/drivers/covivu.jpg",
+    image: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?q=80&w=1470&fit=crop",
     rating: 4.8,
     bookings: "500+ đã đặt",
     description: "Các loại xe: 5 chỗ, 7 chỗ, 9 chỗ - Tài xế người Việt - Hóa đơn: Có (tick xanh)",
@@ -21,7 +21,7 @@ const driverServices = [
   },
   {
     title: "Smile Trip",
-    image: "/images/drivers/smile-trip.jpg",
+    image: "https://images.unsplash.com/photo-1494515843206-f3117d3f51b7?q=80&w=1472&fit=crop",
     rating: 4.9,
     bookings: "1K+ đã đặt",
     description: "Các loại xe: Từ 5 đến 55 chỗ - Tài xế người Việt & người Nước ngoài",
@@ -29,7 +29,7 @@ const driverServices = [
   },
   {
     title: "Hạ Nguy Pha",
-    image: "/images/drivers/ha-nguy-pha.jpg",
+    image: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?q=80&w=1470&fit=crop",
     rating: 4.7,
     bookings: "300+ đã đặt",
     description: "Các loại xe: 5 chỗ, 7 chỗ, 9 chỗ - Tài xế người Việt",
@@ -37,7 +37,7 @@ const driverServices = [
   },
   {
     title: "Rvisa",
-    image: "/images/drivers/rvisa.jpg",
+    image: "https://images.unsplash.com/photo-1494515843206-f3117d3f51b7?q=80&w=1472&fit=crop",
     rating: 4.8,
     bookings: "800+ đã đặt",
     description: "Các loại xe: Từ 5 đến 55 chỗ - Tài xế người Việt & người Nước ngoài",
@@ -45,7 +45,7 @@ const driverServices = [
   },
   {
     title: "Nhung Nguyen",
-    image: "/images/drivers/nhung-nguyen.jpg",
+    image: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?q=80&w=1470&fit=crop",
     rating: 4.9,
     bookings: "400+ đã đặt",
     description: "Các loại xe: Từ 5 đến 55 chỗ - Tài xế người Việt & người Nước ngoài",
