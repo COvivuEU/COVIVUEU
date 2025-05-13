@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { staggerContainer, fadeIn } from "@/lib/animations";
 import { FileText, Plane, MapPin, Home, User, Smartphone, UtensilsCrossed, Car } from "lucide-react";
@@ -95,7 +94,7 @@ const ServicesSection = () => {
     <section id="services" className="py-16 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.h2 
-          className="text-3xl font-bold text-center mb-12"
+          className="text-3xl font-bold text-center mb-12 uppercase"
           variants={fadeIn("up", "tween", 0.2, 1)}
           initial="hidden"
           whileInView="show"
