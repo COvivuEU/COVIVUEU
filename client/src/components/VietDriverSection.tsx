@@ -15,8 +15,7 @@ const driverServices = [
     title: "CÔvivu",
     type: "Công ty",
     description: "Các loại xe: 5 chỗ, 7 chỗ, 9 chỗ",
-    driverType: "Tài xế người Việt",
-    invoice: "Có",
+    tags: ["Tài xế người Việt", "Hóa đơn: Có (tick xanh)"],
     image: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?q=80&w=1470&fit=crop",
     rating: 4.8,
     bookings: "500+ đã đặt",
@@ -25,8 +24,7 @@ const driverServices = [
     title: "Smile Trip",
     type: "Công ty",
     description: "Các loại xe: Từ 5 đến 55 chỗ",
-    driverType: "Tài xế người Việt & người Nước ngoài",
-    invoice: "Có",
+    tags: ["Tài xế người Việt & người Nước ngoài"],
     image: "https://images.unsplash.com/photo-1494515843206-f3117d3f51b7?q=80&w=1472&fit=crop",
     rating: 4.9,
     bookings: "1K+ đã đặt",
@@ -35,8 +33,7 @@ const driverServices = [
     title: "Hạ Nguy Pha",
     type: "Cá nhân",
     description: "Các loại xe: 5 chỗ, 7 chỗ, 9 chỗ",
-    driverType: "Tài xế người Việt",
-    invoice: "Không",
+    tags: ["Tài xế người Việt"],
     image: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?q=80&w=1470&fit=crop",
     rating: 4.7,
     bookings: "300+ đã đặt",
@@ -45,8 +42,7 @@ const driverServices = [
     title: "Rvisa",
     type: "Cá nhân",
     description: "Các loại xe: Từ 5 đến 55 chỗ",
-    driverType: "Tài xế người Việt & người Nước ngoài",
-    invoice: "Không",
+    tags: ["Tài xế người Việt & người Nước ngoài"],
     image: "https://images.unsplash.com/photo-1494515843206-f3117d3f51b7?q=80&w=1472&fit=crop",
     rating: 4.8,
     bookings: "800+ đã đặt",
@@ -55,8 +51,7 @@ const driverServices = [
     title: "Nhung Nguyen",
     type: "Cá nhân",
     description: "Các loại xe: Từ 5 đến 55 chỗ",
-    driverType: "Tài xế người Việt & người Nước ngoài",
-    invoice: "Không",
+    tags: ["Tài xế người Việt & người Nước ngoài"],
     image: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?q=80&w=1470&fit=crop",
     rating: 4.9,
     bookings: "400+ đã đặt",
@@ -120,12 +115,13 @@ const VietDriverSection = () => {
                       <span className="text-sm font-medium text-teal-600 mb-2">
                         {service.type}
                       </span>
-                      <p className="text-gray-600 text-sm mb-2 text-left">{service.description}</p>
-                      <div className="mb-2 text-left">
-                        <p className="text-gray-600 text-sm mb-1">{service.driverType}</p>
-                        <p className="text-gray-600 text-sm">
-                          Hóa đơn: <span className={service.invoice === "Có" ? "text-green-600" : "text-red-600"}>{service.invoice}</span>
-                        </p>
+                      <p className="text-gray-600 text-sm mb-2">{service.description}</p>
+                      <div className="mb-2">
+                        {service.tags.map((tag, i) => (
+                          <span key={i} className="inline-block bg-gray-100 rounded-full px-3 py-1 text-xs font-semibold text-gray-600 mr-2 mb-2">
+                            {tag}
+                          </span>
+                        ))}
                       </div>
                       <div className="mt-auto flex justify-between items-center">
                         <div className="flex items-center">
