@@ -1,5 +1,18 @@
 @tailwind base;
 @tailwind components;
+
+@keyframes wave {
+  0%, 100% {
+    transform: perspective(500px) rotateX(0deg) rotateY(0deg);
+  }
+  25% {
+    transform: perspective(500px) rotateX(2deg) rotateY(3deg);
+  }
+  75% {
+    transform: perspective(500px) rotateX(-2deg) rotateY(-3deg);
+  }
+}
+
 @tailwind utilities;
 
 @layer base {
