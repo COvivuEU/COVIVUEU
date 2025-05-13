@@ -84,7 +84,7 @@ const VisaServiceSection = () => {
         </motion.h2>
 
         <motion.p 
-          className="text-base md:text-lg text-gray-700 mb-6"
+          className="text-base md:text-lg text-gray-700 mb-6 text-center"
           variants={fadeIn("up", "tween", 0.3, 1)}
           initial="hidden"
           whileInView="show"
