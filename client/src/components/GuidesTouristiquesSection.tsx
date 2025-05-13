@@ -74,7 +74,7 @@ const GuidesTouristiquesSection = () => {
                     <div className="rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow">
                       <div className="relative pt-[56.25%] overflow-hidden bg-gradient-to-br from-blue-50 to-gray-50">
                         <div className="absolute inset-0 flex items-center justify-center">
-                          <div className="w-1/4 h-auto">
+                          <div className="w-24 h-16 flex items-center justify-center">
                             <img
                               src={country.flag}
                               alt={`Flag of ${country.name}`}
