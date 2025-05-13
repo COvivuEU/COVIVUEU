@@ -116,15 +116,12 @@ const VietDriverSection = () => {
                         {service.type}
                       </span>
                       <p className="text-gray-600 text-sm mb-2">{service.description}</p>
-                      <div className="mb-2 space-y-2">
-                        <span className="inline-block bg-gray-100 rounded-full px-3 py-1 text-xs font-semibold text-gray-600">
-                          {service.driverType}
-                        </span>
-                        <div>
-                          <span className="inline-block bg-gray-100 rounded-full px-3 py-1 text-xs font-semibold mr-2">
-                            Hóa đơn: <span className={service.invoice === "Có" ? "text-blue-600" : "text-red-600"}>{service.invoice}</span>
+                      <div className="mb-2">
+                        {service.tags.map((tag, i) => (
+                          <span key={i} className="inline-block bg-gray-100 rounded-full px-3 py-1 text-xs font-semibold text-gray-600 mr-2 mb-2">
+                            {tag}
                           </span>
-                        </div>
+                        ))}
                       </div>
                       <div className="mt-auto flex justify-between items-center">
                         <div className="flex items-center">
