@@ -2,7 +2,6 @@
 import { motion } from "framer-motion";
 import { fadeIn } from "@/lib/animations";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { Link } from "react-router-dom";
 
 const cities = [
   {
@@ -15,6 +14,18 @@ const cities = [
     name: "Venice",
     country: "Ý",
     flag: "https://upload.wikimedia.org/wikipedia/commons/0/03/Flag_of_Italy.svg",
+    link: "/restaurants"
+  },
+  {
+    name: "Zurich",
+    country: "THỤY SĨ",
+    flag: "https://upload.wikimedia.org/wikipedia/commons/f/f3/Flag_of_Switzerland.svg",
+    link: "/restaurants"
+  },
+  {
+    name: "Interlaken",
+    country: "THỤY SĨ", 
+    flag: "https://upload.wikimedia.org/wikipedia/commons/f/f3/Flag_of_Switzerland.svg",
     link: "/restaurants"
   },
   {
@@ -60,8 +71,8 @@ const RestaurantsSection = () => {
             <CarouselContent>
               {cities.map((city, index) => (
                 <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                  <Link 
-                    to={city.link}
+                  <a 
+                    href={city.link}
                     className="block p-4 text-center transition-transform hover:scale-105"
                   >
                     <div className="rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow">
@@ -84,7 +95,7 @@ const RestaurantsSection = () => {
                         <p className="text-sm text-gray-600">{city.country}</p>
                       </div>
                     </div>
-                  </Link>
+                  </a>
                 </CarouselItem>
               ))}
             </CarouselContent>
