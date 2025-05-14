@@ -6,7 +6,7 @@ import ServicesSection from "@/components/ServicesSection";
 import VisaServiceSection from "@/components/VisaServiceSection";
 import VietDriverSection from "@/components/VietDriverSection";
 import AssuranceVoyageSection from "@/components/AssuranceVoyageSection";
-import BilletsAvionSection from "@/components/BilletsAvionSection";
+
 import ToursSection from "@/components/ToursSection";
 import HomestaySection from "@/components/HomestaySection";
 import GuidesTouristiquesSection from "@/components/GuidesTouristiquesSection";
@@ -63,7 +63,6 @@ const Home = () => {
         <VisaServiceSection />
         <VietDriverSection />
         <AssuranceVoyageSection />
-        <BilletsAvionSection />
         <ToursSection />
         <div id="land-tour"><LandTourSection /></div>
         <div id="city-tour"><CityTourSection /></div>
