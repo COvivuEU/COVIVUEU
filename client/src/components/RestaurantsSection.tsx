@@ -18,18 +18,6 @@ const cities = [
     link: "/restaurants"
   },
   {
-    name: "Zurich",
-    country: "THỤY SĨ",
-    flag: "https://upload.wikimedia.org/wikipedia/commons/f/f3/Flag_of_Switzerland.svg",
-    link: "/restaurants"
-  },
-  {
-    name: "Interlaken",
-    country: "THỤY SĨ",
-    flag: "https://upload.wikimedia.org/wikipedia/commons/f/f3/Flag_of_Switzerland.svg",
-    link: "/restaurants"
-  },
-  {
     name: "Frankfurt",
     country: "ĐỨC",
     flag: "https://upload.wikimedia.org/wikipedia/commons/b/ba/Flag_of_Germany.svg",
