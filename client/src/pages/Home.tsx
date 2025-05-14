@@ -3,7 +3,6 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
 import ServicesSection from "@/components/ServicesSection";
-import VisaServiceSection from "@/components/VisaServiceSection";
 import VietDriverSection from "@/components/VietDriverSection";
 import ToursSection from "@/components/ToursSection";
 
@@ -55,7 +54,6 @@ const Home = () => {
       <main>
         <HeroSection />
         <ServicesSection />
-        <VisaServiceSection />
         <VietDriverSection />
         <ToursSection />
         <div id="land-tour"><LandTourSection /></div>
