@@ -116,11 +116,11 @@ const VietDriverSection = () => {
                         {service.type}
                       </span>
                       <p className="text-gray-600 text-sm mb-2">{service.description}</p>
-                      <div className="mb-2">
+                      <div className="mb-2 flex flex-col space-y-2">
                         {service.tags.map((tag, i) => (
                           <span 
                             key={i} 
-                            className={`inline-block rounded-full px-3 py-1 text-xs font-semibold mr-2 mb-2 ${
+                            className={`inline-block rounded-full px-3 py-1 text-xs font-semibold ${
                               tag.includes("Có") ? 'bg-blue-500 text-white' : 
                               tag.includes("Không") ? 'bg-red-500 text-white' : 
                               'bg-gray-100 text-gray-600'
