@@ -11,7 +11,6 @@ import HomestaySection from "@/components/HomestaySection";
 import GuidesTouristiquesSection from "@/components/GuidesTouristiquesSection";
 import TourFromVNSection from "@/components/TourFromVNSection";
 import EuropeanTourSection from "@/components/EuropeanTourSection";
-import RestaurantsSection from "@/components/RestaurantsSection";
 import PartnersSection from "@/components/PartnersSection";
 import LandTourSection from "@/components/LandTourSection"; // Added import
 import CityTourSection from "@/components/CityTourSection"; // Added import
@@ -67,7 +66,6 @@ const Home = () => {
         <GuidesTouristiquesSection />
         <TourFromVNSection />
         <EuropeanTourSection />
-        <RestaurantsSection />
         <PartnersSection />
       </main>
 
