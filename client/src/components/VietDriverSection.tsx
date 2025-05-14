@@ -33,7 +33,7 @@ const driverServices = [
     title: "Hạ Nguy Pha",
     type: "Cá nhân",
     description: "Các loại xe: 5 chỗ, 7 chỗ, 9 chỗ",
-    tags: ["Tài xế người Việt"   , "Hóa đơn: Không (X đỏ)"],
+    tags: ["Tài xế người Việt", "Hóa đơn: Không"],
     image: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?q=80&w=1470&fit=crop",
     rating: 4.7,
     bookings: "300+ đã đặt",
