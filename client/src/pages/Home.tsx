@@ -5,14 +5,12 @@ import HeroSection from "@/components/HeroSection";
 import ServicesSection from "@/components/ServicesSection";
 import VisaServiceSection from "@/components/VisaServiceSection";
 import VietDriverSection from "@/components/VietDriverSection";
-import AssuranceVoyageSection from "@/components/AssuranceVoyageSection";
-
 import ToursSection from "@/components/ToursSection";
+
 import HomestaySection from "@/components/HomestaySection";
 import GuidesTouristiquesSection from "@/components/GuidesTouristiquesSection";
 import TourFromVNSection from "@/components/TourFromVNSection";
 import EuropeanTourSection from "@/components/EuropeanTourSection";
-import CartesSimSection from "@/components/CartesSimSection";
 import RestaurantsSection from "@/components/RestaurantsSection";
 import PartnersSection from "@/components/PartnersSection";
 import LandTourSection from "@/components/LandTourSection"; // Added import
@@ -62,7 +60,6 @@ const Home = () => {
         <ServicesSection />
         <VisaServiceSection />
         <VietDriverSection />
-        <AssuranceVoyageSection />
         <ToursSection />
         <div id="land-tour"><LandTourSection /></div>
         <div id="city-tour"><CityTourSection /></div>
@@ -70,7 +67,6 @@ const Home = () => {
         <div id="special-tour"><SpecialTourSection /></div>
         <HomestaySection />
         <GuidesTouristiquesSection />
-        <CartesSimSection />
         <TourFromVNSection />
         <EuropeanTourSection />
         <RestaurantsSection />
