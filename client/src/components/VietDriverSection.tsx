@@ -1,4 +1,7 @@
+The code modifies the styling of the company/individual type tags and driver type tags in the VietDriverSection component to use lighter colors and better sizing.
+```
 
+```replit_final_file
 import { motion } from "framer-motion";
 import { fadeIn } from "@/lib/animations";
 import { StarIcon } from "lucide-react";
@@ -112,10 +115,15 @@ const VietDriverSection = () => {
                     </div>
                     <div className="p-4 flex flex-col flex-grow">
                       <h3 className="font-semibold text-lg mb-2">{service.title}</h3>
-                      <span className="text-sm font-medium text-teal-600 mb-2">
+                      <span className="text-sm font-medium text-teal-400 mb-2 px-2 py-1 bg-teal-50 rounded-md">
                         {service.type}
                       </span>
                       <p className="text-gray-600 text-sm mb-2">{service.description}</p>
+                      <div className="mb-2 space-y-2">
+                        <span className="inline-block bg-indigo-50 rounded-full px-4 py-1.5 text-sm font-medium text-indigo-500">
+                          {service.driverType}
+                        </span>
+                      </div>
                       <div className="mb-2">
                         {service.tags.map((tag, i) => (
                           <span 
