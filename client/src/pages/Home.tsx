@@ -5,9 +5,8 @@ import HeroSection from "@/components/HeroSection";
 import ServicesSection from "@/components/ServicesSection";
 import VisaServiceSection from "@/components/VisaServiceSection";
 import VietDriverSection from "@/components/VietDriverSection";
-import AssuranceVoyageSection from "@/components/AssuranceVoyageSection";
-
 import ToursSection from "@/components/ToursSection";
+
 import HomestaySection from "@/components/HomestaySection";
 import GuidesTouristiquesSection from "@/components/GuidesTouristiquesSection";
 import TourFromVNSection from "@/components/TourFromVNSection";
@@ -62,7 +61,6 @@ const Home = () => {
         <ServicesSection />
         <VisaServiceSection />
         <VietDriverSection />
-        <AssuranceVoyageSection />
         <ToursSection />
         <div id="land-tour"><LandTourSection /></div>
         <div id="city-tour"><CityTourSection /></div>
