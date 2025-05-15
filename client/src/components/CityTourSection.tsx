@@ -53,20 +53,27 @@ const cityTours = [
 ];
 
 const CityTourSection = () => {
+  const renderStars = (rating: number) => {
+    return Array(5).fill(0).map((_, index) => (
+      <StarIcon
+        key={index}
+        className={`h-4 w-4 ${index < rating ? 'text-yellow-400 fill-yellow-400' : 'text-gray-300'}`}
+      />
+    ));
+  };
+
   return (
     <section className="py-12 bg-white border-t border-gray-100">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-left mb-8">
-          <motion.h2 
-            className="text-2xl md:text-3xl font-bold uppercase mb-3"
-            variants={fadeIn("up", "tween", 0.2, 1)}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true }}
-          >
-            CITY TOUR
-          </motion.h2>
-        </div>
+        <motion.h2 
+          className="text-2xl md:text-3xl font-bold text-center mb-12 uppercase"
+          variants={fadeIn("up", "tween", 0.2, 1)}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+        >
+          CITY TOUR
+        </motion.h2>
         
         <motion.div
           variants={fadeIn("up", "tween", 0.4, 1)}
@@ -75,19 +82,19 @@ const CityTourSection = () => {
           viewport={{ once: true }}
           className="w-full"
         >
-          <Carousel className="w-full">
+          <Carousel className="w-full max-w-5xl mx-auto">
             <CarouselContent>
               {cityTours.map((tour, index) => (
                 <CarouselItem key={index} className="md:basis-1/3">
-                  <div className="h-full bg-white rounded-lg shadow-md overflow-hidden">
-                    <div className="aspect-[16/9] relative">
+                  <div className="relative h-full bg-white rounded-lg shadow-md overflow-hidden flex flex-col p-4 min-h-[400px]">
+                    <div className="relative h-40 overflow-hidden rounded-lg">
                       <img
                         src={tour.image}
                         alt={tour.title}
-                        className="absolute inset-0 w-full h-full object-cover"
+                        className="absolute top-0 left-0 w-full h-full object-cover"
                       />
                     </div>
-                    <div className="p-4 space-y-3">
+                    <div className="flex flex-col flex-grow gap-4 mt-4">
                       <div>
                         <h3 className="font-semibold text-lg">{tour.title}</h3>
                         <p className="text-gray-700">{tour.location}</p>
@@ -95,37 +102,25 @@ const CityTourSection = () => {
                           <p className="text-gray-600 text-sm italic">{tour.subtitle}</p>
                         )}
                       </div>
-                      
-                      <div className="space-y-1 text-sm text-gray-600">
-                        <p>{tour.duration}</p>
-                        <p>{tour.transport}</p>
-                        <p>{tour.buddy}</p>
+                      <div className="space-y-0.5">
+                        <p className="text-gray-600 text-sm">{tour.duration}</p>
+                        <p className="text-gray-600 text-sm">{tour.transport}</p>
+                        <p className="text-gray-600 text-sm">{tour.buddy}</p>
                       </div>
-
-                      <div className="pt-3 border-t border-gray-100">
-                        <div className="flex justify-between items-center mb-3">
-                          <span className="font-semibold text-lg">{tour.price}</span>
-                          <button className="bg-teal-600 text-white px-4 py-2 rounded-md text-sm hover:bg-teal-700 transition-colors">
-                            Chi tiết
-                          </button>
-                        </div>
-                        
-                        <div className="flex items-center gap-2">
-                          <div className="flex">
-                            {Array(5).fill(0).map((_, i) => (
-                              <StarIcon
-                                key={i}
-                                className={`h-4 w-4 ${
-                                  i < Math.floor(tour.rating)
-                                    ? 'text-yellow-400 fill-yellow-400'
-                                    : 'text-gray-300'
-                                }`}
-                              />
-                            ))}
+                      <div className="mt-auto">
+                        <div className="border-t border-gray-100 pt-3">
+                          <p className="font-semibold text-lg mb-3">{tour.price}</p>
+                          <div className="flex items-center justify-between">
+                            <div className="flex items-center">
+                              {renderStars(tour.rating)}
+                              <span className="ml-2 text-sm text-gray-600">
+                                {tour.rating} ({tour.reviews})
+                              </span>
+                            </div>
+                            <button className="bg-teal-600 text-white px-4 py-2 rounded-md text-sm hover:bg-teal-700 transition-colors">
+                              Chi tiết
+                            </button>
                           </div>
-                          <span className="text-sm text-gray-600">
-                            {tour.rating} ({tour.reviews})
-                          </span>
                         </div>
                       </div>
                     </div>
