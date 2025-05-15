@@ -13,43 +13,47 @@ import {
 const tourProviders = [
   {
     logo: "https://images.pexels.com/photos/672532/pexels-photo-672532.jpeg",
-    name: "SmileTrip",
+    name: "EuroCircle",
     details: {
-      dkkd: "Pháp",
-      hq: "Trụ sở chính: Paris",
-      since: "2013",
-      office: "Văn phòng: Hà Nội, Osaka (Nhật Bản), Paris (Pháp)"
+      dkkd: "Việt Nam",
+      hq: "Trụ sở chính: TP.HCM",
+      since: "2018",
+      office: "Văn phòng: Paris"
     },
     rating: 4.8,
-    link: "#"
+    link: "#",
+    agents: ["OFO Travel"]
   },
   {
     logo: "https://images.pexels.com/photos/1117452/pexels-photo-1117452.jpeg",
-    name: "Hermes Voyages",
+    name: "GoEUGo",
     details: {
-      dkkd: "Séc",
-      hq: "Trụ sở chính: Praha",
-      since: "2023",
-      office: ""
+      dkkd: "Hà Lan",
+      hq: "Trụ sở chính: Rotterdam",
+      since: "1988",
+      office: "Văn phòng: Rotterdam, Vancouver (Canada)"
     },
     rating: 4.7,
+    agents: ["Univiet Travel", "Dế Việt", "Worldtrip", "EUtrip"],
+    locations: ["Hong Kong", "Đài Loan", "Bắc Kinh", "Thượng Hải", "Quảng Châu", "Hà Nội"],
     link: "#"
   },
   {
     logo: "https://images.pexels.com/photos/1117452/pexels-photo-1117452.jpeg",
-    name: "Du lịch Paris",
+    name: "Europamundo",
     details: {
-      dkkd: "Pháp",
-      hq: "Trụ sở chính: Paris",
-      since: "2022",
-      office: ""
+      dkkd: "Tây Ban Nha",
+      hq: "Trụ sở chính: Madrid",
+      since: "1997",
+      office: "Văn phòng: Madrid"
     },
-    rating: 4.6,
-    link: "#"
+    rating: 4.9,
+    link: "#",
+    agents: ["TransViet", "BestPrice", "BenThanh Tourist"]
   }
 ];
 
-const FixedGroupTourSection = () => {
+const FlexibleTourSection = () => {
   const renderStars = (rating: number) => {
     return Array(5).fill(0).map((_, index) => (
       <StarIcon
@@ -60,7 +64,7 @@ const FixedGroupTourSection = () => {
   };
 
   return (
-    <section id="fixed-group-tour" className="py-16 bg-white border-t border-gray-100">
+    <section id="flexible-tour" className="py-16 bg-white border-t border-gray-100">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.h2 
           className="text-3xl font-bold text-center mb-12 uppercase"
@@ -69,7 +73,7 @@ const FixedGroupTourSection = () => {
           whileInView="show"
           viewport={{ once: true }}
         >
-          Tour ghép cố định
+          Tour ghép linh hoạt
         </motion.h2>
 
         <motion.div
@@ -104,6 +108,16 @@ const FixedGroupTourSection = () => {
                         {provider.details.office && (
                           <p className="text-gray-600 text-sm">{provider.details.office}</p>
                         )}
+                        {provider.agents && (
+                          <p className="text-gray-600 text-sm">
+                            Đại lí Việt Nam: {provider.agents.join(", ")}
+                          </p>
+                        )}
+                        {provider.locations && (
+                          <p className="text-gray-600 text-sm">
+                            {provider.locations.join(", ")}
+                          </p>
+                        )}
                       </div>
                       <div className="mt-auto flex items-center justify-between">
                         <div className="flex items-center">
@@ -133,4 +147,4 @@ const FixedGroupTourSection = () => {
   );
 };
 
-export default FixedGroupTourSection;
+export default FlexibleTourSection;
