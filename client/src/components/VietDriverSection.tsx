@@ -1,7 +1,7 @@
 
 import { motion } from "framer-motion";
 import { fadeIn } from "@/lib/animations";
-import { StarIcon, Chair } from "lucide-react";
+import { StarIcon, ArrowRight } from "lucide-react";
 import {
   Carousel,
   CarouselContent,
@@ -114,7 +114,7 @@ const VietDriverSection = () => {
                       <div className="flex flex-wrap gap-2 mb-3">
                         {service.carSizes.map((size, i) => (
                           <div key={i} className="flex items-center bg-gray-100 px-2 py-1 rounded-md">
-                            <Chair className="h-4 w-4 mr-1" />
+                            <ArrowRight className="h-4 w-4 mr-1" />
                             <span className="text-xs">{size}</span>
                           </div>
                         ))}
