@@ -124,7 +124,7 @@ const TourFromVNSection = () => {
                         <div className="flex items-center">
                           {renderStars(provider.rating)}
                           <span className="ml-2 text-sm text-gray-600">
-                            {provider.rating}
+                            {provider.rating} (500+ reviews)
                           </span>
                         </div>
                         <a 
