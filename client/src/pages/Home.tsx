@@ -14,7 +14,8 @@ import PartnersSection from "@/components/PartnersSection";
 import LandTourSection from "@/components/LandTourSection"; // Added import
 import CityTourSection from "@/components/CityTourSection"; // Added import
 import DayTourSection from "@/components/DayTourSection"; // Added import
-import SpecialTourSection from "@/components/SpecialTourSection"; // Added import
+import SpecialTourSection from "@/components/SpecialTourSection";
+import FixedGroupTourSection from "@/components/FixedGroupTourSection";
 
 const Home = () => {
   // Smooth scrolling for navigation links
@@ -60,6 +61,7 @@ const Home = () => {
         <div id="city-tour"><CityTourSection /></div>
         <div id="day-tour"><DayTourSection /></div>
         <div id="special-tour"><SpecialTourSection /></div>
+        <div id="fixed-group-tour"><FixedGroupTourSection /></div>
         <HomestaySection />
         <RestaurantsSection />
         <GuidesTouristiquesSection />
