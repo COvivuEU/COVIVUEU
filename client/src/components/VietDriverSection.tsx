@@ -17,7 +17,7 @@ const driverServices = [
     tags: ["Tài xế người Việt", "Hóa đơn: Có"],
     image: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?q=80&w=1470&fit=crop",
     rating: 4.8,
-    bookings: "500+ đã đặt",
+    bookings: "500+ reviews",
   },
   {
     title: "Smile Trip",
@@ -26,7 +26,7 @@ const driverServices = [
     tags: ["Tài xế người Việt & người Nước ngoài", "Hóa đơn: Có"],
     image: "https://images.unsplash.com/photo-1494515843206-f3117d3f51b7?q=80&w=1472&fit=crop",
     rating: 4.9,
-    bookings: "1K+ đã đặt",
+    bookings: "1K+ reviews",
   },
   {
     title: "Hạ Nguy Pha",
@@ -35,7 +35,7 @@ const driverServices = [
     tags: ["Tài xế người Việt", "Hóa đơn: Không"],
     image: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?q=80&w=1470&fit=crop",
     rating: 4.7,
-    bookings: "300+ đã đặt",
+    bookings: "300+ reviews",
   },
   {
     title: "Rvisa",
@@ -44,7 +44,7 @@ const driverServices = [
     tags: ["Tài xế người Việt & người Nước ngoài", "Hóa đơn: Không"],
     image: "https://images.unsplash.com/photo-1494515843206-f3117d3f51b7?q=80&w=1472&fit=crop",
     rating: 4.8,
-    bookings: "800+ đã đặt",
+    bookings: "800+ reviews",
   },
   {
     title: "Nhung Nguyen",
@@ -53,7 +53,7 @@ const driverServices = [
     tags: ["Tài xế người Việt & người Nước ngoài", "Hóa đơn: Không"],
     image: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?q=80&w=1470&fit=crop",
     rating: 4.9,
-    bookings: "400+ đã đặt",
+    bookings: "400+ reviews",
   }
 ];
 
