@@ -6,31 +6,31 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 const cities = [
   {
     name: "Paris",
-    country: "PHÁP",
+    //country: "PHÁP",
     flag: "https://upload.wikimedia.org/wikipedia/commons/c/c3/Flag_of_France.svg",
     link: "/restaurants"
   },
   {
     name: "Venice",
-    country: "Ý",
+    //country: "Ý",
     flag: "https://upload.wikimedia.org/wikipedia/commons/0/03/Flag_of_Italy.svg",
     link: "/restaurants"
   },
   {
     name: "Zurich",
-    country: "THỤY SĨ",
+    //country: "THỤY SĨ",
     flag: "https://upload.wikimedia.org/wikipedia/commons/f/f3/Flag_of_Switzerland.svg",
     link: "/restaurants"
   },
   {
     name: "Interlaken",
-    country: "THỤY SĨ", 
+    //country: "THỤY SĨ", 
     flag: "https://upload.wikimedia.org/wikipedia/commons/f/f3/Flag_of_Switzerland.svg",
     link: "/restaurants"
   },
   {
     name: "Frankfurt",
-    country: "ĐỨC",
+    //country: "ĐỨC",
     flag: "https://upload.wikimedia.org/wikipedia/commons/b/ba/Flag_of_Germany.svg",
     link: "/restaurants"
   }
