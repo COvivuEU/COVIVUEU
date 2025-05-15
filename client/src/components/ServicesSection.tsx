@@ -7,8 +7,8 @@ const services = [
     icon: <div className="flex justify-center items-center w-10 h-10 border border-teal-600 rounded-md">
             <MapPin className="h-6 w-6 text-teal-600" />
           </div>,
-    title: "Tour tới Việt Nam",
-    link: "#tours",
+    title: "Tour từ Việt Nam",
+    link: "#TourFromVNSection",
     isExternal: false
   },
   {
