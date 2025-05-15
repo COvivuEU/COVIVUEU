@@ -81,6 +81,16 @@ const TourFromVNSection = () => {
           Tour từ Việt Nam
         </motion.h2>
 
+        <motion.p 
+          className="text-base md:text-lg text-gray-700 mb-6 text-center"
+          variants={fadeIn("up", "tween", 0.3, 1)}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+        >
+          Các loại Tour xuất phát từ Việt Nam và trở về Việt Nam, CÓ BAO GỒM cả Vé máy bay và Visa
+        </motion.p>
+        
         <motion.div
           variants={fadeIn("up", "tween", 0.4, 1)}
           initial="hidden"
