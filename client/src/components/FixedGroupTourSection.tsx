@@ -95,7 +95,7 @@ const FixedGroupTourSection = () => {
                       <div>
                         <h3 className="font-semibold text-lg">{provider.name}</h3>
                       </div>
-                      <div className="space-y-1">
+                      <div className="space-y-0.5">
                         <p className="text-gray-600 text-sm">ĐKKD: {provider.details.dkkd}</p>
                         <p className="text-gray-600 text-sm">{provider.details.hq}</p>
                         {provider.details.since && (
