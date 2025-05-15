@@ -1,4 +1,4 @@
-import { Star } from "lucide-react";
+import { StarIcon } from "lucide-react";
 import { motion } from "framer-motion";
 import { staggerContainer, fadeIn } from "@/lib/animations";
 import {
@@ -59,11 +59,10 @@ const tourProviders = [
 
 const TourFromVNSection = () => {
   const renderStars = (rating: number) => {
-    return [...Array(5)].map((_, index) => (
-      <Star
+    return Array(5).fill(0).map((_, index) => (
+      <StarIcon
         key={index}
-        size={16}
-        className={`${index < rating ? 'text-yellow-400' : 'text-gray-300'}`}
+        className={`h-4 w-4 ${index < rating ? 'text-yellow-400 fill-yellow-400' : 'text-gray-300'}`}
       />
     ));
   };
