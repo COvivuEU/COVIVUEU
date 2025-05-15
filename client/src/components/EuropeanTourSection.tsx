@@ -148,7 +148,7 @@ const EuropeanTourSection = () => {
                         <div className="flex items-center bg-teal-50/50 px-3 py-1 rounded-full">
                           {renderStars(provider.rating)}
                           <span className="ml-2 text-sm text-teal-700 font-medium">
-                            {provider.rating}
+                            {provider.rating} (500+ reviews)
                           </span>
                         </div>
                         <a 
