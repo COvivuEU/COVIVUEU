@@ -1,6 +1,7 @@
+
 import { motion } from "framer-motion";
 import { fadeIn } from "@/lib/animations";
-import { StarIcon } from "lucide-react";
+import { StarIcon, Chair } from "lucide-react";
 import {
   Carousel,
   CarouselContent,
@@ -11,10 +12,11 @@ import {
 
 const driverServices = [
   {
-    title: "CÔvivu",
+    title: "COvivu",
     type: "Công ty",
-    description: "Các loại xe: 5 chỗ, 7 chỗ, 9 chỗ",
-    tags: ["Tài xế người Việt", "Hóa đơn: Có"],
+    carSizes: ["#5s", "#7s", "#9s"],
+    tags: ["Tài xế người Việt"],
+    hasInvoice: true,
     image: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?q=80&w=1470&fit=crop",
     rating: 4.8,
     bookings: "500+ reviews",
@@ -22,38 +24,32 @@ const driverServices = [
   {
     title: "Smile Trip",
     type: "Công ty",
-    description: "Các loại xe: Từ 5 đến 55 chỗ",
-    tags: ["Tài xế người Việt & người Nước ngoài", "Hóa đơn: Có"],
+    carSizes: ["#5s", "#9s", "#29s", "#50s", "#54s"],
+    tags: ["Tài xế người Việt & người Nước ngoài"],
+    hasInvoice: true,
     image: "https://images.unsplash.com/photo-1494515843206-f3117d3f51b7?q=80&w=1472&fit=crop",
     rating: 4.9,
     bookings: "1K+ reviews",
   },
   {
-    title: "Hạ Nguy Pha",
+    title: "Wisdom Travel",
     type: "Cá nhân",
-    description: "Các loại xe: 5 chỗ, 7 chỗ, 9 chỗ",
-    tags: ["Tài xế người Việt", "Hóa đơn: Không"],
+    carSizes: ["#8s", "#9s", "#16s", "#20s", "#30s", "#50s", "#60s"],
+    tags: ["Tài xế người Việt & người Nước ngoài"],
+    hasInvoice: true,
     image: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?q=80&w=1470&fit=crop",
     rating: 4.7,
     bookings: "300+ reviews",
   },
   {
-    title: "Rvisa",
-    type: "Cá nhân",
-    description: "Các loại xe: Từ 5 đến 55 chỗ",
-    tags: ["Tài xế người Việt & người Nước ngoài", "Hóa đơn: Không"],
+    title: "Paris Culture Visites",
+    type: "Công ty",
+    carSizes: ["#5s", "#9s", "#29s", "#50s", "#55s"],
+    tags: ["Tài xế người Việt & người Nước ngoài"],
+    hasInvoice: false,
     image: "https://images.unsplash.com/photo-1494515843206-f3117d3f51b7?q=80&w=1472&fit=crop",
     rating: 4.8,
     bookings: "800+ reviews",
-  },
-  {
-    title: "Nhung Nguyen",
-    type: "Cá nhân",
-    description: "Các loại xe: Từ 5 đến 55 chỗ",
-    tags: ["Tài xế người Việt & người Nước ngoài", "Hóa đơn: Không"],
-    image: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?q=80&w=1470&fit=crop",
-    rating: 4.9,
-    bookings: "400+ reviews",
   }
 ];
 
@@ -114,21 +110,34 @@ const VietDriverSection = () => {
                       <span className="text-sm font-medium text-teal-600 mb-2">
                         {service.type}
                       </span>
-                      <p className="text-gray-600 text-sm mb-2">{service.description}</p>
+                      
+                      <div className="flex flex-wrap gap-2 mb-3">
+                        {service.carSizes.map((size, i) => (
+                          <div key={i} className="flex items-center bg-gray-100 px-2 py-1 rounded-md">
+                            <Chair className="h-4 w-4 mr-1" />
+                            <span className="text-xs">{size}</span>
+                          </div>
+                        ))}
+                      </div>
+
                       <div className="mb-2 flex flex-col space-y-2">
                         {service.tags.map((tag, i) => (
                           <span 
                             key={i} 
-                            className={`inline-block rounded px-2 py-0.5 text-xs font-medium mr-2 mb-2 ${
-                              tag.includes("Có") ? 'bg-blue-100 text-blue-600' : 
-                              tag.includes("Không") ? 'bg-red-100 text-red-600' : 
-                              'bg-slate-50 text-slate-600'
-                            }`}
+                            className="inline-block rounded px-2 py-0.5 text-xs font-medium bg-slate-50 text-slate-600"
                           >
                             {tag}
                           </span>
                         ))}
+                        <span 
+                          className={`inline-block rounded px-2 py-0.5 text-xs font-medium ${
+                            service.hasInvoice ? 'bg-blue-100 text-blue-600' : 'bg-red-100 text-red-600'
+                          }`}
+                        >
+                          Hóa đơn: {service.hasInvoice ? 'Có' : 'Không'}
+                        </span>
                       </div>
+
                       <div className="mt-auto flex justify-between items-center">
                         <div className="flex items-center">
                           {renderStars(service.rating)}
