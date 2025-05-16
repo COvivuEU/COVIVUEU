@@ -63,10 +63,10 @@ const CityTourSection = () => {
   };
 
   return (
-    <section className="py-12 bg-white border-t border-gray-100">
+    <section className="py-16 bg-white border-t border-gray-100">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.h2 
-          className="text-2xl md:text-3xl font-bold text-center mb-12 uppercase"
+          className="text-3xl font-bold text-center mb-4 uppercase"
           variants={fadeIn("up", "tween", 0.2, 1)}
           initial="hidden"
           whileInView="show"
@@ -74,6 +74,16 @@ const CityTourSection = () => {
         >
           CITY TOUR
         </motion.h2>
+
+        <motion.p 
+          className="text-lg text-gray-700 mb-8 text-center"
+          variants={fadeIn("up", "tween", 0.3, 1)}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+        >
+          Khám phá các thành phố nổi tiếng châu Âu
+        </motion.p>
         
         <motion.div
           variants={fadeIn("up", "tween", 0.4, 1)}
