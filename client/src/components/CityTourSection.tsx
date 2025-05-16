@@ -9,7 +9,7 @@ const cityTours = [
     image: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a",
     title: "Paris Quick check-in",
     location: "PHÁP | Paris",
-    subtitle: "(nội thành)",
+    //subtitle: "(nội thành)",
     duration: "1 ngày x 9 giờ",
     transport: "Đi bộ + PTCC",
     buddy: "Buddy Việt",
