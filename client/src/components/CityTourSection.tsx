@@ -74,7 +74,6 @@ const CityTourSection = () => {
         >
           CITY TOUR CHÂU ÂU
         </motion.h2>
-
         <motion.p 
           className="text-lg text-gray-700 mb-8 text-center"
           variants={fadeIn("up", "tween", 0.3, 1)}
@@ -84,7 +83,6 @@ const CityTourSection = () => {
         >
           Khám phá các thành phố nổi tiếng và di sản văn hóa châu Âu
         </motion.p>
-        
         <motion.div
           variants={fadeIn("up", "tween", 0.4, 1)}
           initial="hidden"
@@ -106,7 +104,7 @@ const CityTourSection = () => {
                     </div>
                     <div className="p-4 flex flex-col flex-grow">
                       <h3 className="font-semibold text-lg mb-2">{tour.title}</h3>
-                      <p className="text-gray-700 mb-1">{tour.location}</p>
+                      <p className="text-gray-700 text-sm mb-1">{tour.location}</p>
                       {tour.subtitle && (
                         <p className="text-gray-600 text-sm italic mb-2">{tour.subtitle}</p>
                       )}
@@ -117,7 +115,7 @@ const CityTourSection = () => {
                       </div>
                       <div className="mt-auto">
                         <div className="border-t border-gray-100 pt-3">
-                          <p className="font-semibold text-lg text-teal-600 mb-3">từ {tour.price}</p>
+                          <p className="font-semibold text-lg text-teal-600 mb-3">{tour.price}</p>
                           <div className="flex items-center justify-between">
                             <div className="flex items-center">
                               {renderStars(tour.rating)}
