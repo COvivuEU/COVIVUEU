@@ -1,6 +1,7 @@
-import { Star } from "lucide-react";
+
+import { StarIcon } from "lucide-react";
 import { motion } from "framer-motion";
-import { staggerContainer, fadeIn } from "@/lib/animations";
+import { fadeIn } from "@/lib/animations";
 import {
   Carousel,
   CarouselContent,
@@ -87,19 +88,19 @@ const europeanTours = [
 
 const EuropeanTourSection = () => {
   const renderStars = (rating: number) => {
-    return [...Array(5)].map((_, index) => (
-      <Star
+    return Array(5).fill(0).map((_, index) => (
+      <StarIcon
         key={index}
-        size={16}
-        className={`${index < rating ? 'text-yellow-400' : 'text-gray-300'}`}
+        className={`h-4 w-4 ${index < rating ? 'text-yellow-400 fill-yellow-400' : 'text-gray-300'}`}
       />
     ));
   };
+
   return (
-    <section className="py-16 bg-white border-t border-gray-100">
+    <section id="EuropeanTourSection" className="py-16 bg-white border-t border-gray-100">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.h2 
-          className="text-3xl font-bold text-center mb-4 uppercase"
+          className="text-3xl font-bold text-center mb-12 uppercase"
           variants={fadeIn("up", "tween", 0.2, 1)}
           initial="hidden"
           whileInView="show"
@@ -107,7 +108,7 @@ const EuropeanTourSection = () => {
         >
           Land Tour tại Châu Âu
         </motion.h2>
-        
+
         <motion.p 
           className="text-base md:text-lg text-gray-700 mb-6 text-center"
           variants={fadeIn("up", "tween", 0.3, 1)}
@@ -116,7 +117,6 @@ const EuropeanTourSection = () => {
           viewport={{ once: true }}
         >
           Các loại Tour xuất phát và kết thúc trong khu vực Schengen, KHÔNG BAO GỒM Vé máy bay và Visa
-
         </motion.p>
         
         <motion.div
@@ -129,42 +129,36 @@ const EuropeanTourSection = () => {
           <Carousel className="w-full max-w-5xl mx-auto">
             <CarouselContent>
               {europeanTours.map((provider, index) => (
-                <CarouselItem key={index} className="md:basis-1/3 p-2">
-                  <div className="relative h-full bg-white/80 backdrop-blur-sm rounded-lg shadow-lg overflow-hidden flex flex-col p-5 min-h-[420px] border border-teal-100 hover:border-teal-200 transition-all">
-                    <div className="relative h-48 overflow-hidden rounded-lg shadow-md">
+                <CarouselItem key={index} className="md:basis-1/3">
+                  <div className="relative h-full bg-white rounded-lg shadow-md overflow-hidden flex flex-col p-4 min-h-[400px]">
+                    <div className="relative h-40 overflow-hidden rounded-lg">
                       <img
                         src={provider.logo}
                         alt={provider.name}
-                        className="absolute top-0 left-0 w-full h-full object-cover transform hover:scale-105 transition-transform duration-300"
+                        className="absolute top-0 left-0 w-full h-full object-cover"
                       />
                     </div>
-                    <div className="flex flex-col flex-grow gap-4 mt-5">
+                    <div className="flex flex-col flex-grow gap-4 mt-4">
                       <div>
-                        <h3 className="font-semibold text-lg text-teal-700 hover:text-teal-600 transition-colors">
-                          <a href={provider.link}>{provider.name}</a>
-                        </h3>
+                        <h3 className="font-semibold text-lg">{provider.name}</h3>
                       </div>
-                      <div className="space-y-2">
-                        {provider.description.map((desc, i) => (
-                          <p key={i} className="text-gray-700 font-medium bg-teal-50/50 px-3 py-1 rounded-md">{desc}</p>
-                        ))}
+                      <div className="space-y-1">
+                        <p className="text-gray-600 text-sm">ĐKKD: {provider.details.dkkd}</p>
+                        <p className="text-gray-600 text-sm">{provider.details.office}</p>
+                        {provider.details.since && (
+                          <p className="text-gray-600 text-sm">Since: {provider.details.since}</p>
+                        )}
                       </div>
-                      <div className="space-y-1.5 text-sm text-gray-600 bg-white/60 p-3 rounded-md">
-                        <p className="flex items-center"><span className="w-16 text-teal-700">ĐKKD:</span> {provider.details.dkkd}</p>
-                        <p className="flex items-center"><span className="w-16 text-teal-700">HQ:</span> {provider.details.hq.replace('Trụ sở chính: ', '')}</p>
-                        {provider.details.since && <p className="flex items-center"><span className="w-16 text-teal-700">Since:</span> {provider.details.since}</p>}
-                        <p className="flex items-center"><span className="w-16 text-teal-700">Office:</span> {provider.details.office.replace('Văn phòng: ', '')}</p>
-                      </div>
-                      <div className="mt-auto flex items-center justify-between pt-3 border-t border-teal-100">
-                        <div className="flex items-center bg-teal-50/50 px-3 py-1 rounded-full">
+                      <div className="mt-auto flex items-center justify-between">
+                        <div className="flex items-center">
                           {renderStars(provider.rating)}
-                          <span className="ml-2 text-sm text-teal-700 font-medium">
+                          <span className="ml-2 text-sm text-gray-600">
                             {provider.rating} (500+ reviews)
                           </span>
                         </div>
                         <a 
                           href={provider.link}
-                          className="bg-teal-600 text-white px-5 py-2 rounded-full text-sm hover:bg-teal-700 transition-all hover:shadow-md"
+                          className="bg-teal-600 text-white px-4 py-2 rounded-md text-sm hover:bg-teal-700 transition-colors"
                         >
                           Chi tiết
                         </a>
