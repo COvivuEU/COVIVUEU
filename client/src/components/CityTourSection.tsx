@@ -72,7 +72,7 @@ const CityTourSection = () => {
           whileInView="show"
           viewport={{ once: true }}
         >
-          CITY TOUR
+          CITY TOUR CHÂU ÂU
         </motion.h2>
 
         <motion.p 
@@ -82,7 +82,7 @@ const CityTourSection = () => {
           whileInView="show"
           viewport={{ once: true }}
         >
-          Khám phá các thành phố nổi tiếng châu Âu
+          Khám phá các thành phố nổi tiếng và di sản văn hóa châu Âu
         </motion.p>
         
         <motion.div
@@ -95,31 +95,29 @@ const CityTourSection = () => {
           <Carousel className="w-full max-w-5xl mx-auto">
             <CarouselContent>
               {cityTours.map((tour, index) => (
-                <CarouselItem key={index} className="md:basis-1/3">
-                  <div className="relative h-full bg-white rounded-lg shadow-md overflow-hidden flex flex-col p-4 min-h-[400px]">
-                    <div className="relative h-40 overflow-hidden rounded-lg">
+                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                  <div className="relative h-full bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
+                    <div className="relative pt-[56.25%] overflow-hidden">
                       <img
                         src={tour.image}
                         alt={tour.title}
                         className="absolute top-0 left-0 w-full h-full object-cover"
                       />
                     </div>
-                    <div className="flex flex-col flex-grow gap-4 mt-4">
-                      <div>
-                        <h3 className="font-semibold text-lg">{tour.title}</h3>
-                        <p className="text-gray-700">{tour.location}</p>
-                        {tour.subtitle && (
-                          <p className="text-gray-600 text-sm italic">{tour.subtitle}</p>
-                        )}
-                      </div>
-                      <div className="space-y-0.5">
+                    <div className="p-4 flex flex-col flex-grow">
+                      <h3 className="font-semibold text-lg mb-2">{tour.title}</h3>
+                      <p className="text-gray-700 mb-1">{tour.location}</p>
+                      {tour.subtitle && (
+                        <p className="text-gray-600 text-sm italic mb-2">{tour.subtitle}</p>
+                      )}
+                      <div className="space-y-1 mb-4">
                         <p className="text-gray-600 text-sm">{tour.duration}</p>
                         <p className="text-gray-600 text-sm">{tour.transport}</p>
                         <p className="text-gray-600 text-sm">{tour.buddy}</p>
                       </div>
                       <div className="mt-auto">
                         <div className="border-t border-gray-100 pt-3">
-                          <p className="font-semibold text-lg mb-3">{tour.price}</p>
+                          <p className="font-semibold text-lg text-teal-600 mb-3">từ {tour.price}</p>
                           <div className="flex items-center justify-between">
                             <div className="flex items-center">
                               {renderStars(tour.rating)}
