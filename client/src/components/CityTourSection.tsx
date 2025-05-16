@@ -108,10 +108,10 @@ const CityTourSection = () => {
                       {tour.subtitle && (
                         <p className="text-gray-600 text-sm italic mb-2">{tour.subtitle}</p>
                       )}
-                      <div className="mb-4">
-                        <p className="text-gray-600 text-sm leading-5">{tour.duration}</p>
-                        <p className="text-gray-600 text-sm leading-5">{tour.transport}</p>
-                        <p className="text-gray-600 text-sm leading-5">{tour.buddy}</p>
+                      <div className="space-y-1 mb-4">
+                        <p className="text-gray-600 text-sm">{tour.duration}</p>
+                        <p className="text-gray-600 text-sm">{tour.transport}</p>
+                        <p className="text-gray-600 text-sm">{tour.buddy}</p>
                       </div>
                       <div className="mt-auto">
                         <div className="border-t border-gray-100 pt-3">
