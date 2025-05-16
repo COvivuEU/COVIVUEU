@@ -102,21 +102,17 @@ const CityTourSection = () => {
                         className="absolute top-0 left-0 w-full h-full object-cover"
                       />
                     </div>
-                    <div className="p-4 flex flex-col flex-grow">
-                      <h3 className="font-semibold text-lg mb-2">{tour.title}</h3>
-                      <p className="text-gray-700 text-sm mb-1">{tour.location}</p>
-                      {tour.subtitle && (
-                        <p className="text-gray-600 text-sm italic mb-2">{tour.subtitle}</p>
-                      )}
-                      <div className="flex flex-col gap-1.5 mb-4">
-                        <p className="text-gray-600 text-sm leading-relaxed">{tour.location}</p>
-                        <p className="text-gray-600 text-sm leading-relaxed">{tour.duration}</p>
-                        <p className="text-gray-600 text-sm leading-relaxed">{tour.transport}</p>
-                        <p className="text-gray-600 text-sm leading-relaxed">{tour.buddy}</p>
+                    <div className="p-3 flex flex-col flex-grow">
+                      <h3 className="font-semibold text-lg mb-1">{tour.title}</h3>
+                      <div className="flex flex-col gap-0.5">
+                        <p className="text-gray-600 text-sm leading-tight">{tour.location}</p>
+                        <p className="text-gray-600 text-sm leading-tight">{tour.duration}</p>
+                        <p className="text-gray-600 text-sm leading-tight">{tour.transport}</p>
+                        <p className="text-gray-600 text-sm leading-tight">{tour.buddy}</p>
                       </div>
-                      <div className="mt-auto">
-                        <div className="border-t border-gray-100 pt-3">
-                          <p className="font-semibold text-lg text-teal-600 mb-3">{tour.price}</p>
+                      <div className="mt-2">
+                        <div className="border-t border-gray-100 pt-2">
+                          <p className="font-semibold text-lg text-teal-600 mb-2">{tour.price}</p>
                           <div className="flex items-center justify-between">
                             <div className="flex items-center">
                               {renderStars(tour.rating)}
