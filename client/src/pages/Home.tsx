@@ -57,20 +57,18 @@ const Home = () => {
       <main>
         <HeroSection />
         <ServicesSection />
-        <VietDriverSection />
-        <ToursSection />
-        <div id="land-tour"><LandTourSection /></div>
-        <div id="city-tour"><CityTourSection /></div>
-        <div id="day-tour"><DayTourSection /></div>
-        <div id="special-tour"><SpecialTourSection /></div>
+        <TourFromVNSection />
+        <EuropeanTourSection />
         <div id="fixed-group-tour"><FixedGroupTourSection /></div>
         <div id="flexible-tour"><FlexibleTourSection /></div>
         <div id="private-tour"><PrivateTourSection /></div>
+        <div id="city-tour"><CityTourSection /></div>
+        <div id="day-tour"><DayTourSection /></div>
+        <div id="special-tour"><SpecialTourSection /></div>
         <HomestaySection />
-        <RestaurantsSection />
         <GuidesTouristiquesSection />
-        <TourFromVNSection />
-        <EuropeanTourSection />
+        <VietDriverSection />
+        <RestaurantsSection />
         <PartnersSection />
       </main>
 

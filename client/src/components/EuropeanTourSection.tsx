@@ -105,9 +105,20 @@ const EuropeanTourSection = () => {
           whileInView="show"
           viewport={{ once: true }}
         >
-          Land Tour từ Châu Âu
+          Land Tour tại Châu Âu
         </motion.h2>
+        
+        <motion.p 
+          className="text-base md:text-lg text-gray-700 mb-6 text-center"
+          variants={fadeIn("up", "tween", 0.3, 1)}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+        >
+          Các loại Tour xuất phát và kết thúc trong khu vực Schengen, KHÔNG BAO GỒM Vé máy bay và Visa
 
+        </motion.p>
+        
         <motion.div
           variants={fadeIn("up", "tween", 0.4, 1)}
           initial="hidden"
