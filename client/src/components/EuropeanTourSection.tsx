@@ -16,10 +16,7 @@ const europeanTours = [
     name: "COvivu",
     link: "#",
     rating: 4.5,
-    description: [
-      "Tour Thiết kế riêng",
-      "Tour Thiết kế sẵn"
-    ],
+    description: ["Tour Thiết kế riêng", "Tour Thiết kế sẵn"],
     details: {
       dkkd: "Pháp",
       hq: "Trụ sở chính: Strasbourg",
@@ -31,10 +28,8 @@ const europeanTours = [
     logo: "https://images.pexels.com/photos/1117452/pexels-photo-1117452.jpeg",
     name: "SmileTrip",
     link: "#",
-    description: [
-      "Tour Thiết kế riêng",
-      "Tour Thiết kế sẵn"
-    ],
+    rating: 4.8,
+    description: ["Tour Thiết kế riêng", "Tour Thiết kế sẵn"],
     details: {
       dkkd: "Pháp",
       hq: "Trụ sở chính: Paris",
@@ -46,9 +41,8 @@ const europeanTours = [
     logo: "https://images.pexels.com/photos/1117452/pexels-photo-1117452.jpeg",
     name: "EuroCircle",
     link: "#",
-    description: [
-      "Tour ghép linh hoạt"
-    ],
+    rating: 4.7,
+    description: ["Tour ghép linh hoạt"],
     details: {
       dkkd: "Việt Nam",
       hq: "Trụ sở chính: TP.HCM",
@@ -60,9 +54,8 @@ const europeanTours = [
     logo: "https://images.pexels.com/photos/1117452/pexels-photo-1117452.jpeg",
     name: "GoEUGo",
     link: "#",
-    description: [
-      "Tour ghép linh hoạt"
-    ],
+    rating: 4.6,
+    description: ["Tour ghép linh hoạt"],
     details: {
       dkkd: "Hà Lan",
       hq: "Trụ sở chính: Rotterdam",
@@ -74,9 +67,8 @@ const europeanTours = [
     logo: "https://images.pexels.com/photos/1117452/pexels-photo-1117452.jpeg",
     name: "Babar Travel",
     link: "#",
-    description: [
-      "Tour ghép linh hoạt"
-    ],
+    rating: 4.9,
+    description: ["Tour ghép linh hoạt"],
     details: {
       dkkd: "Việt Nam",
       hq: "Trụ sở chính: Hà Nội",
@@ -150,14 +142,12 @@ const EuropeanTourSection = () => {
                         )}
                       </div>
                       <div className="mt-auto flex items-center justify-between">
-                        {provider.rating && (
-                          <div className="flex items-center">
-                            {renderStars(Math.floor(provider.rating))}
-                            <span className="ml-2 text-sm text-gray-600">
-                              {provider.rating} (500+ reviews)
-                            </span>
-                          </div>
-                        )}
+                        <div className="flex items-center">
+                          {renderStars(provider.rating)}
+                          <span className="ml-2 text-sm text-gray-600">
+                            {provider.rating} (500+ reviews)
+                          </span>
+                        </div>
                         <a 
                           href={provider.link}
                           className="bg-teal-600 text-white px-4 py-2 rounded-md text-sm hover:bg-teal-700 transition-colors"
