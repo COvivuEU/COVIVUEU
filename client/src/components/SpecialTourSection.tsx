@@ -51,7 +51,7 @@ const SpecialTourSection = () => {
           whileInView="show"
           viewport={{ once: true }}
         >
-          TOUR TRẢI NGHIỆM ĐẶC BIỆT
+          TRẢI NGHIỆM ĐẶC BIỆT
         </motion.h2>
         
         <motion.p 
