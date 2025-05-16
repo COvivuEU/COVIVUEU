@@ -150,12 +150,14 @@ const EuropeanTourSection = () => {
                         )}
                       </div>
                       <div className="mt-auto flex items-center justify-between">
-                        <div className="flex items-center">
-                          {renderStars(provider.rating)}
-                          <span className="ml-2 text-sm text-gray-600">
-                            {provider.rating} (500+ reviews)
-                          </span>
-                        </div>
+                        {provider.rating && (
+                          <div className="flex items-center">
+                            {renderStars(Math.floor(provider.rating))}
+                            <span className="ml-2 text-sm text-gray-600">
+                              {provider.rating} (500+ reviews)
+                            </span>
+                          </div>
+                        )}
                         <a 
                           href={provider.link}
                           className="bg-teal-600 text-white px-4 py-2 rounded-md text-sm hover:bg-teal-700 transition-colors"
