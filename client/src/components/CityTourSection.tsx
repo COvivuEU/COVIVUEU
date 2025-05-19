@@ -104,11 +104,11 @@ const CityTourSection = () => {
                     </div>
                     <div className="p-3 flex flex-col flex-grow">
                       <h3 className="font-semibold text-lg mb-1">{tour.title}</h3>
-                      <div className="flex flex-col gap-0.5">
-                        <p className="text-gray-600 text-sm leading-tight">{tour.location}</p>
-                        <p className="text-gray-600 text-sm leading-tight">{tour.duration}</p>
-                        <p className="text-gray-600 text-sm leading-tight">{tour.transport}</p>
-                        <p className="text-gray-600 text-sm leading-tight">{tour.buddy}</p>
+                      <div>
+                        <p className="text-gray-600 text-sm leading-none mb-1">{tour.location}</p>
+                        <p className="text-gray-600 text-sm leading-none mb-1">{tour.duration}</p>
+                        <p className="text-gray-600 text-sm leading-none mb-1">{tour.transport}</p>
+                        <p className="text-gray-600 text-sm leading-none">{tour.buddy}</p>
                       </div>
                       <div className="mt-2">
                         <div className="border-t border-gray-100 pt-2">
