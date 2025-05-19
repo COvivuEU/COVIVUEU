@@ -114,10 +114,10 @@ const TourFromVNSection = () => {
                         <h3 className="font-semibold text-lg mb-1">{provider.name}</h3>
                       </div>
                       <div>
-                        <p className="text-gray-600 text-sm leading-none mb-1">ĐKKD: Việt Nam</p>
-                        <p className="text-gray-600 text-sm leading-none mb-1">{provider.office}</p>
+                        <p className="text-gray-600 text-sm leading-relaxed mb-0.5">ĐKKD: Việt Nam</p>
+                        <p className="text-gray-600 text-sm leading-relaxed mb-0.5">{provider.office}</p>
                         {provider.since && (
-                          <p className="text-gray-600 text-sm leading-none">Since: {provider.since}</p>
+                          <p className="text-gray-600 text-sm leading-relaxed">Since: {provider.since}</p>
                         )}
                       </div>
                       <div className="mt-2 flex items-center justify-between">

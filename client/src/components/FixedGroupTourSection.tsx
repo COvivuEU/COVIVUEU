@@ -96,13 +96,13 @@ const FixedGroupTourSection = () => {
                         <h3 className="font-semibold text-lg mb-1">{provider.name}</h3>
                       </div>
                       <div>
-                        <p className="text-gray-600 text-sm leading-none mb-1">ĐKKD: {provider.details.dkkd}</p>
-                        <p className="text-gray-600 text-sm leading-none mb-1">{provider.details.hq}</p>
+                        <p className="text-gray-600 text-sm leading-relaxed mb-0.5">ĐKKD: {provider.details.dkkd}</p>
+                        <p className="text-gray-600 text-sm leading-relaxed mb-0.5">{provider.details.hq}</p>
                         {provider.details.since && (
-                          <p className="text-gray-600 text-sm leading-none mb-1">Since: {provider.details.since}</p>
+                          <p className="text-gray-600 text-sm leading-relaxed mb-0.5">Since: {provider.details.since}</p>
                         )}
                         {provider.details.office && (
-                          <p className="text-gray-600 text-sm leading-none">{provider.details.office}</p>
+                          <p className="text-gray-600 text-sm leading-relaxed">{provider.details.office}</p>
                         )}
                       </div>
                       <div className="mt-2 flex items-center justify-between">
