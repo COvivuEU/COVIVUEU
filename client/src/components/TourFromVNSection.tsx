@@ -109,18 +109,18 @@ const TourFromVNSection = () => {
                         className="absolute top-0 left-0 w-full h-full object-cover"
                       />
                     </div>
-                    <div className="flex flex-col flex-grow gap-4 mt-4">
+                    <div className="flex flex-col flex-grow gap-2 mt-2">
                       <div>
-                        <h3 className="font-semibold text-lg">{provider.name}</h3>
+                        <h3 className="font-semibold text-lg mb-1">{provider.name}</h3>
                       </div>
-                      <div>
-                        <p className="text-gray-600 text-sm">ĐKKD: Việt Nam</p>
-                        <p className="text-gray-600 text-sm">{provider.office}</p>
+                      <div className="space-y-0.5">
+                        <p className="text-gray-600 text-sm leading-tight">ĐKKD: Việt Nam</p>
+                        <p className="text-gray-600 text-sm leading-tight">{provider.office}</p>
                         {provider.since && (
-                          <p className="text-gray-600 text-sm">Since: {provider.since}</p>
+                          <p className="text-gray-600 text-sm leading-tight">Since: {provider.since}</p>
                         )}
                       </div>
-                      <div className="mt-auto flex items-center justify-between">
+                      <div className="mt-2 flex items-center justify-between">
                         <div className="flex items-center">
                           {renderStars(provider.rating)}
                           <span className="ml-2 text-sm text-gray-600">
