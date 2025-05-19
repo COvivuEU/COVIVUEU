@@ -83,15 +83,15 @@ const SpecialTourSection = () => {
                         className="absolute top-0 left-0 w-full h-full object-cover"
                       />
                     </div>
-                    <div className="p-4 flex flex-col flex-grow">
-                      <h3 className="font-semibold text-lg mb-2">{tour.title}</h3>
-                      <div className="flex items-center mb-2">
+                    <div className="p-3 flex flex-col flex-grow">
+                      <h3 className="font-semibold text-lg mb-1">{tour.title}</h3>
+                      <div className="flex items-center mb-1">
                         {renderStars(tour.rating)}
-                        <span className="ml-2 text-sm text-gray-600">
+                        <span className="ml-2 text-sm text-gray-600 leading-tight">
                           {tour.rating} ({tour.bookings})
                         </span>
                       </div>
-                      <p className="text-gray-600 text-sm mb-3">{tour.description}</p>
+                      <p className="text-gray-600 text-sm mb-2 leading-tight">{tour.description}</p>
                       <div className="mt-auto">
                         <div className="flex justify-between items-center">
                           <span className="text-lg font-bold text-teal-600">
