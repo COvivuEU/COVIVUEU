@@ -97,29 +97,29 @@ const FlexibleTourSection = () => {
                     </div>
                     <div className="flex flex-col flex-grow gap-4 mt-4">
                       <div>
-                        <h3 className="font-semibold text-lg">{provider.name}</h3>
+                        <h3 className="font-semibold text-lg mb-1">{provider.name}</h3>
                       </div>
-                      <div className="space-y-0.5">
-                        <p className="text-gray-600 text-sm">ĐKKD: {provider.details.dkkd}</p>
-                        <p className="text-gray-600 text-sm">{provider.details.hq}</p>
+                      <div>
+                        <p className="text-gray-600 text-sm leading-none mb-1">ĐKKD: {provider.details.dkkd}</p>
+                        <p className="text-gray-600 text-sm leading-none mb-1">{provider.details.hq}</p>
                         {provider.details.since && (
-                          <p className="text-gray-600 text-sm">Since: {provider.details.since}</p>
+                          <p className="text-gray-600 text-sm leading-none mb-1">Since: {provider.details.since}</p>
                         )}
                         {provider.details.office && (
-                          <p className="text-gray-600 text-sm">{provider.details.office}</p>
+                          <p className="text-gray-600 text-sm leading-none mb-1">{provider.details.office}</p>
                         )}
                         {provider.agents && (
-                          <p className="text-gray-600 text-sm">
+                          <p className="text-gray-600 text-sm leading-none mb-1">
                             Đại lí Việt Nam: {provider.agents.join(", ")}
                           </p>
                         )}
                         {provider.locations && (
-                          <p className="text-gray-600 text-sm">
+                          <p className="text-gray-600 text-sm leading-none">
                             {provider.locations.join(", ")}
                           </p>
                         )}
                       </div>
-                      <div className="mt-auto flex items-center justify-between">
+                      <div className="mt-2 flex items-center justify-between">
                         <div className="flex items-center">
                           {renderStars(provider.rating)}
                           <span className="ml-2 text-sm text-gray-600">
