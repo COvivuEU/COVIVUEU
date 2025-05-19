@@ -1,4 +1,3 @@
-
 import { StarIcon } from "lucide-react";
 import { motion } from "framer-motion";
 import { fadeIn } from "@/lib/animations";
@@ -110,7 +109,7 @@ const EuropeanTourSection = () => {
         >
           Các loại Tour xuất phát và kết thúc trong khu vực Schengen, KHÔNG BAO GỒM Vé máy bay và Visa
         </motion.p>
-        
+
         <motion.div
           variants={fadeIn("up", "tween", 0.4, 1)}
           initial="hidden"
@@ -134,11 +133,11 @@ const EuropeanTourSection = () => {
                       <div>
                         <h3 className="font-semibold text-lg">{provider.name}</h3>
                       </div>
-                      <div className="space-y-1">
-                        <p className="text-gray-600 text-sm">ĐKKD: {provider.details.dkkd}</p>
-                        <p className="text-gray-600 text-sm">{provider.details.office}</p>
+                      <div>
+                        <p className="text-gray-600 text-sm leading-none mb-1">ĐKKD: {provider.details.dkkd}</p>
+                        <p className="text-gray-600 text-sm leading-none mb-1">{provider.details.office}</p>
                         {provider.details.since && (
-                          <p className="text-gray-600 text-sm">Since: {provider.details.since}</p>
+                          <p className="text-gray-600 text-sm leading-none">Since: {provider.details.since}</p>
                         )}
                       </div>
                       <div className="mt-auto flex items-center justify-between">
