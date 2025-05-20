@@ -89,7 +89,7 @@ const TourFromVNSection = () => {
         >
           Các loại Tour xuất phát từ Việt Nam và trở về Việt Nam, CÓ BAO GỒM cả Vé máy bay và Visa
         </motion.p>
-        
+
         <motion.div
           variants={fadeIn("up", "tween", 0.4, 1)}
           initial="hidden"
@@ -120,20 +120,17 @@ const TourFromVNSection = () => {
                           <p className="text-gray-600 text-sm leading-relaxed">Since: {provider.since}</p>
                         )}
                       </div>
-                      <div className="mt-2 flex items-center justify-between">
-                        <div className="flex items-center">
-                          {renderStars(provider.rating)}
-                          <span className="ml-2 text-sm text-gray-600">
-                            {provider.rating} (500+ reviews)
-                          </span>
+                      <div className="flex items-center justify-between mt-auto border-t border-gray-100 pt-4">
+                          <div className="flex items-center gap-2 flex-shrink-0 min-w-[120px]">
+                            {renderStars(provider.rating)}
+                            <span className="text-sm text-gray-600 whitespace-nowrap">
+                              {provider.rating}
+                            </span>
+                          </div>
+                          <button className="bg-teal-600 text-white px-4 py-2 rounded-lg hover:bg-teal-700 transition-colors flex-shrink-0">
+                            Chi tiết
+                          </button>
                         </div>
-                        <a 
-                          href={provider.link}
-                          className="bg-teal-600 text-white px-4 py-2 rounded-md text-sm hover:bg-teal-700 transition-colors"
-                        >
-                          Chi tiết
-                        </a>
-                      </div>
                     </div>
                   </div>
                 </CarouselItem>
