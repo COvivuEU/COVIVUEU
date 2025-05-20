@@ -126,9 +126,9 @@ const TourFromVNSection = () => {
                     
                     <div className="p-5 flex flex-col flex-grow">
                       <h3 className="text-xl font-semibold">{provider.name}</h3>
-                      <p className="text-gray-600 text-sm mt-2">{provider.description}</p>
-                      <p className="text-gray-600 text-sm">{provider.dkkd}</p>
-                      <p className="text-gray-600 text-sm">{provider.hq}</p>
+                      <p className="text-gray-600 text-sm mt-1.5">{provider.description}</p>
+                      <p className="text-gray-600 text-sm mt-0.5">{provider.dkkd}</p>
+                      <p className="text-gray-600 text-sm mt-0.5">{provider.hq}</p>
                       
                       <div className="mt-4">
                         <div className="flex flex-wrap gap-1.5 mb-4">
