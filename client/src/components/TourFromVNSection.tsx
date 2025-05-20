@@ -131,13 +131,13 @@ const TourFromVNSection = () => {
                         </div>
                         
                         <div className="flex items-center justify-between mt-auto border-t border-gray-100 pt-4">
-                          <div className="flex items-center gap-2">
+                          <div className="flex items-center gap-2 flex-shrink-0">
                             {renderStars(provider.rating)}
-                            <span className="text-sm text-gray-600">
+                            <span className="text-sm text-gray-600 whitespace-nowrap">
                               {provider.rating}
                             </span>
                           </div>
-                          <button className="bg-teal-600 text-white px-4 py-2 rounded-lg hover:bg-teal-700 transition-colors">
+                          <button className="bg-teal-600 text-white px-4 py-2 rounded-lg hover:bg-teal-700 transition-colors flex-shrink-0">
                             Xem chi tiết
                           </button>
                         </div>
