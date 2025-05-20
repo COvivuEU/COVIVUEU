@@ -15,6 +15,8 @@ const tourProviders = [
     logo: "https://images.pexels.com/photos/672532/pexels-photo-672532.jpeg",
     name: "World Trip",
     description: "Chuyên tổ chức các tour du lịch khám phá châu Âu từ Việt Nam",
+    hq: "Trụ sở chính: Hà Nội",
+    dkkd: "ĐKKD: 0123456789",
     rating: 4.5,
     reviews: "500+",
     features: ["Chuyên nghiệp", "Nhiều kinh nghiệm", "Dịch vụ tận tâm"],
@@ -23,7 +25,9 @@ const tourProviders = [
   {
     logo: "https://images.pexels.com/photos/1117452/pexels-photo-1117452.jpeg",
     name: "Lữ Việt",
-    description: "Trụ sở chính: Đồng hành cùng bạn trong mọi hành trình khám phá châu Âu",
+    description: "Đồng hành cùng bạn trong mọi hành trình khám phá châu Âu",
+    hq: "Trụ sở chính: Hà Nội",
+    dkkd: "ĐKKD: 0987654321",
     rating: 4.8,
     reviews: "1K+",
     features: ["Đa dạng tour", "Giá cả hợp lý", "Hướng dẫn viên chuyên nghiệp"],
@@ -33,6 +37,8 @@ const tourProviders = [
     logo: "https://images.pexels.com/photos/1117452/pexels-photo-1117452.jpeg",
     name: "Inno Tour",
     description: "Tour du lịch châu Âu chất lượng cao với trải nghiệm độc đáo",
+    hq: "Trụ sở chính: Hà Nội",
+    dkkd: "ĐKKD: 0123498765",
     rating: 4.6,
     reviews: "300+",
     features: ["Sáng tạo", "Linh hoạt", "Chi phí tốt"],
@@ -42,6 +48,8 @@ const tourProviders = [
     logo: "https://images.pexels.com/photos/1117452/pexels-photo-1117452.jpeg",
     name: "TransViet",
     description: "Khám phá châu Âu với dịch vụ du lịch đẳng cấp 5 sao",
+    hq: "Trụ sở chính: Hà Nội",
+    dkkd: "ĐKKD: 0567891234",
     rating: 4.7,
     reviews: "800+",
     features: ["Sang trọng", "An toàn", "Tiện nghi"],
@@ -51,6 +59,8 @@ const tourProviders = [
     logo: "https://images.pexels.com/photos/1117452/pexels-photo-1117452.jpeg",
     name: "Tugo",
     description: "Tour du lịch châu Âu theo phong cách trẻ trung, năng động",
+    hq: "Trụ sở chính: Hà Nội",
+    dkkd: "ĐKKD: 0345678912",
     rating: 4.9,
     reviews: "1K+",
     features: ["Hiện đại", "Năng động", "Giá tốt"],
@@ -117,6 +127,8 @@ const TourFromVNSection = () => {
                     <div className="p-5 flex flex-col flex-grow">
                       <h3 className="text-xl font-semibold">{provider.name}</h3>
                       <p className="text-gray-600 text-sm mt-2">{provider.description}</p>
+                      <p className="text-gray-600 text-sm">{provider.dkkd}</p>
+                      <p className="text-gray-600 text-sm">{provider.hq}</p>
                       
                       <div className="mt-4">
                         <div className="flex flex-wrap gap-1.5 mb-4">
