@@ -1,8 +1,14 @@
 
+import { StarIcon } from "lucide-react";
 import { motion } from "framer-motion";
 import { fadeIn } from "@/lib/animations";
-import { StarIcon } from "lucide-react";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const landTours = [
   {
@@ -42,10 +48,10 @@ const LandTourSection = () => {
   };
 
   return (
-    <section className="py-16 bg-white border-t border-gray-100">
+    <section id="landtour" className="py-16 bg-white border-t border-gray-100">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.h2 
-          className="text-3xl font-bold text-center mb-0 uppercase"
+          className="text-3xl font-bold text-center mb-12 uppercase"
           variants={fadeIn("up", "tween", 0.2, 1)}
           initial="hidden"
           whileInView="show"
@@ -55,7 +61,7 @@ const LandTourSection = () => {
         </motion.h2>
 
         <motion.p 
-          className="text-base md:text-lg text-gray-700 mb-6 text-center mt-2"
+          className="text-base md:text-lg text-gray-700 mb-6 text-center"
           variants={fadeIn("up", "tween", 0.3, 1)}
           initial="hidden"
           whileInView="show"
