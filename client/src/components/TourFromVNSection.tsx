@@ -118,15 +118,8 @@ const TourFromVNSection = () => {
                       <h3 className="text-xl font-semibold">{provider.name}</h3>
                       <p className="text-gray-600 text-sm mt-2">{provider.description}</p>
                       
-                      <div className="mt-4 space-y-3">
-                        <div className="flex items-center gap-2">
-                          {renderStars(provider.rating)}
-                          <span className="text-sm text-gray-600">
-                            {provider.rating} ({provider.reviews} đánh giá)
-                          </span>
-                        </div>
-                        
-                        <div className="flex flex-wrap gap-1.5">
+                      <div className="mt-4">
+                        <div className="flex flex-wrap gap-1.5 mb-4">
                           {provider.features.map((feature, i) => (
                             <span 
                               key={i}
@@ -136,11 +129,19 @@ const TourFromVNSection = () => {
                             </span>
                           ))}
                         </div>
+                        
+                        <div className="flex items-center justify-between mt-auto border-t border-gray-100 pt-4">
+                          <div className="flex items-center gap-2">
+                            {renderStars(provider.rating)}
+                            <span className="text-sm text-gray-600">
+                              {provider.rating}
+                            </span>
+                          </div>
+                          <button className="bg-teal-600 text-white px-4 py-2 rounded-lg hover:bg-teal-700 transition-colors">
+                            Xem chi tiết
+                          </button>
+                        </div>
                       </div>
-
-                      <button className="w-full mt-auto bg-teal-600 text-white py-2.5 rounded-lg hover:bg-teal-700 transition-colors">
-                        Xem chi tiết
-                      </button>
                     </div>
                   </div>
                 </CarouselItem>
