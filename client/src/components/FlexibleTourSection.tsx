@@ -119,19 +119,16 @@ const FlexibleTourSection = () => {
                           </p>
                         )}
                       </div>
-                      <div className="mt-2 flex items-center justify-between">
-                        <div className="flex items-center">
+                      <div className="flex items-center justify-between mt-auto border-t border-gray-100 pt-4">
+                        <div className="flex items-center gap-2 flex-shrink-0 min-w-[120px]">
                           {renderStars(provider.rating)}
-                          <span className="ml-2 text-sm text-gray-600">
-                            {provider.rating} (500+ reviews)
+                          <span className="text-sm text-gray-600 whitespace-nowrap">
+                            {provider.rating}
                           </span>
                         </div>
-                        <a 
-                          href={provider.link}
-                          className="bg-teal-600 text-white px-4 py-2 rounded-md text-sm hover:bg-teal-700 transition-colors"
-                        >
+                        <button className="bg-teal-600 text-white px-4 py-2 rounded-lg hover:bg-teal-700 transition-colors flex-shrink-0">
                           Chi tiết
-                        </a>
+                        </button>
                       </div>
                     </div>
                   </div>
