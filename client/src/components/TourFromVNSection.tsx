@@ -89,7 +89,7 @@ const TourFromVNSection = () => {
         >
           Các loại Tour xuất phát từ Việt Nam và trở về Việt Nam, CÓ BAO GỒM cả Vé máy bay và Visa
         </motion.p>
-        
+
         <motion.div
           variants={fadeIn("up", "tween", 0.4, 1)}
           initial="hidden"
@@ -109,31 +109,28 @@ const TourFromVNSection = () => {
                         className="absolute top-0 left-0 w-full h-full object-cover"
                       />
                     </div>
-                    <div className="flex flex-col flex-grow gap-4 mt-4">
+                    <div className="flex flex-col flex-grow gap-2 mt-2">
                       <div>
-                        <h3 className="font-semibold text-lg">{provider.name}</h3>
+                        <h3 className="font-semibold text-lg mb-1">{provider.name}</h3>
                       </div>
                       <div>
-                        <p className="text-gray-600 text-sm">ĐKKD: Việt Nam</p>
-                        <p className="text-gray-600 text-sm">{provider.office}</p>
+                        <p className="text-gray-600 text-sm leading-relaxed mb-0.5">ĐKKD: Việt Nam</p>
+                        <p className="text-gray-600 text-sm leading-relaxed mb-0.5">{provider.office}</p>
                         {provider.since && (
-                          <p className="text-gray-600 text-sm">Since: {provider.since}</p>
+                          <p className="text-gray-600 text-sm leading-relaxed">Since: {provider.since}</p>
                         )}
                       </div>
-                      <div className="mt-auto flex items-center justify-between">
-                        <div className="flex items-center">
-                          {renderStars(provider.rating)}
-                          <span className="ml-2 text-sm text-gray-600">
-                            {provider.rating} (500+ reviews)
-                          </span>
+                      <div className="flex items-center justify-between mt-auto border-t border-gray-100 pt-4">
+                          <div className="flex items-center gap-2 flex-shrink-0 min-w-[120px]">
+                            {renderStars(provider.rating)}
+                            <span className="text-sm text-gray-600 whitespace-nowrap">
+                              {provider.rating}
+                            </span>
+                          </div>
+                          <button className="bg-teal-600 text-white px-4 py-2 rounded-lg hover:bg-teal-700 transition-colors flex-shrink-0">
+                            Chi tiết
+                          </button>
                         </div>
-                        <a 
-                          href={provider.link}
-                          className="bg-teal-600 text-white px-4 py-2 rounded-md text-sm hover:bg-teal-700 transition-colors"
-                        >
-                          Chi tiết
-                        </a>
-                      </div>
                     </div>
                   </div>
                 </CarouselItem>

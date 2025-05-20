@@ -92,15 +92,16 @@ const LandTourSection = () => {
                         </span>
                       </div>
                       <p className="text-gray-600 text-sm mb-3">{tour.description}</p>
-                      <div className="mt-auto">
-                        <div className="flex justify-between items-center">
-                          <span className="text-lg font-bold text-teal-600">
-                            từ {tour.price}
+                      <div className="flex items-center justify-between mt-auto border-t border-gray-100 pt-4">
+                        <div className="flex items-center gap-2 flex-shrink-0 min-w-[120px]">
+                          {renderStars(tour.rating)}
+                          <span className="text-sm text-gray-600 whitespace-nowrap">
+                            {tour.rating}
                           </span>
-                          <button className="bg-teal-600 text-white px-4 py-2 rounded-md text-sm hover:bg-teal-700 transition-colors">
-                            Chi tiết
-                          </button>
                         </div>
+                        <button className="bg-teal-600 text-white px-4 py-2 rounded-lg hover:bg-teal-700 transition-colors flex-shrink-0">
+                          Chi tiết
+                        </button>
                       </div>
                     </div>
                   </div>

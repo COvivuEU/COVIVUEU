@@ -97,41 +97,38 @@ const FlexibleTourSection = () => {
                     </div>
                     <div className="flex flex-col flex-grow gap-4 mt-4">
                       <div>
-                        <h3 className="font-semibold text-lg">{provider.name}</h3>
+                        <h3 className="font-semibold text-lg mb-1">{provider.name}</h3>
                       </div>
-                      <div className="space-y-0.5">
-                        <p className="text-gray-600 text-sm">ĐKKD: {provider.details.dkkd}</p>
-                        <p className="text-gray-600 text-sm">{provider.details.hq}</p>
+                      <div>
+                        <p className="text-gray-600 text-sm leading-none mb-1">ĐKKD: {provider.details.dkkd}</p>
+                        <p className="text-gray-600 text-sm leading-none mb-1">{provider.details.hq}</p>
                         {provider.details.since && (
-                          <p className="text-gray-600 text-sm">Since: {provider.details.since}</p>
+                          <p className="text-gray-600 text-sm leading-none mb-1">Since: {provider.details.since}</p>
                         )}
                         {provider.details.office && (
-                          <p className="text-gray-600 text-sm">{provider.details.office}</p>
+                          <p className="text-gray-600 text-sm leading-none mb-1">{provider.details.office}</p>
                         )}
                         {provider.agents && (
-                          <p className="text-gray-600 text-sm">
+                          <p className="text-gray-600 text-sm leading-none mb-1">
                             Đại lí Việt Nam: {provider.agents.join(", ")}
                           </p>
                         )}
                         {provider.locations && (
-                          <p className="text-gray-600 text-sm">
+                          <p className="text-gray-600 text-sm leading-none">
                             {provider.locations.join(", ")}
                           </p>
                         )}
                       </div>
-                      <div className="mt-auto flex items-center justify-between">
-                        <div className="flex items-center">
+                      <div className="flex items-center justify-between mt-auto border-t border-gray-100 pt-4">
+                        <div className="flex items-center gap-2 flex-shrink-0 min-w-[120px]">
                           {renderStars(provider.rating)}
-                          <span className="ml-2 text-sm text-gray-600">
-                            {provider.rating} (500+ reviews)
+                          <span className="text-sm text-gray-600 whitespace-nowrap">
+                            {provider.rating}
                           </span>
                         </div>
-                        <a 
-                          href={provider.link}
-                          className="bg-teal-600 text-white px-4 py-2 rounded-md text-sm hover:bg-teal-700 transition-colors"
-                        >
+                        <button className="bg-teal-600 text-white px-4 py-2 rounded-lg hover:bg-teal-700 transition-colors flex-shrink-0">
                           Chi tiết
-                        </a>
+                        </button>
                       </div>
                     </div>
                   </div>

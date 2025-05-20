@@ -104,23 +104,23 @@ const CityTourSection = () => {
                     </div>
                     <div className="p-3 flex flex-col flex-grow">
                       <h3 className="font-semibold text-lg mb-1">{tour.title}</h3>
-                      <div className="flex flex-col gap-0.5">
-                        <p className="text-gray-600 text-sm leading-tight">{tour.location}</p>
-                        <p className="text-gray-600 text-sm leading-tight">{tour.duration}</p>
-                        <p className="text-gray-600 text-sm leading-tight">{tour.transport}</p>
-                        <p className="text-gray-600 text-sm leading-tight">{tour.buddy}</p>
+                      <div>
+                        <p className="text-gray-600 text-sm leading-relaxed mb-0.5">{tour.location}</p>
+                        <p className="text-gray-600 text-sm leading-relaxed mb-0.5">{tour.duration}</p>
+                        <p className="text-gray-600 text-sm leading-relaxed mb-0.5">{tour.transport}</p>
+                        <p className="text-gray-600 text-sm leading-relaxed">{tour.buddy}</p>
                       </div>
                       <div className="mt-2">
                         <div className="border-t border-gray-100 pt-2">
                           <p className="font-semibold text-lg text-teal-600 mb-2">{tour.price}</p>
                           <div className="flex items-center justify-between">
-                            <div className="flex items-center">
+                            <div className="flex items-center gap-2 flex-shrink-0 min-w-[120px]">
                               {renderStars(tour.rating)}
-                              <span className="ml-2 text-sm text-gray-600">
+                              <span className="text-sm text-gray-600 whitespace-nowrap">
                                 {tour.rating} ({tour.reviews})
                               </span>
                             </div>
-                            <button className="bg-teal-600 text-white px-4 py-2 rounded-md text-sm hover:bg-teal-700 transition-colors">
+                            <button className="bg-teal-600 text-white px-4 py-2 rounded-md text-sm hover:bg-teal-700 transition-colors flex-shrink-0">
                               Chi tiết
                             </button>
                           </div>
