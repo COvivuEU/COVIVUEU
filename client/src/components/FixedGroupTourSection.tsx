@@ -63,7 +63,7 @@ const FixedGroupTourSection = () => {
     <section id="fixed-group-tour" className="py-16 bg-white border-t border-gray-100">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.h2 
-          className="text-3xl font-bold text-center mb-4 uppercase"
+          className="text-3xl font-bold text-center mb-12 uppercase"
           variants={fadeIn("up", "tween", 0.2, 1)}
           initial="hidden"
           whileInView="show"
@@ -71,16 +71,6 @@ const FixedGroupTourSection = () => {
         >
           Tour ghép cố định
         </motion.h2>
-
-        <motion.p 
-          className="text-lg md:text-xl text-gray-600 mb-10 text-center max-w-3xl mx-auto leading-relaxed"
-          variants={fadeIn("up", "tween", 0.3, 1)}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-        >
-          Khám phá châu Âu cùng nhóm du khách khác với lịch trình được sắp xếp sẵn
-        </motion.p>
 
         <motion.div
           variants={fadeIn("up", "tween", 0.4, 1)}

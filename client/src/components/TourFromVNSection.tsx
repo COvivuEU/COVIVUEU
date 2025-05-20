@@ -1,7 +1,6 @@
-
 import { StarIcon } from "lucide-react";
 import { motion } from "framer-motion";
-import { fadeIn } from "@/lib/animations";
+import { staggerContainer, fadeIn } from "@/lib/animations";
 import {
   Carousel,
   CarouselContent,
@@ -14,57 +13,47 @@ const tourProviders = [
   {
     logo: "https://images.pexels.com/photos/672532/pexels-photo-672532.jpeg",
     name: "World Trip",
-    description: "Chuyên tổ chức các tour du lịch khám phá châu Âu từ Việt Nam",
-    hq: "Trụ sở chính: Hà Nội",
-    dkkd: "ĐKKD: 0123456789",
+    hq: "TP.HCM",
+    since: "",
     rating: 4.5,
-    reviews: "500+",
-    features: ["Chuyên nghiệp", "Nhiều kinh nghiệm", "Dịch vụ tận tâm"],
-    since: "2010"
+    office: "Trụ sở chính: TP.HCM",
+    link: "#"
   },
   {
     logo: "https://images.pexels.com/photos/1117452/pexels-photo-1117452.jpeg",
-    name: "Lữ Việt",
-    description: "Đồng hành cùng bạn trong mọi hành trình khám phá châu Âu",
-    hq: "Trụ sở chính: Hà Nội",
-    dkkd: "ĐKKD: 0987654321",
+    name: "Lữa Việt",
+    hq: "TP.HCM",
+    since: "1995",
     rating: 4.8,
-    reviews: "1K+",
-    features: ["Đa dạng tour", "Giá cả hợp lý", "Hướng dẫn viên chuyên nghiệp"],
-    since: "1995"
+    office: "Văn phòng: Hà Nội, Cần Thơ, Đà Nẵng",
+    link: "#"
   },
   {
     logo: "https://images.pexels.com/photos/1117452/pexels-photo-1117452.jpeg",
     name: "Inno Tour",
-    description: "Tour du lịch châu Âu chất lượng cao với trải nghiệm độc đáo",
-    hq: "Trụ sở chính: Hà Nội",
-    dkkd: "ĐKKD: 0123498765",
+    hq: "TP.HCM",
+    since: "2017",
     rating: 4.6,
-    reviews: "300+",
-    features: ["Sáng tạo", "Linh hoạt", "Chi phí tốt"],
-    since: "2017"
+    office: "",
+    link: "#"
   },
   {
     logo: "https://images.pexels.com/photos/1117452/pexels-photo-1117452.jpeg",
     name: "TransViet",
-    description: "Khám phá châu Âu với dịch vụ du lịch đẳng cấp 5 sao",
-    hq: "Trụ sở chính: Hà Nội",
-    dkkd: "ĐKKD: 0567891234",
+    hq: "TP.HCM",
+    since: "1996",
     rating: 4.7,
-    reviews: "800+",
-    features: ["Sang trọng", "An toàn", "Tiện nghi"],
-    since: "1996"
+    office: "Văn phòng: Hà Nội",
+    link: "#"
   },
   {
     logo: "https://images.pexels.com/photos/1117452/pexels-photo-1117452.jpeg",
     name: "Tugo",
-    description: "Tour du lịch châu Âu theo phong cách trẻ trung, năng động",
-    hq: "Trụ sở chính: Hà Nội",
-    dkkd: "ĐKKD: 0345678912",
+    hq: "TP.HCM",
+    since: "2015",
     rating: 4.9,
-    reviews: "1K+",
-    features: ["Hiện đại", "Năng động", "Giá tốt"],
-    since: "2015"
+    office: "Văn phòng: TP.HCM",
+    link: "#"
   }
 ];
 
@@ -79,10 +68,10 @@ const TourFromVNSection = () => {
   };
 
   return (
-    <section id="TourFromVNSection" className="py-16 bg-white">
-      <div className="container mx-auto px-4">
+    <section id="TourFromVNSection" className="py-16 bg-white border-t border-gray-100">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.h2 
-          className="text-3xl font-bold text-center mb-0 uppercase"
+          className="text-3xl font-bold text-center mb-12 uppercase"
           variants={fadeIn("up", "tween", 0.2, 1)}
           initial="hidden"
           whileInView="show"
@@ -92,13 +81,13 @@ const TourFromVNSection = () => {
         </motion.h2>
 
         <motion.p 
-          className="text-lg md:text-xl text-gray-600 mb-0 text-center max-w-3xl mx-auto leading-relaxed mt-2"
+          className="text-base md:text-lg text-gray-700 mb-6 text-center"
           variants={fadeIn("up", "tween", 0.3, 1)}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
         >
-          Khám phá châu Âu với các tour trọn gói từ Việt Nam, bao gồm vé máy bay và visa
+          Các loại Tour xuất phát từ Việt Nam và trở về Việt Nam, CÓ BAO GỒM cả Vé máy bay và Visa
         </motion.p>
         
         <motion.div
@@ -108,51 +97,42 @@ const TourFromVNSection = () => {
           viewport={{ once: true }}
           className="w-full"
         >
-          <Carousel className="w-full max-w-6xl mx-auto">
+          <Carousel className="w-full max-w-5xl mx-auto">
             <CarouselContent>
               {tourProviders.map((provider, index) => (
-                <CarouselItem key={index} className="md:basis-1/3 lg:basis-1/3">
-                  <div className="bg-white rounded-xl shadow-md overflow-hidden mx-2 h-full flex flex-col transition-all hover:shadow-lg">
-                    <div className="relative h-52">
+                <CarouselItem key={index} className="md:basis-1/3">
+                  <div className="relative h-full bg-white rounded-lg shadow-md overflow-hidden flex flex-col p-4 min-h-[400px]">
+                    <div className="relative h-40 overflow-hidden rounded-lg">
                       <img
                         src={provider.logo}
                         alt={provider.name}
-                        className="w-full h-full object-cover"
+                        className="absolute top-0 left-0 w-full h-full object-cover"
                       />
-                      <div className="absolute top-4 right-4 bg-white/90 px-3 py-1 rounded-full">
-                        <p className="text-sm font-medium">Since {provider.since}</p>
-                      </div>
                     </div>
-                    
-                    <div className="p-5 flex flex-col flex-grow">
-                      <h3 className="text-xl font-semibold">{provider.name}</h3>
-                      <p className="text-gray-600 text-sm mt-1.5">{provider.description}</p>
-                      <p className="text-gray-600 text-sm mt-0.5">{provider.dkkd}</p>
-                      <p className="text-gray-600 text-sm mt-0.5">{provider.hq}</p>
-                      
-                      <div className="mt-4">
-                        <div className="flex flex-wrap gap-1.5 mb-4">
-                          {provider.features.map((feature, i) => (
-                            <span 
-                              key={i}
-                              className="px-2.5 py-0.5 bg-teal-50 text-teal-700 rounded-full text-sm"
-                            >
-                              {feature}
-                            </span>
-                          ))}
+                    <div className="flex flex-col flex-grow gap-2 mt-2">
+                      <div>
+                        <h3 className="font-semibold text-lg mb-1">{provider.name}</h3>
+                      </div>
+                      <div>
+                        <p className="text-gray-600 text-sm leading-relaxed mb-0.5">ĐKKD: Việt Nam</p>
+                        <p className="text-gray-600 text-sm leading-relaxed mb-0.5">{provider.office}</p>
+                        {provider.since && (
+                          <p className="text-gray-600 text-sm leading-relaxed">Since: {provider.since}</p>
+                        )}
+                      </div>
+                      <div className="mt-2 flex items-center justify-between">
+                        <div className="flex items-center">
+                          {renderStars(provider.rating)}
+                          <span className="ml-2 text-sm text-gray-600">
+                            {provider.rating} (500+ reviews)
+                          </span>
                         </div>
-                        
-                        <div className="flex items-center justify-between mt-auto border-t border-gray-100 pt-4">
-                          <div className="flex items-center gap-2 flex-shrink-0">
-                            {renderStars(provider.rating)}
-                            <span className="text-sm text-gray-600 whitespace-nowrap">
-                              {provider.rating}
-                            </span>
-                          </div>
-                          <button className="bg-teal-600 text-white px-4 py-2 rounded-lg hover:bg-teal-700 transition-colors flex-shrink-0">
-                            Xem chi tiết
-                          </button>
-                        </div>
+                        <a 
+                          href={provider.link}
+                          className="bg-teal-600 text-white px-4 py-2 rounded-md text-sm hover:bg-teal-700 transition-colors"
+                        >
+                          Chi tiết
+                        </a>
                       </div>
                     </div>
                   </div>

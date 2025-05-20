@@ -75,7 +75,7 @@ const CityTourSection = () => {
           CITY TOUR CHÂU ÂU
         </motion.h2>
         <motion.p 
-          className="text-lg md:text-xl text-gray-600 mb-10 text-center max-w-3xl mx-auto leading-relaxed"
+          className="text-lg text-gray-700 mb-8 text-center"
           variants={fadeIn("up", "tween", 0.3, 1)}
           initial="hidden"
           whileInView="show"
