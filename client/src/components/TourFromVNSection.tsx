@@ -102,8 +102,8 @@ const TourFromVNSection = () => {
             <CarouselContent>
               {tourProviders.map((provider, index) => (
                 <CarouselItem key={index} className="md:basis-1/3 lg:basis-1/3">
-                  <div className="bg-white rounded-xl shadow-lg overflow-hidden mx-2 h-full transition-transform hover:scale-[1.02] duration-300">
-                    <div className="relative h-48">
+                  <div className="bg-white rounded-xl shadow-md overflow-hidden mx-2 h-full flex flex-col transition-all hover:shadow-lg">
+                    <div className="relative h-52">
                       <img
                         src={provider.logo}
                         alt={provider.name}
@@ -114,11 +114,11 @@ const TourFromVNSection = () => {
                       </div>
                     </div>
                     
-                    <div className="p-6">
-                      <h3 className="text-xl font-semibold mb-2">{provider.name}</h3>
-                      <p className="text-gray-600 text-sm mb-4">{provider.description}</p>
+                    <div className="p-5 flex flex-col flex-grow">
+                      <h3 className="text-xl font-semibold">{provider.name}</h3>
+                      <p className="text-gray-600 text-sm mt-2">{provider.description}</p>
                       
-                      <div className="space-y-4">
+                      <div className="mt-4 space-y-3">
                         <div className="flex items-center gap-2">
                           {renderStars(provider.rating)}
                           <span className="text-sm text-gray-600">
@@ -126,11 +126,11 @@ const TourFromVNSection = () => {
                           </span>
                         </div>
                         
-                        <div className="flex flex-wrap gap-2">
+                        <div className="flex flex-wrap gap-1.5">
                           {provider.features.map((feature, i) => (
                             <span 
                               key={i}
-                              className="px-3 py-1 bg-teal-50 text-teal-700 rounded-full text-sm"
+                              className="px-2.5 py-0.5 bg-teal-50 text-teal-700 rounded-full text-sm"
                             >
                               {feature}
                             </span>
@@ -138,7 +138,7 @@ const TourFromVNSection = () => {
                         </div>
                       </div>
 
-                      <button className="w-full mt-6 bg-teal-600 text-white py-2 rounded-lg hover:bg-teal-700 transition-colors">
+                      <button className="w-full mt-auto bg-teal-600 text-white py-2.5 rounded-lg hover:bg-teal-700 transition-colors">
                         Xem chi tiết
                       </button>
                     </div>
