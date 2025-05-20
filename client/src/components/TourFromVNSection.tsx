@@ -23,7 +23,7 @@ const tourProviders = [
   {
     logo: "https://images.pexels.com/photos/1117452/pexels-photo-1117452.jpeg",
     name: "Lữ Việt",
-    description: "Đồng hành cùng bạn trong mọi hành trình khám phá châu Âu",
+    description: "Trụ sở chính: Đồng hành cùng bạn trong mọi hành trình khám phá châu Âu",
     rating: 4.8,
     reviews: "1K+",
     features: ["Đa dạng tour", "Giá cả hợp lý", "Hướng dẫn viên chuyên nghiệp"],
