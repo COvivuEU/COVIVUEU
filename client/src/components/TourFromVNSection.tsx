@@ -82,7 +82,7 @@ const TourFromVNSection = () => {
     <section id="TourFromVNSection" className="py-16 bg-white">
       <div className="container mx-auto px-4">
         <motion.h2 
-          className="text-3xl font-bold text-center mb-4 uppercase"
+          className="text-3xl font-bold text-center mb-0 uppercase"
           variants={fadeIn("up", "tween", 0.2, 1)}
           initial="hidden"
           whileInView="show"
@@ -92,7 +92,7 @@ const TourFromVNSection = () => {
         </motion.h2>
 
         <motion.p 
-          className="text-lg md:text-xl text-gray-600 mb-10 text-center max-w-3xl mx-auto leading-relaxed"
+          className="text-lg md:text-xl text-gray-600 mb-0 text-center max-w-3xl mx-auto leading-relaxed mt-2"
           variants={fadeIn("up", "tween", 0.3, 1)}
           initial="hidden"
           whileInView="show"
