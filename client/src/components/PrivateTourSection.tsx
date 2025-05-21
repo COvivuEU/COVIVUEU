@@ -106,30 +106,29 @@ const PrivateTourSection = () => {
           <Carousel className="w-full max-w-5xl mx-auto">
             <CarouselContent>
               {tourProviders.map((provider, index) => (
-                <CarouselItem key={index} className="md:basis-1/3">
-                  <div className="relative h-full bg-white rounded-lg shadow-md overflow-hidden flex flex-col p-4 min-h-[400px]">
-                    <div className="relative h-40 overflow-hidden rounded-lg">
+                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                  <div className="relative h-full bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
+                    <div className="relative pt-[56.25%] overflow-hidden">
                       <img
                         src={provider.logo}
                         alt={provider.name}
                         className="absolute top-0 left-0 w-full h-full object-cover"
                       />
                     </div>
-                    <div className="flex flex-col flex-grow gap-4 mt-4">
-                      <div>
-                        <h3 className="font-semibold text-lg mb-1">{provider.name}</h3>
-                      </div>
-                      <div>
-                        <p className="text-gray-600 text-sm leading-none mb-1">ĐKKD: {provider.details.dkkd}</p>
-                        <p className="text-gray-600 text-sm leading-none mb-1">{provider.details.hq}</p>
+                    <div className="p-4 flex flex-col h-full">
+                      <h3 className="font-semibold text-lg mb-2">{provider.name}</h3>
+                      <div className="space-y-2 mb-4">
+                        <p className="text-gray-600 text-sm">ĐKKD: {provider.details.dkkd}</p>
+                        <p className="text-gray-600 text-sm">{provider.details.hq}</p>
                         {provider.details.since && (
-                          <p className="text-gray-600 text-sm leading-none mb-1">Since: {provider.details.since}</p>
+                          <p className="text-gray-600 text-sm">Since: {provider.details.since}</p>
                         )}
                         {provider.details.office && (
-                          <p className="text-gray-600 text-sm leading-none">{provider.details.office}</p>
+                          <p className="text-gray-600 text-sm">{provider.details.office}</p>
                         )}
                       </div>
-                      <div className="flex items-center justify-between mt-auto border-t border-gray-100 pt-4">
+                      <div className="mt-auto border-t border-gray-100 pt-4">
+                        <div className="flex items-center justify-between">
                         <div className="flex items-center gap-2 flex-shrink-0 min-w-[120px]">
                           {renderStars(provider.rating)}
                           <span className="text-sm text-gray-600 whitespace-nowrap">
