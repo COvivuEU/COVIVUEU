@@ -140,8 +140,10 @@ const DayTourSection = () => {
                         <p className="text-gray-600 text-sm leading-relaxed mb-0.5">Từ: {tour.from}</p>
                         <p className="text-gray-600 text-sm leading-relaxed mb-0.5">{tour.duration}</p>
                         <p className="text-gray-600 text-sm leading-relaxed mb-0.5">{tour.transport}</p>
-                        <p className="text-gray-600 text-sm leading-relaxed">{tour.driver}</p>
-                        <p className="text-lg font-semibold text-teal-600 mt-2">{tour.price}</p>
+                        <p className="text-gray-600 text-sm leading-relaxed mb-4">{tour.driver}</p>
+                        <div className="flex justify-between items-center">
+                          <p className="text-lg font-semibold text-teal-600">{tour.price}</p>
+                        </div>
                       </div>
                       <div className="flex items-center justify-between mt-auto border-t border-gray-100 pt-4">
                         <div className="flex items-center gap-2 flex-shrink-0 min-w-[120px]">
