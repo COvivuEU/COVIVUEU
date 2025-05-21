@@ -117,7 +117,7 @@ const PrivateTourSection = () => {
                     </div>
                     <div className="p-4 flex flex-col h-full">
                       <h3 className="font-semibold text-lg mb-2">{provider.name}</h3>
-                      <div className="space-y-2 mb-4">
+                      <div className="space-y-1 mb-4">
                         <p className="text-gray-600 text-sm">ĐKKD: {provider.details.dkkd}</p>
                         <p className="text-gray-600 text-sm">{provider.details.hq}</p>
                         {provider.details.since && (
