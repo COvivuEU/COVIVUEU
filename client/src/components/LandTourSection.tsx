@@ -18,6 +18,8 @@ const landTours = [
     rating: 4.8,
     bookings: "1K+ đã đặt",
     description: "Khám phá 4 quốc gia châu Âu trong 7 ngày",
+    office: "ĐKKD: Việt Nam",
+    since: "2020"
   },
   {
     image: "https://images.unsplash.com/photo-1533105079780-92b9be482077",
@@ -26,6 +28,8 @@ const landTours = [
     rating: 4.9,
     bookings: "800+ đã đặt",
     description: "Hành trình 10 ngày qua 2 quốc gia",
+    office: "ĐKKD: Việt Nam",
+    since: "2019"
   },
   {
     image: "https://images.unsplash.com/photo-1534777367038-9404f45b869a",
@@ -34,6 +38,8 @@ const landTours = [
     rating: 4.7,
     bookings: "500+ đã đặt",
     description: "Khám phá vẻ đẹp Đông Âu trong 8 ngày",
+    office: "ĐKKD: Việt Nam",
+    since: "2021"
   }
 ];
 
@@ -94,7 +100,9 @@ const LandTourSection = () => {
                         <h3 className="font-semibold text-lg mb-1">{tour.title}</h3>
                       </div>
                       <div>
+                        <p className="text-gray-600 text-sm leading-relaxed mb-0.5">{tour.office}</p>
                         <p className="text-gray-600 text-sm leading-relaxed mb-0.5">{tour.description}</p>
+                        <p className="text-gray-600 text-sm leading-relaxed">Since: {tour.since}</p>
                         <p className="text-gray-600 text-sm leading-relaxed">Giá từ: {tour.price}</p>
                       </div>
                       <div className="flex items-center justify-between mt-auto border-t border-gray-100 pt-4">
