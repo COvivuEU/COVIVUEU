@@ -82,25 +82,29 @@ const SpecialTourSection = () => {
                         className="absolute top-0 left-0 w-full h-full object-cover"
                       />
                     </div>
-                    <div className="p-3 flex flex-col flex-grow">
-                      <h3 className="font-semibold text-lg mb-1">{tour.title}</h3>
-                      <div className="flex items-center mb-1">
+                    <div className="p-4 flex flex-col flex-grow">
+                      <h3 className="font-semibold text-lg mb-2">{tour.title}</h3>
+                      <div className="flex items-center mb-2">
                         {renderStars(tour.rating)}
-                        <span className="ml-2 text-sm text-gray-600 leading-tight">
+                        <span className="ml-2 text-sm text-gray-600">
                           {tour.rating} ({tour.bookings})
                         </span>
                       </div>
-                      <p className="text-gray-600 text-sm mb-2 leading-tight">{tour.description}</p>
-                      <div className="flex items-center justify-between mt-auto border-t border-gray-100 pt-4">
-                        <div className="flex items-center gap-2 flex-shrink-0 min-w-[120px]">
-                          {renderStars(tour.rating)}
-                          <span className="text-sm text-gray-600 whitespace-nowrap">
-                            {tour.rating}
-                          </span>
+                      <p className="text-gray-600 text-sm mb-4">{tour.description}</p>
+                      
+                      <div className="mt-auto">
+                        <p className="text-xl font-semibold text-teal-600 mb-4">{tour.price}</p>
+                        <div className="flex items-center justify-between border-t border-gray-100 pt-4">
+                          <div className="flex items-center gap-2">
+                            {renderStars(tour.rating)}
+                            <span className="text-sm text-gray-600">
+                              {tour.rating}
+                            </span>
+                          </div>
+                          <button className="bg-teal-600 text-white px-4 py-2 rounded-lg hover:bg-teal-700 transition-colors">
+                            Chi tiết
+                          </button>
                         </div>
-                        <button className="bg-teal-600 text-white px-4 py-2 rounded-lg hover:bg-teal-700 transition-colors flex-shrink-0">
-                          Chi tiết
-                        </button>
                       </div>
                     </div>
                   </div>
