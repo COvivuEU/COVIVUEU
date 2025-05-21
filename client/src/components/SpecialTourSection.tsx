@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { fadeIn } from "@/lib/animations";
 import { StarIcon } from "lucide-react";
@@ -53,7 +52,7 @@ const SpecialTourSection = () => {
         >
           TRẢI NGHIỆM ĐẶC BIỆT
         </motion.h2>
-        
+
         <motion.p 
           className="text-lg text-gray-700 mb-8 text-center"
           variants={fadeIn("up", "tween", 0.3, 1)}
@@ -63,7 +62,7 @@ const SpecialTourSection = () => {
         >
           Trải nghiệm độc đáo và khó quên tại châu Âu
         </motion.p>
-        
+
         <motion.div
           variants={fadeIn("up", "tween", 0.4, 1)}
           initial="hidden"
