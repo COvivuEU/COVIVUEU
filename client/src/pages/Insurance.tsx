@@ -8,7 +8,7 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 
 const insuranceProviders = [
   {
-    image: "https://images.unsplash.com/photo-1547573854-74d2a71d0826",
+    image: "https://images.unsplash.com/photo-1579621970795-87facc2f976d",
     title: "Bảo hiểm Du lịch Cơ bản",
     provider: "Liberty Insurance",
     rating: 4.7,
@@ -103,7 +103,14 @@ const Insurance = () => {
       <Header />
       
       <main className="flex-grow">
-        <section className="relative py-20 bg-gradient-to-r from-teal-600 to-teal-700">
+        <section 
+        className="relative py-20 bg-cover bg-center"
+        style={{
+          backgroundImage: 'url("https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2070")',
+          backgroundColor: 'rgba(0, 0, 0, 0.5)',
+          backgroundBlendMode: 'overlay'
+        }}
+      >
           <div className="container mx-auto px-4">
             <motion.h1 
               className="text-4xl md:text-5xl font-bold text-white text-center mb-4"
