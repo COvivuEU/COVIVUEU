@@ -104,7 +104,7 @@ const Insurance = () => {
       
       <main className="flex-grow">
         <section 
-        className="relative py-20 bg-cover bg-center"
+        className="relative py-32 md:py-48 bg-cover bg-center"
         style={{
           backgroundImage: 'url("https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2070")',
           backgroundColor: 'rgba(0, 0, 0, 0.5)',
