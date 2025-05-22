@@ -37,7 +37,7 @@ export default function Header() {
             <a href="#devenir-partenaire" className="text-base font-medium text-gray-900 hover:text-teal-600 transition-colors">
               Trở thành đối tác
             </a>
-            <a href="#contact" className="text-base font-medium text-gray-900 hover:text-teal-600 transition-colors">
+            <a href="#footer" className="text-base font-medium text-gray-900 hover:text-teal-600 transition-colors">
               Liên hệ
             </a>
           </nav>
@@ -68,7 +68,7 @@ export default function Header() {
               Trở thành đối tác
             </a>
             <a 
-              href="#contact" 
+              href="#footer" 
               className="block px-3 py-2 text-base font-medium text-gray-900 hover:text-teal-600 hover:bg-gray-50 rounded-md"
               onClick={() => setIsMenuOpen(false)}
             >
