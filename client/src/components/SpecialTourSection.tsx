@@ -84,12 +84,6 @@ const SpecialTourSection = () => {
                     </div>
                     <div className="p-4 flex flex-col flex-grow">
                       <h3 className="font-semibold text-lg mb-2">{tour.title}</h3>
-                      <div className="flex items-center mb-2">
-                        {renderStars(tour.rating)}
-                        <span className="ml-2 text-sm text-gray-600">
-                          {tour.rating} ({tour.bookings})
-                        </span>
-                      </div>
                       <p className="text-gray-600 text-sm mb-4">{tour.description}</p>
                       
                       <div className="mt-auto">

@@ -119,12 +119,6 @@ const HomestaySection = () => {
                     </div>
                     <div className="p-4 flex flex-col h-full">
                         <h3 className="font-semibold text-lg mb-2">{service.title}</h3>
-                        <div className="flex items-center mb-2">
-                          {renderStars(service.rating)}
-                          <span className="ml-2 text-sm text-gray-600">
-                            {service.rating} ({service.bookings})
-                          </span>
-                        </div>
                         <p className="text-gray-600 text-sm mb-4">{service.description}</p>
                         <div className="mt-auto">
                           <p className="text-xl font-semibold text-teal-600 mb-4">{service.price}</p>
