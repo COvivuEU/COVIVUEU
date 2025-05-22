@@ -77,7 +77,7 @@ const VietDriverSection = () => {
         </motion.h2>
 
         <motion.p 
-          className="text-base md:text-lg text-gray-700 text-center mb-8"
+          className="text-base md:text-lg text-gray-700 text-center mb-8 italic"
           variants={fadeIn("up", "tween", 0.3, 1)}
           initial="hidden"
           whileInView="show"
