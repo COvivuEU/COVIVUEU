@@ -5,7 +5,6 @@ import { StarIcon, ShieldCheck, Clock, HeartPulse, Plane, Briefcase, Phone } fro
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-
 import { useQuery } from '@tanstack/react-query';
 
 const fetchInsuranceProviders = async () => {
@@ -15,71 +14,6 @@ const fetchInsuranceProviders = async () => {
   }
   return response.json();
 };
-
-const Insurance = () => {
-  const { data: insuranceProvidersData, isLoading, error } = useQuery({
-    queryKey: ['insuranceProviders'],
-    queryFn: fetchInsuranceProviders
-  });
-
-  const insuranceProviders = insuranceProvidersData?.data || [
-  {
-    image: "https://images.unsplash.com/photo-1579621970795-87facc2f976d",
-    title: "Bảo hiểm Du lịch Cơ bản",
-    provider: "Liberty Insurance",
-    rating: 4.7,
-    bookings: "3K+ đã đặt",
-    price: "100€",
-    duration: "Tối đa 180 ngày",
-    description: "Bảo hiểm cơ bản cho chuyến du lịch châu Âu",
-    coverage: "30.000€",
-    features: [
-      "Tai nạn cá nhân đến 30.000€",
-      "Chi phí y tế khẩn cấp",
-      "Hủy chuyến đi",
-      "Mất hành lý & giấy tờ",
-      "Trợ giúp 24/7"
-    ]
-  },
-  {
-    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef",
-    title: "Bảo hiểm Du lịch VIP",
-    provider: "Bảo Việt Insurance",
-    rating: 4.9,
-    bookings: "1K+ đã đặt",
-    price: "350€",
-    duration: "Tối đa 365 ngày",
-    description: "Bảo hiểm toàn diện với hỗ trợ y tế 24/7",
-    coverage: "100.000€",
-    features: [
-      "Tai nạn cá nhân đến 100.000€",
-      "Chi phí y tế & Nha khoa khẩn cấp",
-      "Hủy & Gián đoạn chuyến đi",
-      "Mất hành lý & Giấy tờ cá nhân",
-      "Trách nhiệm cá nhân",
-      "Hỗ trợ y tế & Du lịch 24/7"
-    ]
-  },
-  {
-    image: "https://images.unsplash.com/photo-1526256262350-7da7584cf5eb",
-    title: "Bảo hiểm Gia đình",
-    provider: "PVI Insurance",
-    rating: 4.8,
-    bookings: "2K+ đã đặt",
-    price: "330€",
-    duration: "Tối đa 90 ngày",
-    description: "Bảo hiểm cho cả gia đình với ưu đãi đặc biệt",
-    coverage: "50.000€",
-    features: [
-      "Bảo hiểm cho cả gia đình (4 người)",
-      "Chi phí y tế khẩn cấp",
-      "Hủy chuyến đi",
-      "Mất hành lý",
-      "Tai nạn cá nhân",
-      "Hỗ trợ đa ngôn ngữ 24/7"
-    ]
-  }
-];
 
 const benefits = [
   {
@@ -105,6 +39,70 @@ const benefits = [
 ];
 
 const Insurance = () => {
+  const { data: insuranceProvidersData, isLoading, error } = useQuery({
+    queryKey: ['insuranceProviders'],
+    queryFn: fetchInsuranceProviders
+  });
+
+  const insuranceProviders = insuranceProvidersData?.data || [
+    {
+      image: "https://images.unsplash.com/photo-1579621970795-87facc2f976d",
+      title: "Bảo hiểm Du lịch Cơ bản",
+      provider: "Liberty Insurance",
+      rating: 4.7,
+      bookings: "3K+ đã đặt",
+      price: "100€",
+      duration: "Tối đa 180 ngày",
+      description: "Bảo hiểm cơ bản cho chuyến du lịch châu Âu",
+      coverage: "30.000€",
+      features: [
+        "Tai nạn cá nhân đến 30.000€",
+        "Chi phí y tế khẩn cấp",
+        "Hủy chuyến đi",
+        "Mất hành lý & giấy tờ",
+        "Trợ giúp 24/7"
+      ]
+    },
+    {
+      image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef",
+      title: "Bảo hiểm Du lịch VIP",
+      provider: "Bảo Việt Insurance",
+      rating: 4.9,
+      bookings: "1K+ đã đặt",
+      price: "350€",
+      duration: "Tối đa 365 ngày",
+      description: "Bảo hiểm toàn diện với hỗ trợ y tế 24/7",
+      coverage: "100.000€",
+      features: [
+        "Tai nạn cá nhân đến 100.000€",
+        "Chi phí y tế & Nha khoa khẩn cấp",
+        "Hủy & Gián đoạn chuyến đi",
+        "Mất hành lý & Giấy tờ cá nhân",
+        "Trách nhiệm cá nhân",
+        "Hỗ trợ y tế & Du lịch 24/7"
+      ]
+    },
+    {
+      image: "https://images.unsplash.com/photo-1526256262350-7da7584cf5eb",
+      title: "Bảo hiểm Gia đình",
+      provider: "PVI Insurance",
+      rating: 4.8,
+      bookings: "2K+ đã đặt",
+      price: "330€",
+      duration: "Tối đa 90 ngày",
+      description: "Bảo hiểm cho cả gia đình với ưu đãi đặc biệt",
+      coverage: "50.000€",
+      features: [
+        "Bảo hiểm cho cả gia đình (4 người)",
+        "Chi phí y tế khẩn cấp",
+        "Hủy chuyến đi",
+        "Mất hành lý",
+        "Tai nạn cá nhân",
+        "Hỗ trợ đa ngôn ngữ 24/7"
+      ]
+    }
+  ];
+
   const renderStars = (rating: number) => {
     return Array(5).fill(0).map((_, index) => (
       <StarIcon
@@ -120,13 +118,13 @@ const Insurance = () => {
       
       <main className="flex-grow">
         <section 
-        className="relative py-32 md:py-48 bg-cover bg-center"
-        style={{
-          backgroundImage: 'url("https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2070")',
-          backgroundColor: 'rgba(0, 0, 0, 0.5)',
-          backgroundBlendMode: 'overlay'
-        }}
-      >
+          className="relative py-32 md:py-48 bg-cover bg-center"
+          style={{
+            backgroundImage: 'url("https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2070")',
+            backgroundColor: 'rgba(0, 0, 0, 0.5)',
+            backgroundBlendMode: 'overlay'
+          }}
+        >
           <div className="container mx-auto px-4">
             <motion.h1 
               className="text-4xl md:text-5xl font-bold text-white text-center mb-4"
