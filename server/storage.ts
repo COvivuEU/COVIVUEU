@@ -1,4 +1,5 @@
-import { users, type User, type InsertUser, waitlist, type Waitlist, type InsertWaitlist } from "@shared/schema";
+import { users, type User, type InsertUser, waitlist, type Waitlist, type InsertWaitlist, insuranceProviders, insurancePackages } from "@shared/schema";
+import { db } from "./db";
 
 export interface IStorage {
   getUser(id: number): Promise<User | undefined>;
@@ -58,4 +59,18 @@ export class MemStorage implements IStorage {
   }
 }
 
-export const storage = new MemStorage();
+export const storage = {
+  async getAllInsuranceProviders() {
+    return await db.select().from(insuranceProviders);
+  },
+
+  async getAllInsurancePackages() {
+    return await db.select().from(insurancePackages);
+  },
+
+  async getPackagesByProvider(providerId: number) {
+    return await db.select()
+      .from(insurancePackages)
+      .where(eq(insurancePackages.provider_id, providerId));
+  }
+};

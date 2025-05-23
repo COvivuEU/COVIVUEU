@@ -1,33 +1,80 @@
 
+import { StarIcon } from "lucide-react";
 import { motion } from "framer-motion";
 import { fadeIn } from "@/lib/animations";
-import { StarIcon } from "lucide-react";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const dayTours = [
   {
     image: "https://images.pexels.com/photos/2570063/pexels-photo-2570063.jpeg",
-    title: "Tour làng cổ Pháp",
-    price: "150€",
-    rating: 4.7,
-    bookings: "500+ đã đặt",
-    description: "Khám phá những làng cổ xinh đẹp của Pháp",
+    title: "Mont-Saint-Michel",
+    country: "PHÁP",
+    destination: "#Mont-Saint-Michel",
+    from: "#Paris",
+    duration: "1 ngày x 12 giờ",
+    transport: "Xe ô tô",
+    driver: "Tài xế Việt",
+    price: "từ 650€",
+    rating: 4.8,
+    office: "ĐKKD: PHÁP"
   },
   {
     image: "https://images.pexels.com/photos/442116/pexels-photo-442116.jpeg",
-    title: "Vườn nho Bordeaux",
-    price: "180€",
-    rating: 4.8,
-    bookings: "300+ đã đặt",
-    description: "Tham quan và thưởng thức rượu vang",
+    title: "Vùng Hạ cảnh nơi anh",
+    country: "THỤY SĨ",
+    destination: "#Iseltwald, #Interlaken, #Brienz Lake, #Zurich",
+    from: "#Strasbourg, #Lucerne, #Bern",
+    duration: "1 ngày x 12 giờ",
+    transport: "Xe ô tô",
+    driver: "Tài xế Việt",
+    price: "từ 500€",
+    rating: 4.7,
+    office: "ĐKKD: THỤY SĨ"
   },
   {
     image: "https://images.unsplash.com/photo-1533591362725-979dfce672b5",
-    title: "Tour sông Seine",
-    price: "120€",
+    title: "Làng cổ Alsace",
+    country: "PHÁP",
+    destination: "#Colmar, #Eguisheim, #Ribeauvillé",
+    from: "#Strasbourg, #Bern, #Basel, #Frankfurt, Interlaken",
+    duration: "1 ngày x 9 giờ",
+    transport: "Xe ô tô",
+    driver: "Tài xế Việt",
+    price: "từ 320€",
     rating: 4.9,
-    bookings: "800+ đã đặt",
-    description: "Du ngoạn trên dòng sông Seine thơ mộng",
+    office: "ĐKKD: PHÁP"
+  },
+  {
+    image: "https://images.unsplash.com/photo-1533591362725-979dfce672b5",
+    title: "Làng cổ tích & Cối xay gió",
+    country: "HÀ LAN",
+    destination: "#Giethoorn, #Zaanse Schans",
+    from: "#Amsterdam",
+    duration: "1 ngày x 10 giờ",
+    transport: "Xe ô tô",
+    driver: "Tài xế Việt",
+    price: "từ 420€",
+    rating: 4.8,
+    office: "ĐKKD: HÀ LAN"
+  },
+  {
+    image: "https://images.unsplash.com/photo-1533591362725-979dfce672b5",
+    title: "Quê hương đồng Hồ Cuckoo",
+    country: "ĐỨC",
+    destination: "#Triberg",
+    from: "#Strasbourg",
+    duration: "1 ngày x 8 giờ",
+    transport: "Xe ô tô",
+    driver: "Tài xế Việt",
+    price: "từ 450€",
+    rating: 4.7,
+    office: "ĐKKD: ĐỨC"
   }
 ];
 
@@ -42,7 +89,7 @@ const DayTourSection = () => {
   };
 
   return (
-    <section className="py-16 bg-white border-t border-gray-100">
+    <section id="daytour" className="py-16 bg-white border-t border-gray-100">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.h2 
           className="text-3xl font-bold text-center mb-4 uppercase"
@@ -55,7 +102,7 @@ const DayTourSection = () => {
         </motion.h2>
         
         <motion.p 
-          className="text-lg text-gray-700 mb-8 text-center"
+          className="text-lg text-gray-700 mb-8 text-center italic"
           variants={fadeIn("up", "tween", 0.3, 1)}
           initial="hidden"
           whileInView="show"
@@ -83,21 +130,25 @@ const DayTourSection = () => {
                         className="absolute top-0 left-0 w-full h-full object-cover"
                       />
                     </div>
-                    <div className="p-3 flex flex-col flex-grow">
-                      <h3 className="font-semibold text-lg mb-1">{tour.title}</h3>
-                      <div className="flex items-center mb-1">
-                        {renderStars(tour.rating)}
-                        <span className="ml-2 text-sm text-gray-600 leading-tight">
-                          {tour.rating} ({tour.bookings})
-                        </span>
-                      </div>
-                      <p className="text-gray-600 text-sm mb-2 leading-tight">{tour.description}</p>
+                    <div className="p-4 flex flex-col flex-grow">
+                      <h3 className="font-semibold text-lg mb-2">{tour.title}</h3>
+                      <p className="text-gray-600 text-sm mb-1">{tour.office}</p>
+                      <p className="text-gray-600 text-sm mb-1">Điểm đến: {tour.destination}</p>
+                      <p className="text-gray-600 text-sm mb-1">Từ: {tour.from}</p>
+                      <p className="text-gray-600 text-sm mb-1">{tour.duration}</p>
+                      <p className="text-gray-600 text-sm mb-1">{tour.transport}</p>
+                      <p className="text-gray-600 text-sm mb-4">{tour.driver}</p>
+                      
                       <div className="mt-auto">
-                        <div className="flex justify-between items-center">
-                          <span className="text-lg font-bold text-teal-600">
-                            từ {tour.price}
-                          </span>
-                          <button className="bg-teal-600 text-white px-4 py-2 rounded-md text-sm hover:bg-teal-700 transition-colors">
+                        <p className="text-xl font-semibold text-teal-600 mb-4">{tour.price}</p>
+                        <div className="flex items-center justify-between border-t border-gray-100 pt-4">
+                          <div className="flex items-center gap-2">
+                            {renderStars(tour.rating)}
+                            <span className="text-sm text-gray-600">
+                              {tour.rating}
+                            </span>
+                          </div>
+                          <button className="bg-teal-600 text-white px-4 py-2 rounded-lg hover:bg-teal-700 transition-colors">
                             Chi tiết
                           </button>
                         </div>

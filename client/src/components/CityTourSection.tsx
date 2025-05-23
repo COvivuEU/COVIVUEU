@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { fadeIn } from "@/lib/animations";
 import { StarIcon } from "lucide-react";
@@ -75,7 +74,7 @@ const CityTourSection = () => {
           CITY TOUR CHÂU ÂU
         </motion.h2>
         <motion.p 
-          className="text-lg text-gray-700 mb-8 text-center"
+          className="text-lg text-gray-700 mb-8 text-center italic"
           variants={fadeIn("up", "tween", 0.3, 1)}
           initial="hidden"
           whileInView="show"

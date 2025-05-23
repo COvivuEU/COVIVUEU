@@ -1,5 +1,6 @@
 import type { Express } from "express";
 import { createServer, type Server } from "http";
+import { insuranceProviders, insurancePackages } from "@shared/schema";
 import { storage } from "./storage";
 import { ZodError } from "zod";
 import { insertWaitlistSchema } from "@shared/schema";
@@ -46,6 +47,37 @@ export async function registerRoutes(app: Express): Promise<Server> {
         success: false,
         message: 'An unexpected error occurred'
       });
+
+  app.get('/api/insurance/providers', async (req, res) => {
+    try {
+      const providers = await storage.getAllInsuranceProviders();
+      return res.status(200).json({
+        success: true,
+        data: providers
+      });
+    } catch (error) {
+      return res.status(500).json({
+        success: false,
+        message: 'Failed to fetch insurance providers'
+      });
+    }
+  });
+
+  app.get('/api/insurance/packages', async (req, res) => {
+    try {
+      const packages = await storage.getAllInsurancePackages();
+      return res.status(200).json({
+        success: true,
+        data: packages
+      });
+    } catch (error) {
+      return res.status(500).json({
+        success: false,
+        message: 'Failed to fetch insurance packages'
+      });
+    }
+  });
+
     }
   });
 

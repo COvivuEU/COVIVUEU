@@ -84,7 +84,7 @@ const HomestaySection = () => {
         </motion.h2>
 
         <motion.p 
-          className="text-base md:text-lg text-gray-700 mb-6 text-center"
+          className="text-base md:text-lg text-gray-700 mb-6 text-center italic"
           variants={fadeIn("up", "tween", 0.3, 1)}
           initial="hidden"
           whileInView="show"
@@ -117,24 +117,24 @@ const HomestaySection = () => {
                         className="absolute top-0 left-0 w-full h-full object-cover"
                       />
                     </div>
-                    <div className="p-4">
-                      <h3 className="font-semibold text-lg mb-2">{service.title}</h3>
-                      <div className="flex items-center mb-2">
-                        {renderStars(service.rating)}
-                        <span className="ml-2 text-sm text-gray-600">
-                          {service.rating} ({service.bookings})
-                        </span>
+                    <div className="p-4 flex flex-col h-full">
+                        <h3 className="font-semibold text-lg mb-2">{service.title}</h3>
+                        <p className="text-gray-600 text-sm mb-4">{service.description}</p>
+                        <div className="mt-auto">
+                          <p className="text-xl font-semibold text-teal-600 mb-4">{service.price}</p>
+                          <div className="flex items-center justify-between border-t border-gray-100 pt-4">
+                            <div className="flex items-center gap-2">
+                              {renderStars(service.rating)}
+                              <span className="text-sm text-gray-600">
+                                {service.rating}
+                              </span>
+                            </div>
+                            <button className="bg-teal-600 text-white px-4 py-2 rounded-lg hover:bg-teal-700 transition-colors">
+                              Chi tiết
+                            </button>
+                          </div>
+                        </div>
                       </div>
-                      <p className="text-gray-600 text-sm mb-3">{service.description}</p>
-                      <div className="flex justify-between items-center">
-                        <span className="text-lg font-bold text-teal-600">
-                          {service.price}
-                        </span>
-                        <button className="bg-teal-600 text-white px-4 py-2 rounded-md text-sm hover:bg-teal-700 transition-colors">
-                          Chi tiết
-                        </button>
-                      </div>
-                    </div>
                   </div>
                 </CarouselItem>
               ))}
