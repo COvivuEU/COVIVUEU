@@ -1,4 +1,5 @@
-import { pgTable, text, serial, numeric, array, integer } from "drizzle-orm/pg-core";
+
+import { pgTable, text, serial, numeric, integer } from "drizzle-orm/pg-core";
 import { createInsertSchema } from "drizzle-zod";
 import { z } from "zod";
 
@@ -13,7 +14,7 @@ export const insuranceProviders = pgTable("insurance_providers", {
   duration: text("duration").notNull(),
   description: text("description").notNull(),
   coverage: text("coverage").notNull(),
-  features: array(text("features")).notNull()
+  features: text("features").array().notNull()
 });
 
 export const insurancePackages = pgTable("packages", {
@@ -24,7 +25,7 @@ export const insurancePackages = pgTable("packages", {
   price: text("price").notNull(),
   duration: text("duration").notNull(),
   coverage: text("coverage").notNull(),
-  features: array(text("features")).notNull()
+  features: text("features").array().notNull()
 });
 
 export const users = pgTable("users", {
