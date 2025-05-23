@@ -6,7 +6,23 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
-const insuranceProviders = [
+import { useQuery } from '@tanstack/react-query';
+
+const fetchInsuranceProviders = async () => {
+  const response = await fetch('/api/insurance/providers');
+  if (!response.ok) {
+    throw new Error('Network response was not ok');
+  }
+  return response.json();
+};
+
+const Insurance = () => {
+  const { data: insuranceProvidersData, isLoading, error } = useQuery({
+    queryKey: ['insuranceProviders'],
+    queryFn: fetchInsuranceProviders
+  });
+
+  const insuranceProviders = insuranceProvidersData?.data || [
   {
     image: "https://images.unsplash.com/photo-1579621970795-87facc2f976d",
     title: "Bảo hiểm Du lịch Cơ bản",
