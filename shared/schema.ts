@@ -1,4 +1,4 @@
-import { pgTable, text, serial, numeric, array } from "drizzle-orm/pg-core";
+import { pgTable, text, serial, numeric, array, integer } from "drizzle-orm/pg-core";
 import { createInsertSchema } from "drizzle-zod";
 import { z } from "zod";
 
@@ -18,7 +18,7 @@ export const insuranceProviders = pgTable("insurance_providers", {
 
 export const insurancePackages = pgTable("packages", {
   id: serial("id").primaryKey(),
-  provider_id: serial("provider_id").references(() => insuranceProviders.id),
+  provider_id: integer("provider_id").references(() => insuranceProviders.id),
   title: text("title").notNull(),
   description: text("description").notNull(),
   price: text("price").notNull(),
